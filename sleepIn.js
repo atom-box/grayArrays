@@ -1,7 +1,13 @@
 
-(function(weekday, vacation){
-if(!weekday || vacation){return true } else if (weekday && !vacation ){return false } else { return "Uncaught error."}
-} )();
+function sleepIn(weekday, vacation){
+	if(!weekday || vacation){
+		return true 
+		} else if (weekday && !vacation ){
+		return false 
+		} else { return "Uncaught error."
+		}
+	} 
+console.log(sleepIn(null, true));
 
 /*  Wrap function in an IIFE.
 Nov 28, 2018  Evan Genest
