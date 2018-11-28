@@ -7,7 +7,7 @@ shows you random graphs of stuck-time for anonymous peer users.  So cool and ele
 Stanford professor.
 
 ## My activity
-The Coding Bat site is only for Python and Java.  I'm trying some of the exercises as JS.
+The Coding Bat site is only for Python and Java.  I'm implementing some of its exercises in JS.
 
 ## Original site
 http://codingbat.com/
