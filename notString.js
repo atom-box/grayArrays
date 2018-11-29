@@ -17,8 +17,8 @@ console.log(yak("three", "four"));
 /*   
 Nov 28, 2018  Evan Genest
 from https://codingbat.com/prob/p187868
-Given two int values, return their sum. Unless the two values are the same, then return double their sum.
+Given a string, return a new string where "not " has been added to the front. However, if the string already begins with "not", return the string unchanged. Note: use .equals() to compare 2 strings.
 
-sumDouble(1, 2) → 3
-sumDouble(3, 2) → 5
-sumDouble(2, 2) → 8*/
+notString("candy") → "not candy"
+notString("x") → "not x"
+notString("not bad") → "not bad"*/

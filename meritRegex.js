@@ -161,10 +161,12 @@ Website: http://www.census.gov
 The U.S. Constitution Online
 Website: http://www.usconstitution.net`
 /*-------------------------------------*/
-console.log("Find ");
+console.log("Find ten letter slice:");
 let x = mb.slice(13,23);
 console.log(x);
-console.log("Find ");
+console.log("Find a phone number w/RegEx:");
+const regEx1 = /\d\d\d/;
+let whereDigits = mb.search(regEx);
 console.log("Find ");
 console.log("Find ");
 console.log("Find ");
