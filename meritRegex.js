@@ -165,10 +165,19 @@ console.log("Find ten letter slice:");
 let x = mb.slice(13,23);
 console.log(x);
 console.log("Find a phone number w/RegEx:");
-const regEx1 = /\d\d\d/;
-let whereDigits = mb.search(regEx);
+let regEx1 = /\d\d\d/;
+let foundStart = mb.search(regEx1);
+let foundStop = foundStart + 3;
+console.log(mb.slice(foundStart, foundStop));
+console.log("Find first capitalized word:");
+regEx1 = /([A-Z][a-z]*)/
+let foundStrings = mb.match(regEx1);
+console.log("Found this word: " + foundStrings[0] + ".");
+console.log("Show same word but capitalized:");
+console.log(foundStrings[0].toUpperCase());
 console.log("Find ");
 console.log("Find ");
+
 console.log("Find ");
 
 
