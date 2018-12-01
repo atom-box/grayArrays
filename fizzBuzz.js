@@ -9,9 +9,9 @@ for (; i <= 100; i++) {
 	if (!(i%5)) {
 	out = out + "buzz";
 	} 
-//if (out){
-//	console.log(i);
-//	} 
+  if (out===""){
+  	out = i;
+	} 
  console.log(out);
 }
 console.log("Done.");
