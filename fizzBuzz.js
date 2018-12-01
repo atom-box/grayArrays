@@ -1,9 +1,8 @@
-console.log("divisible";
-
-
-
-
-/*-------------------------------------*/
+// Refactor! What is modern js for FOR?
+var i = 1;
+for (; i <= 100; i++) {
+	console.log(i);
+}
 /*   
 Dec 1, 2018  Evan Genest
 Fizz Buzz
