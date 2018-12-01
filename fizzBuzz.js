@@ -1,17 +1,18 @@
 // Refactor! What is modern js for FOR?
 let i = 1;
-let out = "";
+let out;
 for (; i <= 100; i++) {
-
+	out = "";
 	if (!(i%3)) {
-	console.log(out);
+	out = out + "fizz";
 	} 
 	if (!(i%5)) {
-	console.log(out);
+	out = out + "buzz";
 	} 
-	if (!out){
-	console.log(i);
-	} 
+//if (out){
+//	console.log(i);
+//	} 
+ console.log(out);
 }
 console.log("Done.");
 
