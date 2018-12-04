@@ -1,4 +1,6 @@
-const v = [2,[77, 200,[100, 35],[230, 210, 185, 172], 29, 45], 3.14, 2.7, [1965, 1960, 1956]];
+const u = [2,[77, 200,[100, 35]]];
+const v = [2,[77, 200,[100, 35],[230, 210, 185, 172], 29, 45]];
+
 const w = [2,[77, 200,[100, 35],[230, 210, 185, 172], 29, 45], 3.14, 2.7, [1965, 1960, 1956], null, undefined];
 const x = [33, 45, 78];
 
@@ -16,9 +18,11 @@ function tally (tot_1, arr1 ){
 	let i = 0;
 	for(; i < stop; i++){
 		if (Array.isArray(arr1[i])){
-			tot_1 += tally(arr1[i])
+			tot_1 += tally(arr1[i]);
+
 		} else {
 			tot_1 += arr1[i];
+			console.log("added " + arr1[i] + " in the ELSE");
 		}
 		console.log("after func added");
 	} 
@@ -26,9 +30,8 @@ function tally (tot_1, arr1 ){
 }
 
 console.log("Simple array totalled: " + tally(total, x));
+console.log("Multi-array U totalled: " + tally(total, u));
 console.log("Multi-array totalled: " + tally(total, w));
-
-
 console.log("Done.");
 
 /*   
