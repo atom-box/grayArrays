@@ -7,10 +7,13 @@ function sumNested(arr) {
 	// sum up all the numbers in array
 	for (let i = 0; i < arr.length; i++) {
 		// if element is a nested array, sum all of its elements
-		if (typeof arr[i] !== 'number') { 
+		if (typeof arr[i] == 'number') { 
+			result += arr[i];
+
+		} else if (Array.isArray(arr[i])) {
 			result += sumNested(arr[i]);
 		} else {
-			result += arr[i];
+			continue;
 		} 
 	}
 	return result; 
@@ -27,4 +30,13 @@ This problem asks you to sum up all of the numbers within an array, but the arra
 [1, 1, 1, [3, 4, [8]], [5]]
  */
 
-"We live in a machine that is designed to get us to neglect what is meaningful about life."
+/*
+To do:
+handle edge case of 'four' or '3a'
+*/
+
+/*
+Coding Diary reflection:
+Should revisit this.  You could never get the recursive loop right on your own.
+Should determine a verbal rule: when is recursie the right strategy?
+*/
