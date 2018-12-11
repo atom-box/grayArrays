@@ -1,7 +1,7 @@
 # Coding Bat Exercises
 
 ## The original
-The original coding bat is a really efficient lightweight drill site for writing five line snippets of 
+The original coding bat is a really efficient lightweight drill site at Stanford University for writing five line snippets of 
 code.  
 ## My activity
 The Coding Bat site is only for Python and Java.  I'm implementing some of its exercises in JS.
