@@ -7,25 +7,29 @@ let yl = 3;
 
 // bursts An array of burst counts
 // duration How many from each end 
-// TOFIX: NOT from ends, check in tandem, L to R!
 function endsSame (bursts, duration) {
   console.log(`Counting in we see ${bursts[duration - 1]} and ${bursts[bursts.length - duration]}.`);
   // endsAreOkay Flag to describe ends.
   let endsAreOkay = true;
+
+  // gap How far from left integer to right integer
+  const GAP = bursts.length - duration;
   for (let i = 0; i <= duration - 1; i++) {
-    console.log(`Let's compare these:  ${bursts[i]} and  ${bursts[bursts.length - i -1] }.`);
-    if (bursts[i] !== bursts[bursts.length - i -1]) { endsAreOkay = false; }
+    console.log(`Let's compare these:  ${bursts[i]} and  ${bursts[i + GAP] }.`);
+    if (bursts[i] !== bursts[i + GAP]) { endsAreOkay = false; }
   }
   return endsAreOkay;
 }
 
-console.log(`For array ${ya}, counting in ${yl} positions, the result is: `);
-console.log(endsSame(ya, yl));
+console.log(`For array ${xa}, counting in ${xl} positions, the result is: `);
+console.log(endsSame(xa, xl));
 
 /*----------------------------------------
 @evangenest
 Coding Bat
-Zakas. December 12, 2018
+December 12, 2018
+Dev Diary: This was pleasant. 70 minutes: slow!
+Looked up style guides several times though.
 ----------------------------------------*/
 
 /*----------------------------------------
@@ -35,3 +39,4 @@ sameEnds([5, 6, 45, 99, 13, 5, 6], 1) → false
 sameEnds([5, 6, 45, 99, 13, 5, 6], 2) → true
 sameEnds([5, 6, 45, 99, 13, 5, 6], 3) → false
 ----------------------------------------*/
+
