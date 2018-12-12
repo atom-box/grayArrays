@@ -7,14 +7,20 @@ let yl = 3;
 
 // bursts An array of burst counts
 // duration How many from each end 
+// TOFIX: NOT from ends, check in tandem, L to R!
 function endsSame (bursts, duration) {
-	console.log(`Counting in we see ${bursts[duration - 1]} and ${bursts[bursts.length - duration]}.`);
+  console.log(`Counting in we see ${bursts[duration - 1]} and ${bursts[bursts.length - duration]}.`);
+  // endsAreOkay Flag to describe ends.
+  let endsAreOkay = true;
+  for (let i = 0; i <= duration - 1; i++) {
+    console.log(`Let's compare these:  ${bursts[i]} and  ${bursts[bursts.length - i -1] }.`);
+    if (bursts[i] !== bursts[bursts.length - i -1]) { endsAreOkay = false; }
+  }
+  return endsAreOkay;
 }
 
-endsSame(wa, wl);
-
-// the pair that will be compared
-let lefNum 
+console.log(`For array ${ya}, counting in ${yl} positions, the result is: `);
+console.log(endsSame(ya, yl));
 
 /*----------------------------------------
 @evangenest
