@@ -1,4 +1,13 @@
+let flitter = (things, rule) => {
+	return(`First element: ${things[0]}, length of rule: ${rule.length}`);
+};
 
+const ELEMENTS = ["oxygen-8", "boron-5", "titanium-15"];
+const CHECK = "non-metal";
+
+console.log("Begin...");
+console.log(flitter(ELEMENTS, CHECK));
+console.log("Done!");
 
 /**
 Coding Interview byte-ebook says:
@@ -9,4 +18,5 @@ Filter returns a new list where every element in the original list passes the co
 December 17, 2018
 @mistergenest
 Dev Diary:  7:28am
+To Do: export this and call it from app.js
 */
