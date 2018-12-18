@@ -1,4 +1,23 @@
 let flitter = (things, rule) => {
+
+/*	if (arguments.length !== 2){
+		console.log(`Function "flitter" was passed ${arguments.length} arguments.`);
+		console.log(`Function "flitter" requires LIST and RULE-string`);
+		// return empty list if ERR
+		return [];
+	} */
+		// result: Becomes true in loop when the rule matches.
+		// stringOfRule: Holds things[i] array member, headed for appending.
+		let result = null;
+		let stringOfArrItem = "";
+		for (let i = 0; i <= things.length - 1 ; i++){
+				if (typeof(things[i]) !== 'string'){
+					stringOfArrItem = toString(things[i]);
+				} else {
+					stringOfArrItem = things[i];
+				}
+			console.log(`${stringOfArrItem} hubba hubba`);
+	}
 	return(`First element: ${things[0]}, length of rule: ${rule.length}`);
 };
 
@@ -18,5 +37,6 @@ Filter returns a new list where every element in the original list passes the co
 December 17, 2018
 @mistergenest
 Dev Diary:  7:28am
-To Do: export this and call it from app.js
+To Do: deciding whether to pass in as a function or a string.  Parsing a string into symbolic sounds tough. 
+Try using tick and dollar sign to insert a string into a logic statement.
 */
