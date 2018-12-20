@@ -1,3 +1,10 @@
+
+/*TO DO:
+NEXT, AT WORK: (1) append RULE + ARRAYITEM (2) use eval() to check an appended string in the loop 
+(3) OUTPUT RESULTS
+*/
+
+// rule: A function that returns a boolean.
 let flitter = (things, rule) => {
 
 /*	if (arguments.length !== 2){
@@ -10,19 +17,16 @@ let flitter = (things, rule) => {
 		// stringOfRule: Holds things[i] array member, headed for appending.
 		let result = null;
 		let stringOfArrItem = "";
+		console.log(`Rule result, by item:`);
 		for (let i = 0; i <= things.length - 1 ; i++){
-				if (typeof(things[i]) !== 'string'){
-					stringOfArrItem = toString(things[i]);
-				} else {
-					stringOfArrItem = things[i];
-				}
-			console.log(`${stringOfArrItem} hubba hubba`);
-	}
+			result = rule(things[i]);
+			console.log(`# ${i} ${result}`);
+ 	}
 	return(`First element: ${things[0]}, length of rule: ${rule.length}`);
 };
 
-const ELEMENTS = ["oxygen-8", "boron-5", "titanium-15"];
-const CHECK = "non-metal";
+const ELEMENTS = ["oxygen-8", "tootsie", "boron-5", "titanium-15"];
+const CHECK =(x)=>{x === "tootsie"} ;
 
 console.log("Begin...");
 console.log(flitter(ELEMENTS, CHECK));
@@ -39,4 +43,9 @@ December 17, 2018
 Dev Diary:  7:28am
 To Do: deciding whether to pass in as a function or a string.  Parsing a string into symbolic sounds tough. 
 Try using tick and dollar sign to insert a string into a logic statement.
+
+*/
+
+/*
+Idea: Love and Loss remade w/ @sloan in the role of Brian Wilson(stick with me here): Rotate each member through the role of Brian Wilson, like the various actors were Bob in I'm Not There. 
 */
