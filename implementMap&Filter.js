@@ -26,10 +26,21 @@ let flitter = (things, rule) => {
 };
 
 const ELEMENTS = ["oxygen-8", "tootsie", "boron-5", "titanium-15"];
-const CHECK =(x)=>{return x === "tootsie"} ;
+const CHECK =(x)=>{x.length > 7} ;
+
+const NUMBERS = [ 1, 2, 3, "four", null, undefined, NaN ];
+const isTiny =(x)=> {return x == 1 | x < 2 ;}
+
+const isBreathing =()=> { return true;}
 
 console.log("Begin...");
 console.log(flitter(ELEMENTS, CHECK));
+
+// returns 1, 0, 0, 1, 0, 0  
+// Why not T/F??     And why didnt "one" get coerced (by ==)? 
+console.log(flitter(NUMBERS, isTiny));
+console.log(flitter(NUMBERS, isBreathing));
+
 console.log("Done!");
 
 /**
