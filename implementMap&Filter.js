@@ -15,7 +15,7 @@ let flitter = (things, rule) => {
 	} */
 		// result: Becomes true in loop when the rule matches.
 		// stringOfRule: Holds things[i] array member, headed for appending.
-		let result = null;
+		let result = false;
 		let stringOfArrItem = "";
 		console.log(`Rule result, by item:`);
 		for (let i = 0; i <= things.length - 1 ; i++){
@@ -26,7 +26,7 @@ let flitter = (things, rule) => {
 };
 
 const ELEMENTS = ["oxygen-8", "tootsie", "boron-5", "titanium-15"];
-const CHECK =(x)=>{x === "tootsie"} ;
+const CHECK =(x)=>{return x === "tootsie"} ;
 
 console.log("Begin...");
 console.log(flitter(ELEMENTS, CHECK));
