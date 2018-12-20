@@ -7,33 +7,32 @@ NEXT, AT WORK: (1) append RULE + ARRAYITEM (2) use eval() to check an appended s
 // rule: A function that returns a boolean.
 let flitter = (things, rule) => {
 
-/*	if (arguments.length !== 2){
-		console.log(`Function "flitter" was passed ${arguments.length} arguments.`);
-		console.log(`Function "flitter" requires LIST and RULE-string`);
-		// return empty list if ERR
-		return [];
-	} */
 		// result: Becomes true in loop when the rule matches.
 		// stringOfRule: Holds things[i] array member, headed for appending.
 		let result = false;
-		let stringOfArrItem = "";
+		let outThings = [];
 		console.log(`Rule result, by item:`);
 		for (let i = 0; i <= things.length - 1 ; i++){
 			result = rule(things[i]);
-			console.log(`# ${i} ${result}`);
+/*			console.log(`# ${i} ${result}`);
+*/			if (result){
+				outThings.push(things[i]);
+			}
  	}
-	return(`First element: ${things[0]}, length of rule: ${rule.length}`);
+			return outThings;
 };
 
-const ELEMENTS = ["oxygen-8", "tootsie", "boron-5", "titanium-15"];
-const CHECK =(x)=>{x.length > 7} ;
+
+
+const ELEMENTS = ["oxygen-8", "cooties", "boron-5", "titanium-15"];
+const CHECK =(x)=>{return x == "cooties"} ;
 
 const NUMBERS = [ 1, 2, 3, "four", null, undefined, NaN ];
-const isTiny =(x)=> {return x == 1 | x < 2 ;}
+const isTiny =(x)=> {return x === 1 | x < 2 ;}
 
 const isBreathing =()=> { return true;}
 
-console.log("Begin...");
+console.log("Test it three times.");
 console.log(flitter(ELEMENTS, CHECK));
 
 // returns 1, 0, 0, 1, 0, 0  
@@ -41,7 +40,7 @@ console.log(flitter(ELEMENTS, CHECK));
 console.log(flitter(NUMBERS, isTiny));
 console.log(flitter(NUMBERS, isBreathing));
 
-console.log("Done!");
+console.log("Finished with all three tests.");
 
 /**
 Coding Interview byte-ebook says:
