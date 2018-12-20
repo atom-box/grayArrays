@@ -22,7 +22,13 @@ let flitter = (things, rule) => {
 			return outThings;
 };
 
-
+let amp =(things, rule)=>{
+	let outThings = [];
+	console.log(`The three arrays are ${outThings}, ${things}, ${rule}`);
+	outThings = things.concat(rule);
+	console.log(`The three arrays are ${outThings}, ${things}, ${rule}`);	
+	return outThings;
+}
 
 const ELEMENTS = ["oxygen-8", "cooties", "boron-5", "titanium-15"];
 const CHECK =(x)=>{return x == "cooties"} ;
@@ -33,7 +39,6 @@ const isTiny =(x)=> {return x === 1 | x < 2 ;}
 const isBreathing =()=> { return true;}
 
 console.log("Test it three times.");
-console.log(flitter(ELEMENTS, CHECK));
 
 // returns 1, 0, 0, 1, 0, 0  
 // Why not T/F??     And why didnt "one" get coerced (by ==)? 
@@ -41,6 +46,9 @@ console.log(flitter(NUMBERS, isTiny));
 console.log(flitter(NUMBERS, isBreathing));
 
 console.log("Finished with all three tests.");
+console.log(NUMBERS);
+console.log("yeah");
+console.log(`Last line!  Received thisss: ${amp(ELEMENTS, NUMBERS)}`);
 
 /**
 Coding Interview byte-ebook says:
