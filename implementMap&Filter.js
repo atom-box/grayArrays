@@ -23,10 +23,8 @@ let flitter = (things, rule) => {
 };
 
 let amp =(things, rule)=>{
-	let outThings = [];
-	console.log(`The three arrays are ${outThings}, ${things}, ${rule}`);
-	outThings = things.concat(rule);
-	console.log(`The three arrays are ${outThings}, ${things}, ${rule}`);	
+	let outThings = "";
+	outThings = things.join('-');
 	return outThings;
 }
 
@@ -48,7 +46,7 @@ console.log(flitter(NUMBERS, isBreathing));
 console.log("Finished with all three tests.");
 console.log(NUMBERS);
 console.log("yeah");
-console.log(`Last line!  Received thisss: ${amp(ELEMENTS, NUMBERS)}`);
+console.log(`La amp made this: ${amp(ELEMENTS, NUMBERS)}`);
 
 
 /**
@@ -60,11 +58,10 @@ Filter returns a new list where every element in the original list passes the co
 December 17, 2018
 @mistergenest
 Dev Diary:  7:28am
-To Do: deciding whether to pass in as a function or a string.  Parsing a string into symbolic sounds tough. 
-Try using tick and dollar sign to insert a string into a logic statement.
+To Do: Pass in a joiner function that joins with dashes
 
 */
 
 /*
-Idea: Love and Loss remade w/ @sloan in the role of Brian Wilson(stick with me here): Rotate each member through the role of Brian Wilson, like the various actors were Bob in I'm Not There. 
+  
 */
