@@ -22,9 +22,11 @@ let flitter = (things, rule) => {
 			return outThings;
 };
 
-let amp =(things, rule)=>{
-	let outThings = "";
-	outThings = things.join('-');
+let amp =(things, verb) => {
+	let outThings = [];
+	for (let i=0; i <= things.length - 1; i++){
+		outThings.push("foo");
+	}
 	return outThings;
 }
 
@@ -43,10 +45,11 @@ console.log("Test it three times.");
 console.log(flitter(NUMBERS, isTiny));
 console.log(flitter(NUMBERS, isBreathing));
 
-console.log("Finished with all three tests.");
-console.log(NUMBERS);
-console.log("yeah");
-console.log(`La amp made this: ${amp(ELEMENTS, NUMBERS)}`);
+let funky = function (x) {
+	return x.length;
+}
+console.log(`La amp made this: ${amp(ELEMENTS, funky)}`);
+console.log(`La amp made this: ${amp(NUMBERS, funky)}`);
 
 
 /**
