@@ -1,25 +1,25 @@
-function makeBricks(small, large, linear) {
-	console.log("ARGUMENTS LENGTH");
-	console.log(arguments.length);
-	console.log("000000");
-	console.log(arguments[0]);
-	console.log("111111");
-	console.log(arguments[1]);
-	console.log("222222");
-	console.log(arguments[2]);
-	console.log("333333");
-	console.log(arguments[3]);
-	console.log("444444");
-	console.log(arguments[4]);
+// object with # of bricks and boolean function for wall length
+let brix = {};
+brix = {
+	small: 0, // # of smalls
+	large: 0,	// # of larges
+	_smallSize: 1, // single brick inches
+	_largeSize: 5  // single brick inches
+};
+
+
+
+brix.canMake = (small, large, linear)=> {
+
 	console.log(small);
 	console.log(large);
 	console.log(linear);
+
 }
 
 
-console.log(`MAKEBRICKS expects ${makeBricks.length} argggss.`);
 console.log(`Passed in 3, 2, 77, 5, 4, 33, 222,4, 3, 2, 3, 2, 12`);
-makeBricks(3, 2, 77, 5, 4, 33, 222,4, 3, 2, 3, 2, 12);
+brix.canMake(3, 2, 77, 5, 4, 33, 222,4, 3, 2, 3, 2, 12);
 
 /*console.log(`Passed in NUTHIN`);
 makeBricks();
