@@ -1,3 +1,14 @@
+/*
+Next action.
+Optional input of stock, extend for small. 
+Then do an inventory check of the small, large.  If insufficient bricks, dont ERR, just exit with gap unchanged.  
+Build more use-cases.
+*/
+
+
+
+
+
 /* 
 brix  An object with # of bricks and boolean function for wall length.
 _stockpile Object.  A private property.  Each category of brick is named by inches a digitstring
