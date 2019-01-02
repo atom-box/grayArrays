@@ -17,17 +17,24 @@ brix = {
 */
 brix.postBuildGap =(currentGap, whichBrick)=> {
 	console.log(`If your opening is ${currentGap} and your brick size is ${whichBrick}...`);
+	// to do: Input should be vetted.
+	// to do: Brick stockpiles should be confirmed.
+
+	// Is gap already solved? Report as zero.
+	if (currentGap === 0) return currentGap;
+	let canLay = currentGap / whichBrick;
+	canLay = Math.trunc(canLay);
+	const leftOverSpace = currentGap - canLay * whichBrick;
+	console.log(`...we can lay ${canLay} (size ${whichBrick}) bricks.  This will leave a space of ${leftOverSpace}.`);
+	// to do: Confirm bricks exist in stock!
+	return leftOverSpace;
 }
 
 
 console.log(`Passed in 11, 5`);
-brix.postBuildGap(11, 5);
+const message = brix.postBuildGap(11, 5);
+console.log(`Function exited, returned this: ${message}`);
 
-/*console.log(`Passed in NUTHIN`);
-makeBricks();
-*//*console.log(`Passed in 4, 3, 2, 3, 2, 12`);
-makeBricks(4, 3, 2, 3, 2, 12);
-*/
 /*
 Jan 1, 2019
 @mistergenest
@@ -38,4 +45,5 @@ makeBricks(3, 1, 8) → true
 makeBricks(3, 1, 9) → false
 makeBricks(3, 2, 10) → true
 
+DevDiary: I learned that arrow functions are different than functions.  They are strictish, they lack the arguments list, so you cannot check their length.
 */
