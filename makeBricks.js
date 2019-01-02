@@ -14,9 +14,20 @@ brix = {
 /**
  currentGap Integer.  The inches of wall you are trying to fill in.
  whichBrick Integer.  The inches a single brick is.
+ manualLarge Integer. Optional parameter: if passed in, resets the inventory of large bricks.
+ manualSmall Integer.  Optional parameter: if passed in, resets the inventory of small bricks.
 */
-brix.postBuildGap =(currentGap, whichBrick)=> {
+brix.postBuildGap =(currentGap, whichBrick, larges, smalls)=> {
 	console.log(`If your opening is ${currentGap} and your brick size is ${whichBrick}...`);
+	// Accept manual brick stockpile input.
+	if (larges){
+		console.log(`${brix._stockpile["5"]} on hand for large bricks.`);
+		console.log(`${larges} is an integer.`);
+		brix._stockpile[5] += larges;
+		console.log(`${brix._stockpile["5"]} on hand for large bricks.`);
+		brix._stockpile["5"] = larges;
+	}
+
 	// to do: Input should be vetted.
 	// to do: Brick stockpiles should be confirmed.
 
@@ -31,9 +42,10 @@ brix.postBuildGap =(currentGap, whichBrick)=> {
 }
 
 
-console.log(`Passed in 11, 5`);
-const message = brix.postBuildGap(11, 5);
+console.log(`Passed in 11, 5, 500, 100`);
+const message = brix.postBuildGap(11, 5, 500, 100);
 console.log(`Function exited, returned this: ${message}`);
+
 
 /*
 Jan 1, 2019
