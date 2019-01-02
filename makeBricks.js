@@ -1,25 +1,27 @@
-// object with # of bricks and boolean function for wall length
+/* 
+brix  An object with # of bricks and boolean function for wall length.
+_stockpile Object.  A private property.  Each category of brick is named by inches a digitstring
+*/ 
 let brix = {};
 brix = {
-	small: 0, // # of smalls
-	large: 0,	// # of larges
-	_smallSize: 1, // single brick inches
-	_largeSize: 5  // single brick inches
+	_stockpile: {
+		5: 0,
+		1: 0
+	}
 };
 
 
-
-brix.canMake = (small, large, linear)=> {
-
-	console.log(small);
-	console.log(large);
-	console.log(linear);
-
+/**
+ currentGap Integer.  The inches of wall you are trying to fill in.
+ whichBrick Integer.  The inches a single brick is.
+*/
+brix.postBuildGap =(currentGap, whichBrick)=> {
+	console.log(`If your opening is ${currentGap} and your brick size is ${whichBrick}...`);
 }
 
 
-console.log(`Passed in 3, 2, 77, 5, 4, 33, 222,4, 3, 2, 3, 2, 12`);
-brix.canMake(3, 2, 77, 5, 4, 33, 222,4, 3, 2, 3, 2, 12);
+console.log(`Passed in 11, 5`);
+brix.postBuildGap(11, 5);
 
 /*console.log(`Passed in NUTHIN`);
 makeBricks();
