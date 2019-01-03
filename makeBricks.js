@@ -54,12 +54,19 @@ brix.postBuildGap =(currentGap, whichBrick)=> {
 }
 
 
-console.log(`Building for 3, 3, 10`);
+/* test    
+	0, 0,  100
+
+*/
 brix.set(3, 3);
 let remainingSpace = brix.postBuildGap(10, 5);
 remainingSpace = brix.postBuildGap(remainingSpace, 1);
 console.log(`Function exited, returned this: ${remainingSpace} as the amount of unbuilt space.`);
 
+brix.set(0, 0);
+remainingSpace = brix.postBuildGap(164, 5);
+remainingSpace = brix.postBuildGap(remainingSpace, 1);
+console.log(`Function exited, returned this: ${remainingSpace} as the amount of unbuilt space.`);
 
 
 /*
