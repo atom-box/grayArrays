@@ -1,9 +1,7 @@
 /*
 Next action.
-Duh - set brix should be a different function.  Make a setter called brix.set .
-Optional input of stock, extend for small. 
-Then do an inventory check of the small, large.  If insufficient bricks, dont ERR, just exit with gap unchanged.  
-Build more use-cases.
+Add two more test cases at bottom.
+Then follow the inline todos.
 */
 
 
