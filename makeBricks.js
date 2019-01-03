@@ -22,6 +22,16 @@ brix = {
 	}
 };
 
+// g & s Integers.  New total stock of bricks.
+brix.set =(g, s)=>{
+	if (!Number.isInteger(g) || !Number.isInteger(s)){return}
+	if (g > 0){
+		brix._stockpile[5] = g;
+	}
+	if (s > 0){
+		brix._stockpile[1] = s;
+	}
+}
 
 /**
  currentGap Integer.  The inches of wall you are trying to fill in.
@@ -40,15 +50,18 @@ brix.postBuildGap =(currentGap, whichBrick)=> {
 	let canLay = currentGap / whichBrick;
 	canLay = Math.trunc(canLay);
 	const leftOverSpace = currentGap - canLay * whichBrick;
-	console.log(`...we can lay ${canLay} (size ${whichBrick}) bricks.  This will leave a space of ${leftOverSpace}.`);
+	console.log(`xxxx...we can lay ${canLay} (size ${whichBrick}) bricks.  This will leave a space of ${leftOverSpace}.`);
 	// to do: Confirm bricks exist in stock!
 	return leftOverSpace;
 }
 
 
-console.log(`Passed in 11, 5, 500, 100`);
-const message = brix.postBuildGap(11, 5, 500, 100);
-console.log(`Function exited, returned this: ${message}`);
+console.log(`Building for 3, 3, 10`);
+brix.set(3, 3);
+let remainingSpace = brix.postBuildGap(10, 5);
+remainingSpace = brix.postBuildGap(remainingSpace, 1);
+console.log(`Function exited, returned this: ${remainingSpace} as the amount of unbuilt space.`);
+
 
 
 /*
