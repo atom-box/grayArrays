@@ -1,5 +1,6 @@
 /*
 Next action.
+Duh - set brix should be a different function.  Make a setter called brix.set .
 Optional input of stock, extend for small. 
 Then do an inventory check of the small, large.  If insufficient bricks, dont ERR, just exit with gap unchanged.  
 Build more use-cases.
@@ -28,16 +29,8 @@ brix = {
  manualLarge Integer. Optional parameter: if passed in, resets the inventory of large bricks.
  manualSmall Integer.  Optional parameter: if passed in, resets the inventory of small bricks.
 */
-brix.postBuildGap =(currentGap, whichBrick, larges, smalls)=> {
+brix.postBuildGap =(currentGap, whichBrick)=> {
 	console.log(`If your opening is ${currentGap} and your brick size is ${whichBrick}...`);
-	// Accept manual brick stockpile input.
-	if (larges){
-		console.log(`${brix._stockpile["5"]} on hand for large bricks.`);
-		console.log(`${larges} is an integer.`);
-		brix._stockpile[5] += larges;
-		console.log(`${brix._stockpile["5"]} on hand for large bricks.`);
-		brix._stockpile["5"] = larges;
-	}
 
 	// to do: Input should be vetted.
 	// to do: Brick stockpiles should be confirmed.
