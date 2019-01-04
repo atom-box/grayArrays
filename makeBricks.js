@@ -49,22 +49,30 @@ brix.postBuildGap =(currentGap, whichBrick)=> {
 	if (currentGap === 0) return currentGap;
 
 	// Make a decimal rough answr, then INT it.
-	let canLay = currentGap / whichBrick;
-	canLay = Math.trunc(canLay);
+	let suggestedLay = currentGap / whichBrick;
+	suggestedLay
+	 = Math.trunc(suggestedLay
+	 	);
 
 	// Get the leftover space to return for next whittling down of the gap (until 0 returned).
-	const leftOverSpace = currentGap - canLay * whichBrick;
+	const leftOverSpace = currentGap - suggestedLay
+	 * whichBrick;
 	// Required before passing to array dereference.
 	let whichBrickStr = String(whichBrick);
-	// compare canlay to inventory, produce willLay
-	
-// To do!!!: function here to compare canLay to brix._stockpile[whichBrickStr] and output a new int called actualLay !!!  This passes fullreq, reduced, or zero to the next function, and maybe a console.log for each now
+	// compare suggestedLay
+	// to inventory, produce willLay
 
+
+// To do!!!: function here to compare suggestedLay
+ to brix._stockpile[whichBrickStr] and output a new int called actualLay !!!  
+// This passes fullreq, reduced, or zero to the next function, and maybe a console.log for each now
+brix.actualUsed
 
 // not neccessary, redundant to the previous
 	if (false){
-		brix._stockpile[whichBrickStr] -= canLay;
-	console.log(`Laid ${canLay} (size ${whichBrick}) bricks.  And left a space of ${leftOverSpace}.`);
+		brix._stockpile[whichBrickStr] -= suggestedLay
+		;
+	console.log(`Laid ${actualLay} (size ${whichBrick}) bricks.  And left a space of ${leftOverSpace}.`);
 		return new currentGap
 	} else {
 		console.log(`No ${whichBrick} bricks added `);
