@@ -54,9 +54,10 @@ brix.postBuildGap =(currentGap, whichBrick)=> {
 
 	// Get the leftover space to return for next whittling down of the gap (until 0 returned).
 	const leftOverSpace = currentGap - canLay * whichBrick;
-// Required before passing to array dereference.
-let whichBrickStr = String(whichBrick);
-
+	// Required before passing to array dereference.
+	let whichBrickStr = String(whichBrick);
+	// compare canlay to inventory, produce willLay
+	
 // To do!!!: function here to compare canLay to brix._stockpile[whichBrickStr] and output a new int called actualLay !!!  This passes fullreq, reduced, or zero to the next function, and maybe a console.log for each now
 
 
