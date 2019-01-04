@@ -42,22 +42,37 @@ brix.postBuildGap =(currentGap, whichBrick)=> {
 
 	// to do: Input should be vetted.
 	// to do: Brick stockpiles should be confirmed.
+	// a super-function will call the minifunctions
+	// then STOP!   This was 20 min codingbat online...DevDiary: adding just a few features was 80% of the time.  The core was nothing.  Like a real project.
 
 	// Is gap already solved? Report as zero.
 	if (currentGap === 0) return currentGap;
+
+	// Make a decimal rough answr, then INT it.
 	let canLay = currentGap / whichBrick;
 	canLay = Math.trunc(canLay);
+
+	// Get the leftover space to return for next whittling down of the gap (until 0 returned).
 	const leftOverSpace = currentGap - canLay * whichBrick;
-	console.log(`xxxx...we can lay ${canLay} (size ${whichBrick}) bricks.  This will leave a space of ${leftOverSpace}.`);
-	// to do: Confirm bricks exist in stock!
-	return leftOverSpace;
+// Required before passing to array dereference.
+let whichBrickStr = String(whichBrick);
+
+// To do!!!: function here to compare canLay to brix._stockpile[whichBrickStr] and output a new int called actualLay !!!
+
+
+
+	// to do: Confirm bricks exist in stock!  Strategy: if insufficient funds, lay nought, return unchanged gap.  If sufficient funds, subtract bricks from stockpile.
+	if (false){
+		brix._stockpile[whichBrickStr] -= canLay;
+	console.log(`Laid ${canLay} (size ${whichBrick}) bricks.  And left a space of ${leftOverSpace}.`);
+		return new currentGap
+	} else {
+		console.log(`No ${whichBrick} bricks added `);
+		return leftOverSpace;
+	}
 }
 
 
-/* test    
-	0, 0,  100
-
-*/
 brix.set(3, 3);
 let remainingSpace = brix.postBuildGap(10, 5);
 remainingSpace = brix.postBuildGap(remainingSpace, 1);
