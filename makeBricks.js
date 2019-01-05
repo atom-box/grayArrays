@@ -1,13 +1,3 @@
-/*
-Next action.
-Add two more test cases at bottom.
-Then follow the inline todos.
-*/
-
-
-
-
-
 /* 
 brix  Object.  Contains property # of stockpiled , contains a setter method, contains a buildthewall-type method.
 _stockpile Object.  A private property.  Each category of brick is named by inches a digitstring
@@ -23,7 +13,10 @@ brix = {
 // g & s Integers.  
 // Sets the stockpile of Grand & Small bricks
 brix.set =(g, s)=>{
-	if (!Number.isInteger(g) || !Number.isInteger(s)){return}
+	if (!Number.isInteger(g) || !Number.isInteger(s)){
+		console.log(`****Set event failed****`);
+		return;
+	}
 	if (g > 0){
 		brix._stockpile[5] = g;
 	}
@@ -35,15 +28,12 @@ brix.set =(g, s)=>{
 /**
  currentGap Integer.  The inches of wall you are trying to fill in.
  whichBrick Integer.  The inches a single brick is.
- manualLarge Integer. Optional parameter: if passed in, resets the inventory of large bricks.
- manualSmall Integer.  Optional parameter: if passed in, resets the inventory of small bricks.
 */
-
 brix.postBuildGap =(currentGap, whichBrick)=> {
-	console.log(`If your opening is ${currentGap} and your brick size is ${whichBrick}...`);
-
-	// a super-function will call the minifunctions
-	// then STOP!   
+	// Must be string to dereference array
+	let whichBrickStr = String(whichBrick);
+	console.log(`If your opening is ${currentGap} and your brick size is ${whichBrick}`);
+	console.log(`and your inventory of size ${whichBrick} bricks is ${brix._stockpile[whichBrickStr]}...`)
 
 	// Is gap already solved? Report as zero.
 	if (currentGap === 0) return currentGap;
@@ -57,40 +47,36 @@ brix.postBuildGap =(currentGap, whichBrick)=> {
 	// Get the leftover space to return for next whittling down of the gap (until 0 returned).
 	const leftOverSpace = currentGap - suggestedLay
 	 * whichBrick;
-	// Required before passing to array dereference.
-	let whichBrickStr = String(whichBrick);
-	// compare suggestedLay
-	// to inventory, produce willLay
 
-
-// To do!!!: function here to compare suggestedLay
- to brix._stockpile[whichBrickStr] and output a new int called actualLay !!!  
-// This passes fullreq, reduced, or zero to the next function, and maybe a console.log for each now
-brix.actualUsed
-
-// not neccessary, redundant to the previous
-	if (false){
-		brix._stockpile[whichBrickStr] -= suggestedLay
-		;
-	console.log(`Laid ${actualLay} (size ${whichBrick}) bricks.  And left a space of ${leftOverSpace}.`);
-		return new currentGap
+	let actualLay = 0;
+	if (brix._stockpile[whichBrickStr] > suggestedLay) {
+		actualLay = suggestedLay;
 	} else {
-		console.log(`No ${whichBrick} bricks added `);
-		return leftOverSpace;
+		actualLay = brix._stockpile[whichBrickStr];
 	}
+	brix._stockpile[whichBrickStr] -= actualLay;
+	console.log(`Laid ${actualLay} (size ${whichBrick}) bricks.  And left a space of ${leftOverSpace}.`);
+		return leftOverSpace
 }
 
 
-brix.set(3, 3);
+// brix.set(3, 3);  NO INVENTORY.  SHOULD BUILD NOUGHT AND RETURN FULL WALL AS GAP
 let remainingSpace = brix.postBuildGap(10, 5);
 remainingSpace = brix.postBuildGap(remainingSpace, 1);
 console.log(`Function exited, returned this: ${remainingSpace} as the amount of unbuilt space.`);
+console.log(`Inventory of remaining 5 and 1 bricks is ${brix._stockpile["5"]} and ${brix._stockpile[1]}\n\n`)
 
-brix.set(0, 0);
+brix.set(100, 25);
 remainingSpace = brix.postBuildGap(164, 5);
 remainingSpace = brix.postBuildGap(remainingSpace, 1);
 console.log(`Function exited, returned this: ${remainingSpace} as the amount of unbuilt space.`);
+console.log(`Inventory of remaining 5 and 1 bricks is ${brix._stockpile["5"]} and ${brix._stockpile[1]}\n\n`)
 
+brix.set(100, 25);
+remainingSpace = brix.postBuildGap(164, 5);
+remainingSpace = brix.postBuildGap(remainingSpace, 1);
+console.log(`Function exited, returned this: ${remainingSpace} as the amount of unbuilt space.`);
+console.log(`Inventory of remaining 5 and 1 bricks is ${brix._stockpile["5"]} and ${brix._stockpile[1]}\n\n`)
 
 /*
 Jan 1, 2019
@@ -105,3 +91,11 @@ makeBricks(3, 2, 10) → true
 DevDiary: I learned that arrow functions are different than functions.  They are strictish, they lack the arguments list, so you cannot check their length.
 DevDiary: This was supposedly a 20 min codingbat online...but I couldn't resist making it 'real' with input checking, an inventory to manipulate adding just a few features was 80% of the time.  The original core was nothing -- feature-creep occurred like crazy, like in a real project.
 */
+/*
+Better design:
+Fundamental limit to this strategy is that I think it 
+fails in many edge cases, including if the smaller brick is not 1.  
+A better algorithm would be something more math-y maybe?
+Inputs are not vetted for negatives, strings...
+*/
+
