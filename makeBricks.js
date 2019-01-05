@@ -44,9 +44,6 @@ brix.postBuildGap =(currentGap, whichBrick)=> {
 	 = Math.trunc(suggestedLay
 	 	);
 
-	// Get the leftover space to return for next whittling down of the gap (until 0 returned).
-	const leftOverSpace = currentGap - suggestedLay
-	 * whichBrick;
 
 	let actualLay = 0;
 	if (brix._stockpile[whichBrickStr] > suggestedLay) {
@@ -55,12 +52,16 @@ brix.postBuildGap =(currentGap, whichBrick)=> {
 		actualLay = brix._stockpile[whichBrickStr];
 	}
 	brix._stockpile[whichBrickStr] -= actualLay;
+	// Get the leftover space to return for next whittling down of the gap (until 0 returned).
+	const leftOverSpace = currentGap - actualLay
+	 * whichBrick;
+
 	console.log(`Laid ${actualLay} (size ${whichBrick}) bricks.  And left a space of ${leftOverSpace}.`);
 		return leftOverSpace
 }
 
 
-// brix.set(3, 3);  NO INVENTORY.  SHOULD BUILD NOUGHT AND RETURN FULL WALL AS GAP
+brix.set(1, 1);  
 let remainingSpace = brix.postBuildGap(10, 5);
 remainingSpace = brix.postBuildGap(remainingSpace, 1);
 console.log(`Function exited, returned this: ${remainingSpace} as the amount of unbuilt space.`);
@@ -72,7 +73,7 @@ remainingSpace = brix.postBuildGap(remainingSpace, 1);
 console.log(`Function exited, returned this: ${remainingSpace} as the amount of unbuilt space.`);
 console.log(`Inventory of remaining 5 and 1 bricks is ${brix._stockpile["5"]} and ${brix._stockpile[1]}\n\n`)
 
-brix.set(100, 25);
+// brix.set(100, 25); // NO INVENTORY.  SHOULD BUILD NOUGHT AND RETURN FULL WALL AS GAP
 remainingSpace = brix.postBuildGap(164, 5);
 remainingSpace = brix.postBuildGap(remainingSpace, 1);
 console.log(`Function exited, returned this: ${remainingSpace} as the amount of unbuilt space.`);
