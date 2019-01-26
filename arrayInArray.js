@@ -1,3 +1,20 @@
+const bestTimes = [31, 1, 1, [3, 4, [8]], [5]];
+
+let tally = nums => {
+	let recur = parcel =>{
+		return nums[0];
+	}
+	let sum = 0;
+	sum = recur(nums);
+	return sum;
+};
+
+
+
+
+
+console.log(tally(bestTimes));
+
 /*   
 Jan 26, 2019  Evan Genest
 Same problem from a month ago; see if you can remember the recursive base case.
