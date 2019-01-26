@@ -1,19 +1,29 @@
-const bestTimes = [31, 1, 1, [3, 4, [8]], [5]];
+const bestTimes = [31, 1, 1, [3, 4, [8]], 44, [11]];
 
-let tally = nums => {
+
+	/**
+	* recur function: Accepts array or number
+	* if x[index] is an array, calls itself
+	* if x[index] addable, adds it in*/
+	let	inNestSum = 0;
 	let recur = parcel =>{
-		return nums[0];
+		for (let i = 0; i < parcel.length; i++){
+
+			// Is this member an array?
+			if (Array.isArray(parcel[i])){
+				 recur(parcel[i]);
+			}
+
+			// Is this member a number?
+			if (typeof parcel[i] === 'number'){
+				inNestSum += parcel[i];
+				console.log(`Just added ${parcel[i]} to sum and got ${inNestSum} `)
+			}
+		}
+		return inNestSum;
 	}
-	let sum = 0;
-	sum = recur(nums);
-	return sum;
-};
 
-
-
-
-
-console.log(tally(bestTimes));
+console.log(recur(bestTimes));
 
 /*   
 Jan 26, 2019  Evan Genest
