@@ -1,15 +1,20 @@
 let earsAre =bunnies=>{
-	if (bunnies){
-		bunnies -= 1;
-		return 2;
-	} else {
+	if (bunnies < 1){
 		return 0;
 	}
+	if (bunnies > 1){
+		bunnies -= 1;
+		return 2 + earsAre(bunnies);
+	}
+	return 2;
+ 	console.log("Should never see this");
 }
 
 let n = 1;
 console.log(`For ${n} bunnies there are ${earsAre(n)} ears.`);
 n = 0;
+console.log(`For ${n} bunnies there are ${earsAre(n)} ears.`);
+n = 13;
 console.log(`For ${n} bunnies there are ${earsAre(n)} ears.`);
 
 
