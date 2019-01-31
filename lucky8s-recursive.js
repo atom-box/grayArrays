@@ -11,15 +11,17 @@ else return DIGIT + recurs(newNum)
 
 */
 	let isEight = null; 
-	let digit = n % 10;
+	let digit = Math.trunc( n % 10);
 	(digit === 8) ?    
 		isEight = 1
 	:
 		isEight = 0;
 
 	let newNum = n /10;
-
-	return isEight;
+	console.log(`isEight is ${isEight} newNum is ${newNum} digit is ${digit}`);
+	if (newNum < 1)
+		return isEight;
+	return isEight + recur(newNum);	
 }
 
 
@@ -29,6 +31,10 @@ console.log(`Digits found in ${numberTried} is ${recur(numberTried)}`);
 numberTried = 8;
 console.log(`Digits found in ${numberTried} is ${recur(numberTried)}`);
 numberTried = 0;
+console.log(`Digits found in ${numberTried} is ${recur(numberTried)}`);
+numberTried = 85878458;
+console.log(`Digits found in ${numberTried} is ${recur(numberTried)}`);
+numberTried = 8888880;
 console.log(`Digits found in ${numberTried} is ${recur(numberTried)}`);
 
 /*************
