@@ -18,7 +18,8 @@ else return DIGIT + recurs(newNum)
 		isEight = 0;
 
 	let newNum = n /10;
-	console.log(`isEight is ${isEight} newNum is ${newNum} digit is ${digit}`);
+	// debugging:	
+	// console.log(`isEight is ${isEight} newNum is ${newNum} digit is ${digit}`);
 	if (newNum < 1)
 		return isEight;
 	return isEight + recur(newNum);	
