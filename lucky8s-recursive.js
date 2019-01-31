@@ -10,7 +10,7 @@ else return DIGIT + recurs(newNum)
 (CONDITION)?       DOTHIS  : DOTHIS;
 
 */
-	let isEight = null;
+	let isEight = null; 
 	let digit = n % 10;
 	(digit === 8) ?    
 		isEight = 1
