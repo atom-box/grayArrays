@@ -1,23 +1,35 @@
 let recur =n=> {
 
-put a broke-off-piece in temp AS 1 OR 0 based on whether it is an 8
+/*
+put a broke-off-piece in DIGIT AS 1 OR 0 based on whether it is an 8
 	(use shortcut syntax)
 put a new truncated number in newNum
-if newNum === zero return temp
-else return temp + recurs(newNum)
+if newNum === zero return DIGIT
+else return DIGIT + recurs(newNum)
 
+(CONDITION)?       DOTHIS  : DOTHIS;
 
+*/
+	let isEight = null;
+	let digit = n % 10;
+	(digit === 8) ?    
+		isEight = 1
+	:
+		isEight = 0;
 
+	let newNum = n /10;
 
-	return null;
+	return isEight;
 }
 
 
 
-
-
-
-console.log(recur(80080));
+let numberTried = 1234567;
+console.log(`Digits found in ${numberTried} is ${recur(numberTried)}`);
+numberTried = 8;
+console.log(`Digits found in ${numberTried} is ${recur(numberTried)}`);
+numberTried = 0;
+console.log(`Digits found in ${numberTried} is ${recur(numberTried)}`);
 
 /*************
 Given any integer, function returns an integer, the count of how many 8s were in the integer
