@@ -5,4 +5,16 @@ There are 100 light bulbs, labeled from 1 to 100, lined up all set to off initia
 • What is the status of the Nth light bulb (34th, 62nd, etc.)? Is it on or off?
 • How many people need to go through the line of light bulbs until exactly K light bulbs are set
 to on?
+
+// bulbsList Array of booleans. A list of the incoming bulbs 
+// startedFrom Integer. The square the person started from, also the interval they advance by when they walk to next bulb
+// switchify Function. 
+// switchify(bulbsList, startedFrom) Function.  Returns the NEW array of 100 falses/trues representing the bulbs after they've been walked.
+
+// bulbsList Array. Array of booleans. A list of the incoming bulbs, whether lit or not. 
+// tellNumberLit(bulbsList) Function.  Returns number of TRUE 
+
+// folks Integer.  How many folks will walk. 
+	bulbsList Array of booleans.  A list of the bulbs, whether lit or not.
+	letsWalk(bulbsList, folks) Function.
 */
