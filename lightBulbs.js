@@ -17,7 +17,7 @@ let populateBulbs =(size, type)=>{
 // switchify(bulbsList, startedFrom) Function.  Returns the NEW array of 100 falses/trues representing the bulbs after they've been walked.
 const switchify =(bulbsList, startedFrom)=>{
 	for(let i = startedFrom; i < bulbsList.length; i += startedFrom){
-		bulbsList[i] = true;
+		bulbsList[i] != bulbsList[i];
 	}
 	return bulbsList;
 }
@@ -42,10 +42,10 @@ let showBulbs =(themBulbs)=>{
 
 
 
-let foo = populateBulbs(100, null);
-foo = switchify(foo, 13);
+let foo = populateBulbs(100, false);
+foo = switchify(foo, 3);
 showBulbs(foo);
-console.log(`We found ${tellNumberLit(foo)}`);
+console.log(`We found this many on ${tellNumberLit(foo)}`);
 
 
 
@@ -63,7 +63,7 @@ to on?
 
 
 
-// folks Integer.  How many folks will walk. 
+// maxFolks Integer.  Final walker that will walk. Starts with the 'two walker' and increments succesive walkers by 1.
 	bulbsList Array of booleans.  A list of the bulbs, whether lit or not.
-	letsWalk(bulbsList, folks) Function.
+	startWalking(bulbsList, folks) Function.
 */
