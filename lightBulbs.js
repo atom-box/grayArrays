@@ -1,6 +1,9 @@
 let bulbs = [];
 
-let makeClones =(size, type)=>{
+// size Integer.  How many things will be in the array.
+// type Coould be string, boolean, null, anything.  It's what you want stuck into each member.
+// populateBulbs(size, type) Function.  Returns an array.
+let populateBulbs =(size, type)=>{
 	let things = [];
 	for( ; size > 0; size--){
 		// offset b/c zero indexed
@@ -11,7 +14,7 @@ let makeClones =(size, type)=>{
 
 
 
-let foo = makeClones(100, false);
+let foo = populateBulbs(100, false);
 console.log(`Array is ${foo.length} long and looks like this:`)
 console.log(foo);
 
