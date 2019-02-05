@@ -1,8 +1,8 @@
 let bulbs = [];
 
-// size Integer.  How many things will be in the array.
-// type Coould be string, boolean, null, anything.  It's what you want stuck into each member.
-// populateBulbs(size, type) Function.  Returns an array.
+/* Integer SIZE.  How many things will be in the array.
+// Thing TYPE is string, boolean, null, whatever.  It's what you want stuck into each member.
+// Function POPULATEBULBS(size, type) .  Returns an array. */
 let populateBulbs =(size, type)=>{
 	let things = [];
 	for( ; size > 0; size--){
@@ -12,11 +12,40 @@ let populateBulbs =(size, type)=>{
 	return things;
 }
 
+// bulbsList Array of booleans. A list of the incoming bulbs 
+// startedFrom Integer. The square the person started from, also the interval they advance by when they walk to next bulb
+// switchify(bulbsList, startedFrom) Function.  Returns the NEW array of 100 falses/trues representing the bulbs after they've been walked.
+const switchify =(bulbsList, startedFrom)=>{
+	for(let i = startedFrom; i < bulbsList.length; i += startedFrom){
+		bulbsList[i] = true;
+	}
+	return bulbsList;
+}
+
+// Array BULBSLIST. Array of booleans. A list of the incoming bulbs, whether lit or not. 
+// Function TELLNUMBERLIT(BULBSLIST).  Returns number of TRUE 
+const tellNumberLit =(themBulbs)=>{
+	let onTotal =0;
+	for (let member of themBulbs){
+		if (member===true){
+			onTotal++;
+		}
+	}
+	return onTotal;
+};
 
 
-let foo = populateBulbs(100, false);
-console.log(`Array is ${foo.length} long and looks like this:`)
-console.log(foo);
+let showBulbs =(themBulbs)=>{
+	console.log(`Array is ${foo.length} long and looks like this:`)
+	console.log(foo);
+}
+
+
+
+let foo = populateBulbs(100, null);
+foo = switchify(foo, 13);
+showBulbs(foo);
+console.log(`We found ${tellNumberLit(foo)}`);
 
 
 
@@ -32,13 +61,7 @@ There are 100 light bulbs, labeled from 1 to 100, lined up all set to off initia
 • How many people need to go through the line of light bulbs until exactly K light bulbs are set
 to on?
 
-// bulbsList Array of booleans. A list of the incoming bulbs 
-// startedFrom Integer. The square the person started from, also the interval they advance by when they walk to next bulb
-// switchify Function. 
-// switchify(bulbsList, startedFrom) Function.  Returns the NEW array of 100 falses/trues representing the bulbs after they've been walked.
 
-// bulbsList Array. Array of booleans. A list of the incoming bulbs, whether lit or not. 
-// tellNumberLit(bulbsList) Function.  Returns number of TRUE 
 
 // folks Integer.  How many folks will walk. 
 	bulbsList Array of booleans.  A list of the bulbs, whether lit or not.
