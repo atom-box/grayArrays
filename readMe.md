@@ -5,6 +5,15 @@ Every file above is a standalone js file that can be run in node.js<br/>
 The bottom of each file has explanatory comments about the assigned exercise.<br/>
 I solve these in the morning before I go to work.  Sometimes I solve them at lunch.
 
+## Dev Diary
+1/3/2019:  Thanks Nick Parlante for recursion advice.  Thanks Dave Jenkins for real world recursion discussion.
+
+## Future Ideas
+* Go back and re do a couple of these with edge cases.  Use it as a playground for learning Cocoa, et al.
+* Re do in Elm language
+* Shop in some Knuth for re-do.  Benchmark each!
+* Re do as excuse for a front end bootstrap, unsplash, CSS-Flexbox & Grid
+
 ## Coding Bat
 The original <em>Coding Bat</em> is an efficient lightweight drill site for Stanford University freshmen.<br/>
 http://codingbat.com/
