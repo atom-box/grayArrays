@@ -17,7 +17,7 @@ let populateBulbs =(size, type)=>{
 // switchify(bulbsList, startedFrom) Function.  Returns the NEW array of 100 falses/trues representing the bulbs after they've been walked.
 const switchify =(bulbsList, startedFrom)=>{
 	for(let i = startedFrom; i < bulbsList.length; i += startedFrom){
-		bulbsList[i] != bulbsList[i];
+		bulbsList[i] = !bulbsList[i];
 	}
 	return bulbsList;
 }
@@ -40,6 +40,13 @@ let showBulbs =(themBulbs)=>{
 	console.log(foo);
 }
 
+
+// Integer WHICH choose a bulb
+// Array THEMBULBS the current bulb states
+// Function PEEK(THEMBULBS).  Returns boolean.
+let peek =(themBulbs, which)=> {
+	return themBulbs[which];
+}
 
 
 let foo = populateBulbs(100, false);
