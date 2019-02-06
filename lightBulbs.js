@@ -14,8 +14,8 @@ let populateBulbs =(size, type)=>{
 
 // bulbsList Array of booleans. A list of the incoming bulbs 
 // startedFrom Integer. The square the person started from, also the interval they advance by when they walk to next bulb
-// switchify(bulbsList, startedFrom) Function.  Returns the NEW array of 100 falses/trues representing the bulbs after they've been walked.
-const switchify =(bulbsList, startedFrom)=>{
+// gauntletWalk(bulbsList, startedFrom) Function.  Returns the NEW array of 100 falses/trues representing the bulbs after they've been walked.
+const gauntletWalk =(bulbsList, startedFrom)=>{
 	for(let i = startedFrom; i < bulbsList.length; i += startedFrom){
 		bulbsList[i] = !bulbsList[i];
 	}
@@ -49,13 +49,35 @@ let peek =(themBulbs, which)=> {
 }
 
 
+
+// Integer GOAL.  How many bulbs you want on.
+// Function REPEATSTILLSUCCESS(array, goal). Returns integer for number of gauntlet walks.
+const repeatsUntilSuccess =(themBulbs, goal)=> {
+	//test if already true
+	console.log(`Started at ${new Date}`);
+	// Integer INVENTORY.  Number of bulbs now on.
+	let numberOfWalks = 0;
+	let inventory = tellNumberLit(themBulbs);
+	while (inventory !== goal){
+		themBulbs = gauntletWalk(themBulbs, ++numberOfWalks);
+		inventory = tellNumberLit(themBulbs);
+	}
+	console.log(`Done at ${new Date}`);
+	return numberOfWalks;
+}
+
+
+
 let foo = populateBulbs(100, false);
-foo = switchify(foo, 3);
+foo = gauntletWalk(foo, 3);
 showBulbs(foo);
 console.log(`We found this many on ${tellNumberLit(foo)}`);
+/*--------------------------------*/
 
-
-
+const WEWANT = 51;
+let cumulativeWalks = 0;
+cumulativeWalks = repeatsUntilSuccess(foo, WEWANT);
+console.log(`To get ${WEWANT} it took ${cumulativeWalks}...`);
 
 
 
