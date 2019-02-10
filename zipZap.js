@@ -4,16 +4,26 @@
 // Finally, return the modified string described in the spec 
 
 let zipZap = inS =>{
-	let outS = inS;
-	return(`There are ${outS.length} chars in ${outS}.`);
+	outS = '';
+	for(let i=0; i<inS.length-2; i++){
+		outS += inS[i];
+		if (inS[i]==='z' && inS[i+2]==='p'){
+			++i;
+		}
+	}
+	outS += inS.slice(-1);  // MEMORIZE 
+	return outS;
 }
 
-console.log(zipZap("zipXzap"));
-console.log(zipZap("zopzop"));
-console.log(zipZap("zzzopzop"));
+let myString = "zipXzap";
+console.log(`[${myString}] becomes [ ${zipZap(myString)}]`);
+myString = "zopzop";
+console.log(`[${myString}] becomes [ ${zipZap(myString)}]`);
+myString = "zzzopzop";
+console.log(`[${myString}] becomes [ ${zipZap(myString)}]`);
 
 
-/***************
+/*****}]`**********
 ZipZap exercise https://codingbat.com/prob/p180759
 @mistergenest 
 Evan Genest
@@ -23,4 +33,7 @@ Look for patterns like "zip" and "zap" in the string -- length-3, starting with 
 zipZap("zipXzap") → "zpXzp"
 zipZap("zopzop") → "zpzp"
 zipZap("zzzopzop") → "zzzpzp"
+
+DEV NOTES
+You forgot syntax of inS.slice(-1) to get the last letter of a string.
 ****************/
