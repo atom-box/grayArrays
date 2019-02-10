@@ -5,23 +5,31 @@
 
 let zipZap = inS =>{
 	outS = '';
+	console.log(`Incoming --------> ${inS}.`);
 	for(let i=0; i<inS.length-2; i++){
 		outS += inS[i];
-		if (inS[i]==='z' && inS[i+2]==='p'){
-			++i;
+		if (inS[i]==='z' && 
+			inS[i+2]==='p' &&
+			['a','e','i','o','u','y'].includes(inS[i+1])){
+			console.log(`Success for ${inS[i]}${inS[i+1]}${inS[i+2]}`)
+			i++;
 		}
 	}
-	outS += inS.slice(-1);  // MEMORIZE 
+	// without this you'll skip final letter.
+	outS += inS.slice(-1);  // MEMORIZE syntax !!
 	return outS;
 }
 
-let myString = "zipXzap";
+let myString = "zaapzaap";
 console.log(`[${myString}] becomes [ ${zipZap(myString)}]`);
-myString = "zopzop";
+myString = "z-pz?p";
 console.log(`[${myString}] becomes [ ${zipZap(myString)}]`);
-myString = "zzzopzop";
+myString = "z=pz6p";
 console.log(`[${myString}] becomes [ ${zipZap(myString)}]`);
-
+myString = "zapz-p";
+console.log(`[${myString}] becomes [ ${zipZap(myString)}]`);
+myString = "zwpzup";
+console.log(`[${myString}] becomes [ ${zipZap(myString)}]`);
 
 /*****}]`**********
 ZipZap exercise https://codingbat.com/prob/p180759
@@ -36,4 +44,6 @@ zipZap("zzzopzop") → "zzzpzp"
 
 DEV NOTES
 You forgot syntax of inS.slice(-1) to get the last letter of a string.
+
+Fails for z-p and zaap
 ****************/
