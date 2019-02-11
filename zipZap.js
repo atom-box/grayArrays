@@ -5,24 +5,25 @@
 
 let zipZap = inS =>{
 	outS = '';
+	console.log(`:    :    :    :    :    `);
 	console.log(`Incoming --------> ${inS}.`);
 	for(let i=0; i<inS.length-2; i++){
 		outS += inS[i];
 		if (inS[i]==='z' && 
 			inS[i+2]==='p' &&
 			['a','e','i','o','u','y'].includes(inS[i+1])){
-			console.log(`Success for ${inS[i]}${inS[i+1]}${inS[i+2]}`)
+			console.log(`DETECTED Z*P IN for ${inS[i]}${inS[i+1]}${inS[i+2]}`)
 			i++;
 		}
 	}
 	// without this you'll skip final letter.
-	outS += inS.slice(-1);  // MEMORIZE syntax !!
+	outS += inS.slice(-2);  // MEMORIZE syntax !!
 	return outS;
 }
 
 let myString = "zaapzaap";
 console.log(`[${myString}] becomes [ ${zipZap(myString)}]`);
-myString = "z-pz?p";
+myString = "z-pz?pzzzaaapppzypzoop ppppzzazoz";
 console.log(`[${myString}] becomes [ ${zipZap(myString)}]`);
 myString = "z=pz6p";
 console.log(`[${myString}] becomes [ ${zipZap(myString)}]`);
@@ -46,4 +47,6 @@ DEV NOTES
 You forgot syntax of inS.slice(-1) to get the last letter of a string.
 
 Fails for z-p and zaap
+
+This was a just-right exercise for before breakfast.  Was not solved on first try, had bite sized edge cases that didn't need much work to solve.
 ****************/
