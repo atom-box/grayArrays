@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coding Bat Challenge | Evan Genest</title>
+	  <xscript src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js" integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<div class="container">
+    <div class="col-md-9">
+    	<h2>
+    		Scores Clumped?
+    	</h2>
+      <p>Given an array of scores sorted in increasing order, return true if the array contains 3 adjacent scores that differ from each other by at most 2, such as with {3, 4, 5} or {3, 5, 5}.
+      <h3>
+        Enter an array:
+      </h3>
+      <form id="historyform">
+        <textarea name="history" id="history" class="form-control" rows="4"></textarea>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    <div class="col-md-9">
+      <h3 align="center">
+        Result: <span id="permalink"> </span>
+      </h3>
+      </p>
+    </div>
+ </div>
+<script>
+$('document').ready(function() {
+    $('#historyform').on('submit', function(event) {
+        var history = $('#history')[0].value;
+        var post_data = {'history': history};
+        console.log(post_data);
+        $.post("/graph", post_data, function(response) {
+            var svg = response["graph"];
+            $('#image').html(svg);
+            var id = response["id"];
+            var permalink_url = "/display/" + id;
+            var permalink = $("<a href='" + permalink_url + "'> (permalink) </a>")
+            $('#permalink').html(permalink);
+        })
+        event.preventDefault();
+    });
+});
+</script>
+</body>
+</html>
