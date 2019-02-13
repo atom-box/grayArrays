@@ -21,16 +21,20 @@ let  hasClump = (nums)=>{
 	if (nums.length < 3){
 		return false;
 	}
-	if (nums[0]-nums[1] <= 2 && nums[1]-nums[2]<=2){
+	if ((nums[2] - nums[1] <= 2 ) && (nums[1]-nums[0]<=2)){
+		console.log(`Found cluster: ${nums[0]} ${nums[1]} ${nums[2]}`)
 		return true;
 	}
 	nums.unshift(1);
 	hasClump(nums);
 };
 
-console.log(`result is ${hasClump([1, 4, 9])}`); // true
-console.log(`result is ${hasClump([3, 4, 6])}`); // false
-console.log(`result is ${hasClump([1, 3, 5, 5])}`); // true
+let testNums = [2, 14, 49];
+console.log(`result for ${testNums} is ${hasClump(testNums)}`); // false
+testNums = [3, 4, 6];
+console.log(`result for ${testNums} is ${hasClump(testNums)}`); // false
+testNums = [1, 3, 5, 5];
+console.log(`result for ${testNums} is ${hasClump(testNums)}`); // true
 
 
 /**
