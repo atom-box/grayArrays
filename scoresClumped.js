@@ -18,22 +18,25 @@ let  hasClump = (nums)=>{
 */
 
 let  hasClump = (nums)=>{
+	console.log(`-------incoming ${nums}---------`);
 	if (nums.length < 3){
 		return false;
 	}
-	if ((nums[2] - nums[1] <= 2 ) && (nums[1]-nums[0]<=2)){
+	if (nums[2] - nums[1] <= 2  && nums[1]-nums[0]<=2){
 		console.log(`Found cluster: ${nums[0]} ${nums[1]} ${nums[2]}`)
 		return true;
 	}
-	nums.unshift(1);
+	console.log(`           pop!     ${nums[0]}   `);
+
+	nums.shift(1);
 	hasClump(nums);
 };
 
 let testNums = [2, 14, 49];
 console.log(`result for ${testNums} is ${hasClump(testNums)}`); // false
-testNums = [3, 4, 6];
+testNums = [3, 4];
 console.log(`result for ${testNums} is ${hasClump(testNums)}`); // false
-testNums = [1, 3, 5, 5];
+testNums = [1, 22, 28, 37, 63, 65, 65];
 console.log(`result for ${testNums} is ${hasClump(testNums)}`); // true
 
 
