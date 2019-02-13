@@ -19,33 +19,22 @@ let  hasClump = (nums)=>{
 
 let  hasClump = (nums)=>{
 	let [a, b, c] = nums.slice(0,3);
-	console.log(`------------NUMS ARRAY IS--${nums}------------------------`);
-	console.log(`------------A  B  C has--${a}, ${b}, ${c}------------------------`);
 	if (nums.length < 3){
-		console.log(`               ---quit`)
 		return false;  // ARRAY TOO SHORT
 	}
 	if (c - b <= 2  && b - a <=2){
-		console.log(`          success on ${a}-${b}-${c}.`)
 		return true;   // FOUND A CLUSTER
 	}
 	nums.shift();		
-	console.log(`Call recursion...`);
 	return (false || hasClump(nums)); //  RECUR!
-	console.log(`You will never see this.`);
 }
 
 
 
 let testNums = [];
 console.log(`result for ${testNums} is ${hasClump(testNums)}\n&&&&&&&&&\n&&&&&&&&&`); // false
-
-testNums = [2, 14, 49];
-console.log(`result for ${testNums} is ${hasClump(testNums)}\n&&&&&&&&&\n&&&&&&&&&`); // false
 testNums = [3, 4];
 console.log(`result for ${testNums} is ${hasClump(testNums)}\n&&&&&&&&&\n&&&&&&&&&`); // false
-testNums = [1, 22, 28, 37, 63, 65, 65];
-console.log(`result for ${testNums} is ${hasClump(testNums)}\n&&&&&&&&&\n&&&&&&&&&`); // true
 testNums = [2, 14, 14, 49, 51, 51];
 console.log(`result for ${testNums} is ${hasClump(testNums)}\n&&&&&&&&&\n&&&&&&&&&`); // false
 
@@ -67,4 +56,11 @@ when you call the recursion
 call it on some degraded state.
 For an array, this could mean the array operates ever on the first position
 and keeps passing a smaller array that's been unshifted.
+
+LESSON LEARNED:
+
+The pattern here has three return statements.
+The over and over call of recursion must look like this:
+	RETURN false  ||  recurs(nums)
+
 */
