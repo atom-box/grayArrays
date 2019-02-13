@@ -18,26 +18,36 @@ let  hasClump = (nums)=>{
 */
 
 let  hasClump = (nums)=>{
-	console.log(`-------incoming ${nums}---------`);
+	let [a, b, c] = nums.slice(0,3);
+	console.log(`------------NUMS ARRAY IS--${nums}------------------------`);
+	console.log(`------------A  B  C has--${a}, ${b}, ${c}------------------------`);
 	if (nums.length < 3){
-		return false;
+		console.log(`               ---quit`)
+		return false;  // ARRAY TOO SHORT
 	}
-	if (nums[2] - nums[1] <= 2  && nums[1]-nums[0]<=2){
-		console.log(`Found cluster: ${nums[0]} ${nums[1]} ${nums[2]}`)
-		return true;
+	if (c - b <= 2  && b - a <=2){
+		console.log(`          success on ${a}-${b}-${c}.`)
+		return true;   // FOUND A CLUSTER
 	}
-	console.log(`           pop!     ${nums[0]}   `);
+	nums.shift();		
+	console.log(`Call recursion...`);
+	return (false || hasClump(nums)); //  RECUR!
+	console.log(`You will never see this.`);
+}
 
-	nums.shift(1);
-	hasClump(nums);
-};
 
-let testNums = [2, 14, 49];
-console.log(`result for ${testNums} is ${hasClump(testNums)}`); // false
+
+let testNums = [];
+console.log(`result for ${testNums} is ${hasClump(testNums)}\n&&&&&&&&&\n&&&&&&&&&`); // false
+
+testNums = [2, 14, 49];
+console.log(`result for ${testNums} is ${hasClump(testNums)}\n&&&&&&&&&\n&&&&&&&&&`); // false
 testNums = [3, 4];
-console.log(`result for ${testNums} is ${hasClump(testNums)}`); // false
+console.log(`result for ${testNums} is ${hasClump(testNums)}\n&&&&&&&&&\n&&&&&&&&&`); // false
 testNums = [1, 22, 28, 37, 63, 65, 65];
-console.log(`result for ${testNums} is ${hasClump(testNums)}`); // true
+console.log(`result for ${testNums} is ${hasClump(testNums)}\n&&&&&&&&&\n&&&&&&&&&`); // true
+testNums = [2, 14, 14, 49, 51, 51];
+console.log(`result for ${testNums} is ${hasClump(testNums)}\n&&&&&&&&&\n&&&&&&&&&`); // false
 
 
 /**
