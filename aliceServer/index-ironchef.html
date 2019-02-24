@@ -2,17 +2,22 @@
 <html>
 <head>
 	<title>CodingBat | Evan Genest</title>
+ <meta charset="UTF-8"> 
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
 
 <script type="text/javascript">
-  const firstAlert =()=>{
-    alert("Are-you-readyyyyyyyyyyyyy?");  
-  }
+
+function foo(){
+  document.getElementById('divA').textContent = 'This text is different!';
+}
+
+
+
 </script>
 
 </head>
-<body onload="firstAlert()"> 
+<body > 
 <a href="https://github.com/jvns/git-workflow"
     class="banner"><img style="position: absolute; top: 20; right: 0;
     border: 0; z-index:100;"
@@ -23,39 +28,21 @@
     	<h2>
     		Scores Clumped?
     	</h2>
-      <p>Given an array of scores sorted in increasing order, return true if the array contains 3 adjacent scores that differ from each other by at most 2, such as with {3, 4, 5} or {3, 5, 5}.
+      <p id=out1>Given an array of scores sorted in increasing order, return true if the array contains 3 adjacent scores that differ from each other by at most 2, such as with {3, 4, 5} or {3, 5, 5}.
       <h3>
         Enter an array:
       </h3>
       <form id="historyform">
         <textarea name="history" id="history" class="form-control" rows="4"></textarea>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+        <button onclick="foo()" class="btn btn-primary">zero</button>
+        <h1 id="demo">...</h1>      </form>
     </div>
     <div class="col-md-9">
-      <h3 align="center">
-        Result: <span id="permalink"> </span>
+      <h3 id="divA" align="center">
+        Result: 
       </h3>
       </p>
     </div>
  </div>
-<script>
-$('document').ready(function() {
-    $('#historyform').on('submit', function(event) {
-        var history = $('#history')[0].value;
-        var post_data = {'history': history};
-        console.log(post_data);
-        $.post("/graph", post_data, function(response) {
-            var svg = response["graph"];
-            $('#image').html(svg);
-            var id = response["id"];
-            var permalink_url = "/display/" + id;
-            var permalink = $("<a href='" + permalink_url + "'> (permalink) </a>")
-            $('#permalink').html(permalink);
-        })
-        event.preventDefault();
-    });
-});
-</script>
 </body>
 </html>
