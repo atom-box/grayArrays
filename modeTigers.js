@@ -8,6 +8,8 @@ let tigers = {games: games,
 
 const median =(nums)=>{
 	//works for odds
+	if (nums.length === 0){return null};
+	if (nums.length === 1){return nums[0]};
 	return (nums.sort())[Math.trunc(nums.length/2+1)];
 };
 
@@ -22,15 +24,14 @@ const mean =(nums)=>{
 	 	return result;
 };
 
-const median =(nums)=>{
-
-};
 
 console.log(`Mean Tiger games played: ${mean(tigers.games)}`);
-console.log(`median Tiger games played: ${mode(tigers.games)}`);
+console.log(`median Tiger games played: ${median(tigers.games)}`);
 
 /**
-Return the mean, median, and mode of an array.
+
+if (nums.length === 0){return null};if (nums.length === 0)Return the mean, median, and mode of an arr{return null};a
+y.
 */
 
 /**
