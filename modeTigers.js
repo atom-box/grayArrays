@@ -5,6 +5,21 @@ let tigers = {games: games,
 							triples: triples
 							}
 
+const mode = (nums)=>{
+	/**
+	STRATEGY
+	sort the array!!
+	set index of champ, index of now,  flood, occurances.
+	whileloop increments occurances until hetero
+	if occurances > champ set new index of champ as that.
+	Return nums[champIndex]
+
+ ALTERNATIVE STRATEGY write pairs to [a,0],[b,0],[c,0].  
+ This avoids sorting.  Would it be better at scale?  Prolly not.
+	*/
+	let champ = null;
+	let occurances = 0;
+};
 
 const median =(nums)=>{
 	//works for odds
@@ -19,9 +34,9 @@ const mean =(nums)=>{
 	for (let n of nums){
 		sum += n;
 	}
-		result = Math.trunc(sum / nums.length * 10);
-		result /= 10;
-	 	return result;
+	result = Math.trunc(sum / nums.length * 10);
+	result /= 10;
+	return result;
 };
 
 
@@ -53,4 +68,7 @@ Dev Diary: Whoa, I was confused on the ES6 For loop:
 for i IN nums
 for i OF nums
 Big difference!  Got it now.
+
+Dev Diary: 
+Idea for a code meetup is to pair-code coding bats. on a given night of the week downtown.  How to promote-recruit?  Ask yCde, ask girls who code, tell at MadisonSoftwareDevs. I would bring a keyboard.
 */
