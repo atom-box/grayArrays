@@ -14,6 +14,8 @@ const mode = (nums)=>{
 	let occurances = 0;
 };
 
+const dummy =()=>{
+	return "Boy am I dumb.";
+}
 
-
-export
+module.exports = {dummy, mode};
