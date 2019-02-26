@@ -4,11 +4,11 @@ console.log("Top.");
 let modeLogic = packet =>{
 	if (packet.nums.length <= 1){
 		console.log("...hip...");
-		return packet.nums[0];
+		return packet.champValue;
 	}
 	console.log(packet.nums.shift());
 	console.log("...hop...");
-	modeLogic(packet);
+	return modeLogic(packet);
 } 
 // end modeLogicsion
 
@@ -22,7 +22,7 @@ let modeWrapper = nums => {
 		, champValue: nums[0]
 	}
 	console.log(`We see ${packet.nums.length} then ${packet.bestRun} and finally ${packet.champValue}  `);
-	modeLogic(packet)
+	return modeLogic(packet);
 }
 
 
