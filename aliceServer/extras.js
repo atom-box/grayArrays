@@ -1,35 +1,38 @@
-const mode = (nums)=>{
-	let champIndex = 0,
-	occurances = 0,
-	maxCount = 0;
+console.log("Top.");
 
-	nums.sort();
-
-	for (let n of nums){
-
+// start modeLogic A RECURSIVE FUNCTION INSIDE THE MODE WRAPPER
+let modeLogic = packet =>{
+	if (packet.nums.length <= 1){
+		console.log("...hip...");
+		return packet.nums[0];
 	}
-	/**
-	STRATEGY
-	sort the array!!
+	console.log(packet.nums.shift());
+	console.log("...hop...");
+	modeLogic(packet);
+} 
+// end modeLogicsion
 
-	set index of champ, index of now,  flood, occurances.
-	whileloop increments occurances until hetero
-	if occurances > champ set new index of champ as that.
-	Return nums[champIndex]
 
-................LEFT OFF HERE
 
-	store prev
-	if same as prev
-	increment OCCURANCES
-
- ALTERNATIVE STRATEGY write pairs to [a,0],[b,0],[c,0].  
- This avoids sorting.  Would it be better at scale?  Prolly not.
-	*/
-};
-
-const dummy =()=>{
-	return "Boy am I dumb.";
+let modeWrapper = nums => {
+	nums.sort();
+	let packet = {
+		nums: nums 
+		, bestRun: 1
+		, champValue: nums[0]
+	}
+	console.log(`We see ${packet.nums.length} then ${packet.bestRun} and finally ${packet.champValue}  `);
+	modeLogic(packet)
 }
 
-module.exports = {dummy, mode};
+
+const dummy =()=>{
+	return "I may not be the smartest.";
+}
+
+let answer = modeWrapper([3, 5, 5, 5, 3, 3]);
+console.log(`Answer-----> ${answer}`);
+
+/**DevDiary: I wrote a logic-recurser, then I wrote wrapper for it to sit in.*/
+
+module.exports = {dummy, modeWrapper};
