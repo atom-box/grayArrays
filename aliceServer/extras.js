@@ -1,29 +1,38 @@
 console.log("Top.");
 
-// start modeLogic A RECURSIVE FUNCTION INSIDE THE MODE WRAPPER
+// BEGIN RECURS__INSIDELOGIC
 let modeLogic = packet =>{
 	if (packet.nums.length <= 1){
 		console.log("...hip...");
 		return packet.champValue;
 	}
-	console.log(packet.nums.shift());
 	console.log("...hop...");
-	return modeLogic(packet);
-} 
-// end modeLogicsion
+	if(packet.nums[0] === packet.nums[1]){
+		packet.currentStreak += 1;
+	} else {
+		packet.currentStreak = 1;
+	}
+	// can position this first OR last
+	if(packet.currentStreak >= packet.bestStreak ){
+		packet.champValue
+	}
+	console.log(packet.nums.shift());
+	return null + modeLogic(packet);
+}; 
+// END RECURS__INSIDELOGIC
 
-
-
+// START RECURS__WRAPPER
 let modeWrapper = nums => {
 	nums.sort();
 	let packet = {
 		nums: nums 
-		, bestRun: 1
+		, bestStreak: 1
+		, currentStreak: 1
 		, champValue: nums[0]
 	}
 	console.log(`We see ${packet.nums.length} then ${packet.bestRun} and finally ${packet.champValue}  `);
 	return modeLogic(packet);
-}
+}  // END RECURS__WRAPPER
 
 
 const dummy =()=>{
