@@ -8,7 +8,9 @@
 
 <script type="text/javascript">
 
-function alert(){
+document.listen
+
+function putSomething(){
   document.getElementById('divA').textContent = 'This text is different!';
 }
 
@@ -21,12 +23,16 @@ function alert(){
 
     <div class="col-md-9">
     	<h2>
-    		Scores Clumped?
+    		Coding Bat
     	</h2>
       <h3>
-        Enter an array:
+        For this array:
       </h3>
-      <button onclick="alert()">press</button>
+      <p id="array">...</p>
+      <h3>
+        Perform this test;
+      </h3>
+      <button onclick="putSomething()">press</button>
       <div id="divA"></div>
 
  </div>
