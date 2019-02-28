@@ -3,7 +3,7 @@ console.log("Top.");
 // BEGIN RECURS__INSIDELOGIC
 let modeLogic = packet =>{
 	if (packet.nums.length <= 1){
-		console.log("...hip...");
+		console.log(`finally reached base case, array is now ${packet.nums}.`);
 		return packet.champValue;
 	}
 	console.log("...hop...");
@@ -23,14 +23,17 @@ let modeLogic = packet =>{
 
 // START RECURS__WRAPPER
 let modeWrapper = nums => {
-	nums.sort();
+	nums = nums.sort(function(a, b){return a-b});
+	console.log(`Post sort order is:${nums}.`);
+
 	let packet = {
 		nums: nums 
 		, bestStreak: 1
 		, currentStreak: 1
 		, champValue: nums[0]
 	}
-	console.log(`We see ${packet.nums.length} then ${packet.bestRun} and finally ${packet.champValue}  `);
+	console.log(`Incoming Array ${packet.nums}`);
+	console.log(`We see ${packet.nums.length} then ${packet.bestStreak} and finally ${packet.champValue}  `);
 	return modeLogic(packet);
 }  // END RECURS__WRAPPER
 
@@ -39,7 +42,11 @@ const dummy =()=>{
 	return "I may not be the smartest.";
 }
 
-let answer = modeWrapper([3, 5, 5, 5, 3, 3]);
+let answer = modeWrapper([10, 3, 5, 5, 5, 3, 3]);
+console.log(`Answer-----> ${answer}`);
+answer = modeWrapper([11, 2, 3, 200, 200, 4, 5, 6]);
+console.log(`Answer-----> ${answer}`);
+answer = modeWrapper([111, 5, 5, 5, 5, 3, 111, 13,  3, 11]);
 console.log(`Answer-----> ${answer}`);
 
 /**DevDiary: I wrote a logic-recurser, then I wrote wrapper for it to sit in.*/
