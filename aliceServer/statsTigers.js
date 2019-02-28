@@ -30,7 +30,12 @@ const mean =(nums)=>{
 
 
 console.log(`Mean Tiger games played: ${mean(tigers.games)}`);
-console.log(`median Tiger games played: ${median(tigers.games)}`);
+console.log(`Median Tiger games played: ${median(tigers.games)}`);
+console.log(`Mode Tiger games played: ${mode(tigers.games)}`);
+
+console.log(`Mean triples: ${mean(tigers.triples)}`);
+console.log(`Median triples: ${median(tigers.triples)}`);
+console.log(`Mode triples: ${mode(tigers.triples)}`);
 
 /**
 
@@ -51,6 +56,7 @@ Evan Genest
 
 
 /**
+Dev Diary: Turns out that TRIPLES are a bimodal statistic, second commonest total is TWO, not ONE.
 Dev Diary: strangely, nothing hoists: these arrays are unprintable above.
 
 Dev Diary: Whoa, I was confused on the ES6 For loop: 
