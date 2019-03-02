@@ -26,19 +26,15 @@ document.addEventListener( 'DOMContentLoaded', function(){
 	//make 300 tiles;
 	var divs300 = "";
 	var triplets = [ 158, 247, 202, 252, 228, 197, 146, 147, 194, 146, 197, 236]; 
-	let att = newNode = null;
+	let tilesPlace = null;
 	for ( var i = 0; i < 4; i++ ){
 		rC = triplets.shift();
 		gC = triplets.shift();
 		bC = triplets.shift();
 		console.log(`Pixel #${i} is: ${rC}, ${gC}, ${bC}`);
-		newNode = document.createElement("div");
-		att = document.createAttribute("background-color");       // Create 
-		att.value = 'rgb(' + rC + ', '+ gC +',' + bC + ')'; // set
-		newNode.setAttributeNode(att);
-		/*divs300 +=
-    '<p class="tile" style="background-color: rgb(' + rC + ', '+ gC +',' + bC + '); ">' + rC + ', '+ gC +', '+ bC +   '  </div>';*/
-    
+		tilesPlace = document.getElementById('divB');  
+		tilesPlace.insertAdjacentHTML('afterend',  
+    '<p class="tile" style="background-color: rgb(' + rC + ', '+ gC +',' + bC + '); ">' + rC + ', '+ gC +', '+ bC +   '  </div>');
   }
 	document.appendElement(divs300);
 	// Expect: wipe out existing, replace w/ divs?
