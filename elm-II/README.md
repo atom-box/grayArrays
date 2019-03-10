@@ -10,3 +10,11 @@ After that, grab a copy of the elm solution from GitHub. Now, in the same folder
     elm reactor
 
 This will basically launch a local server for testing.
+
+## to do:
+* Find your static page, or the rocket bluebook.  Build a static page just as a foundation 0.0 thing.
+* Build Evan's button in JS!
+* Keep trying the syntax.
+* Read Evan's current at gitbook.  Build the button on paper, maybe.
+and look up 
+* Maybe look up projects other people builtin Elm-community-emails-orTwitterElmLang or Youtube.
