@@ -5,6 +5,27 @@
  <meta charset="UTF-8"> 
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+<style type="text/css">
+  
+.dashboard {
+  border: 5px double #666;
+  margin: 2rem;
+  background-color: #ace;
+  color: #009;
+  padding: 2rem;
+}
+
+.codeboard {
+  border: 5px dashed #bbb;
+  margin: 2rem;
+  background-color: #222;
+  color: #aaf;
+  padding: 2rem;
+}
+
+
+
+</style>
 
 <script src="./front.js">
 
@@ -31,5 +52,21 @@
       <div id="divB"></div>
 
  </div>
+             <form class="dashboard" oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+                <p>Range: </p>
+                <input type="range" name="b" value="50" /> +
+                <p>Number: </p>
+                <input type="number" name="a" value="10" /> =
+                <output name="result">60</output>
+            </form>
+            <p class="codeboard">
+                &ltform class="thin-blue-line" oninput="result.value=parseInt(a.value)+parseInt(b.value)"&gt<br>
+                &ltp&gtRange: &lt/p&gt<br>
+                &ltinput type="range" name="b" value="50" /&gt +<br>
+                &ltp&gtNumber: &lt/p&gt<br>
+                &ltinput type="number" name="a" value="10" /&gt =<br>
+                &ltoutput name="result"&gt60&lt/output&gt<br>
+            &lt/form&gt<br>
+            </p>
 </body>
 </html>
