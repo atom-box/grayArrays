@@ -7,11 +7,18 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
 <style type="text/css">
   
+.elShadow {
+  box-shadow: 0 7px 7px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 0.1rem hidden;
+  border-radius: 0.3rem;
+
+}
+
 .dashboard {
-  border: 5px double #666;
+  border: 2px  white;
   margin: 2rem;
-  background-color: #ace;
-  color: #009;
+  background-color: #444;
+  color: #cc9;
   padding: 2rem;
 }
 
@@ -23,7 +30,10 @@
   padding: 2rem;
 }
 
-
+.block {
+  background-color: rgb(238, 235, 220);
+  margin: 1rem;
+}
 
 </style>
 
@@ -36,30 +46,30 @@
 </head>
 <body > 
 
-    <div class="col-md-9">
-    	<h2>
-    		Coding Bat
-    	</h2>
-      <h3>
-        For this array:
-      </h3>
-      <p id="array">...</p>
-      <div class="dashboard">
-      <h3>
-        Perform this test;
-      </h3>
-      <button onclick="putSomething()">press</button>
-      </div>
-      <div class="codeboard">
-      <p>
-        ThIS IS WHERE TO PUT THE CODE<br>
-        &ltbutton onclick="putSomething()"&gtpress&lt/button&gt
-      </p>
-      </div>
-      <div id="divA">A</div>
-      <div id="divB">B</div>
+	<h2>
+		Coding Bat
+	</h2>
 
- </div>
+  <div class="col-md-9 block elShadow">
+    <h3>
+      For this array:
+    </h3>
+    <p id="array">...</p>
+    <div class="dashboard elShadow">
+      <h3>Perform this test;</h3>
+      <button onclick="putSomething()">press</button>
+    </div>
+    <div class="codeboard elShadow">
+      <p>
+      ThIS IS WHERE TO PUT THE CODE<br>
+      &ltbutton onclick="putSomething()"&gtpress&lt/button&gt
+      </p>
+    </div>
+    <div id="divA">A</div>
+  </div>
+
+  <div id="divB">B</div>
+
              <form class="dashboard" oninput="result.value=parseInt(a.value)+parseInt(b.value)">
                 <p>Range: </p>
                 <input type="range" name="b" value="50" /> +
