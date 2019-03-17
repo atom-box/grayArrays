@@ -1,28 +1,51 @@
-console.log("The HTML loaded the front.js okay.");
-
-
-
-
-
-//  TO DO:  can't believe I lost:  find the syntax, three lines, for inserting HTML elements.  write that into line 19;
-
-
-
+console.log(new Date());
 
 
 function putSomething(){
-  document.getElementById('divA').textContent = 'This text is different!';
+  document.getElementById('divA').textContent = `Here is the fourth verb: ${verbs.has}`	;
+}
+
+let employers = [77, 82, 47, 27, 5, 41, 30, 95];
+employers.show =()=> {
+	return employers;
+} 
+
+let verbs = {
+  is:  2699,
+  are:   1843,
+  has:   384,
+  get:   233,
+  see:  204,
+  need:  193,
+  know:  181,
+  would:   176,
+  find: 166,
+  take:  164,
+  want:  163,
+  does:  104,
+  learn:   102
+};
+
+verbs.showRandomMember =()=>{
+	return(Object.keys(verbs));
 }
 
 
+document.addEventListener( 'DOMContentLoaded', function(){
+	console.log(new Date());
+});
+
+let c = '<img src="./assets/head-profile-31x47.png"></img>';
 
 
+var putFace =()=>{
+	let a = document.getElementById('appleton');
+	a.insertAdjacentHTML("afterend", c);	
+}
 
-
-
+/*
 document.addEventListener( 'DOMContentLoaded', function(){
 	var rC = gC = bC = 244;
-
 	//make 300 tiles;
 	var divs300 = "";
 	var triplets = [ 158, 247, 202, 252, 228, 197, 146, 147, 194, 146, 197, 236]; 
@@ -39,3 +62,4 @@ document.addEventListener( 'DOMContentLoaded', function(){
 	document.appendElement(divs300);
 	// Expect: wipe out existing, replace w/ divs?
 });
+eee*/
