@@ -7,9 +7,6 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
 <style type="text/css">
 
-xh2 {
-  font-size: 2.3rem;
-}
 .title__hoegarden {
   text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
   font-family: monospace;
@@ -27,20 +24,24 @@ xh2 {
   box-shadow: 0 7px 7px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border: 0.1rem hidden;
   border-radius: 0.3rem;
-
 }
+
 
 .dashboard {
   border: 2px  white;
-  margin: 2rem;
+  margin: 0.5rem 2rem;
   background-color: #444;
   color: #cc9;
-  padding: 2rem;
+  padding: 0.5rem;
+}
+
+.dashboard__text {
+  margin: 0.3rem 1.5rem;
 }
 
 .dashboard__data-noneditable {
   color: black;
-  background-color: rgb(151, 205, 241);
+  background-color: #777;
 }
 
 .codeboard {
@@ -68,23 +69,43 @@ xh2 {
 	<h2 class="title__hoegarden float-left">
 		Coding Bat
 	</h2>
-  <h4 class="title__skinny">
+  <h3 class="title__skinny">
     Examples of syntax for several input elements.
-  </h2>
+  </h3>
 </header>
-  <div class="col-md-9 block elShadow">
-    <div class="dashboard elShadow">
-      <h3>Input</h3>
-      <p class="dashboard__data-noneditable">...</p>
-      <button onclick="putSomething()">press</button>
+
+
+  <div class="col-md-9 outblock block elShadow">
+    <h3>Button</h3>
+    <div class="dashboard given elShadow">
+      <h4 class="dashboard__text">1. Given data</h4>
+      <p class="dashboard__data-noneditable dashboard__text">...</p>
+    </div>
+    <div class="dashboard input elShadow">
+      <h4  class="dashboard__text">2. Input element</h4>
+      <div>
+      <button  onclick="putSomething()">press</button>        
+      </div>
+    </div>
+      <div class="dashboard output elShadow">
+      <h4  class="dashboard__text">3. Output</h4>
+      <p class="dashboard__data-noneditable dashboard__text">...</p>
     </div>
     <div class="codeboard elShadow">
       <p>
-      ThIS IS WHERE TO PUT THE CODE<br>
+      html<br>
       &ltbutton onclick="putSomething()"&gtpress&lt/button&gt
       </p>
     </div>
+    <div class="codeboard elShadow">
+      <p>
+      js<br>
+      ...</p>
+    </div>
+
+
     <div id="divA">A</div>
+
   </div>
 
   <div id="divB">B</div>
