@@ -10,26 +10,30 @@ employers.show =()=> {
 	return employers;
 } 
 
-let verbs = {
-  is:  2699,
-  are:   1843,
-  has:   384,
-  get:   233,
-  see:  204,
-  need:  193,
-  know:  181,
-  would:   176,
-  find: 166,
-  take:  164,
-  want:  163,
-  does:  104,
-  learn:   102
-};
+let verbs = [
+[  "iz",  2699],
+[  "are",   1843],
+[ "has",   384],
+[  "geT",   233],
+ [ "see",  204],
+[  "need",  193],
+[  "know",  181],
+[  "would",   176],
+[  "find", 166],
+ [ "take",  164],
+[  "want",  163],
+[  "does",  104],
+ [ "learn",   102]
+];
 
-verbs.showRandomMember =()=>{
-	return(Object.keys(verbs));
+verbs.randomVerb =()=>{
+	let randy = Math.floor(13 * Math.random());
+	return `The ${randy}th verb is: ${verbs[randy][0]}`;
 }
 
+function putSomething2(){
+  document.getElementById('brookfield').textContent = verbs.randomVerb();
+}
 
 document.addEventListener( 'DOMContentLoaded', function(){
 	console.log(new Date());
