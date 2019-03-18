@@ -7,6 +7,10 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
 <style type="text/css">
 
+button {
+  margin-left: 3rem;
+}
+
 .title__hoegarden {
   text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
   font-family: monospace;
@@ -143,7 +147,7 @@
 
 
   <div class="col-md-9 outblock block elShadow">
-    <h3>Generic Input Item</h3>
+    <h3>Tiger Statistics</h3>
     <div class="dashboard given elShadow">
       <h4 class="dashboard__text">1. Given data</h4>
       <p class="dashboard__data-noneditable dashboard__text">...</p>
@@ -151,12 +155,14 @@
     <div class="dashboard input elShadow">
       <h4  class="dashboard__text">2. Input element</h4>
       <div>
-      <button  onclick="putSomething()">press</button>        
+      <button  onclick="putMean()">mean</button>        
+      <button  onclick="putMedian()">median</button>        
+      <button  onclick="putMode()">mode</button>        
       </div>
     </div>
       <div class="dashboard output elShadow">
       <h4  class="dashboard__text">3. Output</h4>
-      <div id="divA">A
+      <div id="divC">...
       </div>
     </div>
     <div class="codeboard elShadow">

@@ -11,19 +11,19 @@ employers.show =()=> {
 } 
 
 let verbs = [
-[  "iz",  2699],
+[  "is",  2699],
 [  "are",   1843],
 [ "has",   384],
-[  "geT",   233],
- [ "see",  204],
+[  "get",   233],
+[ "see",  204],
 [  "need",  193],
 [  "know",  181],
 [  "would",   176],
 [  "find", 166],
- [ "take",  164],
+[ "take",  164],
 [  "want",  163],
 [  "does",  104],
- [ "learn",   102]
+[ "learn",   102]
 ];
 
 verbs.randomVerb =()=>{
@@ -47,11 +47,25 @@ var putFace =()=>{
 	a.insertAdjacentHTML("afterend", c);	
 }
 
+let putMean =()=> {
+	let b = '<p>This worked.</p>';
+	let a = document.getElementById("divC");
+	a.insertAdjacentHTML('afterend', b);
+}
+
+let putMedian =()=> {
+	return "This too.";
+}
+
+let putMode =()=> {
+	return "And also this.";
+}
+
 /*
-document.addEventListener( 'DOMContentLoaded', function(){
+document.aener( 'DOMContentLoaded', function(){
 	var rC = gC = bC = 244;
 	//make 300 tiles;
-	var divs300 = "";
+	var divs;
 	var triplets = [ 158, 247, 202, 252, 228, 197, 146, 147, 194, 146, 197, 236]; 
 	let tilesPlace = null;
 	for ( var i = 0; i < 4; i++ ){
