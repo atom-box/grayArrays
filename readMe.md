@@ -1,28 +1,14 @@
-# Coding Bat Exercises
+## to do
+### A to do just for iron chef, in Coding Bat!
 
-## The programs
-Every file above is a standalone js file that can be run in node.js<br/>
-The bottom of each file has explanatory comments about the assigned exercise.<br/>
-I solve these in the morning before I go to work.  Sometimes I solve them at lunch.
+* Make a zero interactive pair of windows that with js can 
+* Four divs to make:
+- myarray.showArray()
+- myarray.average()
+- myarray.median()
+* reintroduce mode tigers as three modules.
+* convert this week to Evan Hahn Grunt server
+* EVERY DAY 45min of new bat
+* EVERY 2 DAYS JOB ADS OR DOCS CONTRIBUTE
+* if daily, this would be 45 + 45 + 45
 
-## Dev Diary
-1/3/2019:  Thanks Nick Parlante for recursion advice.  Thanks Dave Jenkins for real world recursion discussion.
-
-## Future Ideas
-* Go back and re do a couple of these with edge cases.  Use it as a playground for learning Cocoa, et al.
-* Re do in Elm language
-* Shop in some Knuth for re-do.  Benchmark each!
-* Re do as excuse for a front end bootstrap, unsplash, CSS-Flexbox & Grid
-
-## Coding Bat
-The original <em>Coding Bat</em> is an efficient lightweight drill site for Stanford University freshmen.<br/>
-http://codingbat.com/
-<br/>
-There's no registration or anything required at all.<br/>
-A robot at Coding Bat gives you feedback, showing your graph of where you got stuck, at how many seconds.  It 
-shows you random graphs of stuck-time for anonymous peer users.  So cool and elegant!  It is from a 
-Stanford professor.
-
-## Additional sources
-Lately I've been trying by the Fullstack Bootcamp in New York.  They published fizz-buzz-type exercises in this free pdf:  "The Code Challenge Book: How to Ace the Coding Bootcamp Technical Interview"   https://coderbyte.com/ebook <br/>
-I've been reading a used hardcover textbook, Algorithms by Robert Sedgewick, which has state-of-the-art practices, really professional-level stuff.  I haven't implemented any of it yet.  My copy is the 1st edition so it is state-of-the-art in 1980, but, a lot of this stuff, like Quicksort, isn't going away any time soon.  Bonus: the book is written in Pascal!
