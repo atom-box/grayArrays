@@ -7,12 +7,20 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
 <style type="text/css">
 
+:root { 
+    --lightGray: rgb(239, 239, 249); 
+    --darkGray: rgb(76, 77, 75);
+    --skyColor: rgb(124, 172, 255);
+    --palerSky: rgb(165, 220, 255 );
+}
+
+
 button {
   margin-left: 3rem;
 }
 
 .title__hoegarden {
-  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  text-shadow: 1px 1px 2px black, 0 0 25px gray, 0 0 5px black;
   font-family: monospace;
   color: white;
   font-weight: 500;
@@ -35,7 +43,7 @@ button {
   border: 2px  white;
   margin: 0.5rem 2rem;
   background-color: #444;
-  color: #cc9;
+  color:  var(--lightGray) ;
   padding: 0.5rem;
 }
 
@@ -57,7 +65,7 @@ button {
 }
 
 .block {
-  background-color: rgb(238, 235, 220);
+  background-color:  var(--lightGray)       ;
   margin: 1rem;
   padding: 2rem;
 }
@@ -69,162 +77,42 @@ button {
 </head>
 
 <body > 
+
 <header>
 	<h2 class="title__hoegarden float-left">
-		Coding Bat
+		Gray Arrays
 	</h2>
   <h3 class="title__skinny">
-    Examples of syntax for several input elements.
+    Examples of syntax for several array methods.
   </h3>
 </header>
 
   <div class="col-md-9 outblock block elShadow">
-    <h3>Append some HTML</h3>
-    <p>The for/in loop can loop through each element in an object.</p>
+    <h3>Concatenate</h3>
+    <p>Input: several arrays  Returns a single array.</p>
+
+    <div class="codeboard elShadow">
+      <p>
+      js<br>
+      ...</p>
+    </div>
+
     <div class="dashboard given elShadow">
-      <h4 class="dashboard__text">1. Given data</h4>
+      <h4 class="dashboard__text">If the array is this</h4>
       <p class="dashboard__data-noneditable dashboard__text" >
-       Image of a green face.
+       a, b, c
       </p>
     </div>
-    <div class="dashboard input elShadow">
-      <h4  class="dashboard__text">2. Input element</h4>
-      <div>
-      <button  onclick="putFace()">add a green dude</button>
-      </div>
-    </div>
-      <div class="dashboard output elShadow">
-      <h4  class="dashboard__text">3. Output</h4>
-      <div id="appleton"></div>
-    </div>
-    <div class="codeboard elShadow">
-      <p>
-      html<br>
-      &ltbutton onclick="putSomething()"&gtpress&lt/button&gt
-      </p>
-    </div>
-    <div class="codeboard elShadow">
-      <p>
-      js<br>
-      ...</p>
+    <div class="dashboard output elShadow">
+      <h4  class="dashboard__text">This will be returned</h4>
+        <p class="dashboard__data-noneditable dashboard__text" >
+       a, b, c
+        </p>
     </div>
   </div>
 
-  <div class="col-md-9 outblock block elShadow">
-    <h3>Append some text</h3>
-    <p>The for/in loop can loop through each element in an object.</p>
-    <div class="dashboard given elShadow">
-      <h4 class="dashboard__text">1. Given data</h4>
-      <p class="dashboard__data-noneditable dashboard__text" >
-       The data set is the 13 commonest verbs.
-      </p>
-    </div>
-    <div class="dashboard input elShadow">
-      <h4  class="dashboard__text">2. Input element</h4>
-      <div>
-      <button  onclick="putSomething2()">print a verb</button>
-      </div>
-    </div>
-      <div class="dashboard output elShadow">
-      <h4  class="dashboard__text">3. Output</h4>
-      <div id="brookfield">...</div>
-    </div>
-    <div class="codeboard elShadow">
-      <p>
-      html<br>
-      &ltbutton onclick="putSomething()"&gtpress&lt/button&gt
-      </p>
-    </div>
-    <div class="codeboard elShadow">
-      <p>
-      js<br>
-      ...</p>
-    </div>
-  </div>
+ 
 
 
-
-
-
-  <div class="col-md-9 outblock block elShadow">
-    <h3>Tiger Statistics</h3>
-    <div class="dashboard given elShadow">
-      <h4 class="dashboard__text">1. Given data</h4>
-      <p class="dashboard__data-noneditable dashboard__text">...</p>
-    </div>
-    <div class="dashboard input elShadow">
-      <h4  class="dashboard__text">2. Input element</h4>
-      <div>
-      <button  onclick="putMean()">mean</button>        
-      <button  onclick="putMedian()">median</button>        
-      <button  onclick="putMode()">mode</button>        
-      </div>
-    </div>
-      <div class="dashboard output elShadow">
-      <h4  class="dashboard__text">3. Output</h4>
-      <div id="divC">...
-      </div>
-    </div>
-    <div class="codeboard elShadow">
-      <p>
-      html<br>
-      &ltbutton onclick="putSomething()"&gtpress&lt/button&gt
-      </p>
-    </div>
-    <div class="codeboard elShadow">
-      <p>
-      js<br>
-      ...</p>
-    </div>
-  </div>
-
-  <div class="col-md-9 outblock block elShadow">
-    <h3>Generic Input Item</h3>
-    <div class="dashboard given elShadow">
-      <h4 class="dashboard__text">1. Given data</h4>
-      <p class="dashboard__data-noneditable dashboard__text">...</p>
-    </div>
-    <div class="dashboard input elShadow">
-      <h4  class="dashboard__text">2. Input element</h4>
-      <div>
-      <button  onclick="putSomething()">press</button>        
-      </div>
-    </div>
-      <div class="dashboard output elShadow">
-      <h4  class="dashboard__text">3. Output</h4>
-      <div id="divA">A
-      </div>
-    </div>
-    <div class="codeboard elShadow">
-      <p>
-      html<br>
-      &ltbutton onclick="putSomething()"&gtpress&lt/button&gt
-      </p>
-    </div>
-    <div class="codeboard elShadow">
-      <p>
-      js<br>
-      ...</p>
-    </div>
-  </div>
-
-  <div id="divB">B</div>
-
-             <form class="dashboard" oninput="result.value=parseInt(a.value)+parseInt(b.value)">
-                <p>Range: </p>
-                <input type="range" name="b" value="50" /> +
-                <p>Number: </p>
-                <input type="number" name="a" value="10" /> =
-                <output name="result">60</output>
-            </form>
-            <p class="codeboard">
-                &ltform class="thin-blue-line" oninput="result.value=parseInt(a.value)+parseInt(b.value)"&gt<br>
-                &ltp&gtRange: &lt/p&gt<br>
-                &ltinput type="range" name="b" value="50" /&gt +<br>
-                &ltp&gtNumber: &lt/p&gt<br>
-                &ltinput type="number" name="a" value="10" /&gt =<br>
-                &ltoutput name="result"&gt60&lt/output&gt<br>
-            &lt/form&gt<br>
-            </p>
 </body>
 </html>      
