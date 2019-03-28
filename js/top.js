@@ -12,20 +12,24 @@ funcs.push(tempFuncObj);
 tempFuncObj = {
 	name: 'join' ,
 	printableCode: "p r i n n a b l e" ,
+	data1: nihilWordsQuote,
 	verb: function(a){return this.a}
 };
 funcs.push(tempFuncObj);
 tempFuncObj = {
-	name: null,
+	name: 'Gramps & Fran',
 	printableCode: null ,
 	verb: function(a){return this.a}
 };
 funcs.push(tempFuncObj);
 
-
+var para = document.createElement("P");                 // Create a <p> element
+para.innerHTML = "This is a paragraph.";                // Insert text
+document.getElementById("myDIV").appendChild(para); 
 
 
 console.log(`"Top" is loaded.`);
 console.log(`"Bottom" says: ${funcs[0]}`);
 
-// COMMIT Create datatype: array of objects where each is one of the functions for the page stored as NAME,PRINTABLECODE,VERB where verb is the executable func itself
+// Add suggested array  data1, data2
+// Wire the data into the frontend.
