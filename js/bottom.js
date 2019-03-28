@@ -1,5 +1,5 @@
 // Only node.js has this modules stuff?  ES6 whither??
-export default dummy;
+export  {dummy};
 
 
 console.log("hellow from BOTTOM");
