@@ -24,7 +24,7 @@ tempFuncObj = {
 funcs.push(tempFuncObj);
 
 var para = document.createElement("P");                 // Create a <p> element
-para.innerHTML = "This is a paragraph.";                // Insert text
+para.innerHTML = funcs[1].name;                // Insert text
 document.getElementById("myDIV").appendChild(para); 
 
 
@@ -33,3 +33,5 @@ console.log(`"Bottom" says: ${funcs[0]}`);
 
 // Add suggested array  data1, data2
 // Wire the data into the frontend.
+// store data as JSON
+// use the array of objects
