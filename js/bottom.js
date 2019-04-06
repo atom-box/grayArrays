@@ -1,5 +1,5 @@
 // Only node.js has this modules stuff?  ES6 whither??
-export  {dummy};
+export  {dummy, jr};
 
 
 console.log("hellow from BOTTOM");
@@ -7,6 +7,19 @@ const dummy =()=>{
 	return "I come from bottom JS.";
 }
 
+let jr = [
+{
+	"name": "CamEst thou from an OBJECT in TOP?" ,
+	"printableCode": "p r i n n a b l e" ,
+	"data1": "nihilWordsQuote",
+	"verb": "function(a){return this.a}"
+},
+{
+	"name": "Gramps & Fran",
+	"printableCode": "null" ,
+	"verb": "function(a){return this.a}"
+}
+];
 
 
 /*
