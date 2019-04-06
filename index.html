@@ -1,137 +1,157 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>CodingBat | Evan Genest</title>
- <meta charset="UTF-8"> 
+    <title>CodingBat | Evan Genest</title>
+    <meta charset="UTF-8">
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
-<style type="text/css">
-
-:root { 
-    --lightGray: rgb(239, 239, 249); 
-    --darkGray: rgb(76, 77, 75);
-    --skyColor: rgb(124, 172, 255);
-    --palerSky: rgb(165, 220, 255 );
-}
-
-
-button {
-  margin-left: 3rem;
-}
-
-.title__hoegarden {
-  text-shadow: 1px 1px 2px black, 0 0 25px gray, 0 0 5px black;
-  font-family: monospace;
-  color: white;
-  font-weight: 500;
-}
-
-.title__skinny {
-  font-weight: 100;
-  text-indent: 2.5rem;
-  line-height: 2.6rem;
-}
-
-.elShadow {
-  box-shadow: 0 7px 7px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border: 0.1rem hidden;
-  border-radius: 0.3rem;
-}
-
-
-.dashboard {
-  border: 2px  white;
-  margin: 0.5rem 2rem;
-  background-color: #444;
-  color:  var(--lightGray) ;
-  padding: 0.5rem;
-}
-
-.dashboard__text {
-  margin: 0.3rem 1.5rem;
-}
-
-.dashboard__data-noneditable {
-  color: black;
-  background-color: #777;
-}
-
-.codeboard {
-  border: 5px dashed #bbb;
-  margin: 2rem;
-  background-color: #222;
-  color: #aaf;
-  padding: 2rem;
-}
-
-.block {
-  background-color:  var(--lightGray)       ;
-  margin: 1rem;
-  padding: 2rem;
-}
-
-</style>
+    <style type="text/css">
+        :root { 
+            --lightGray: rgb(239, 239, 249); 
+            --darkGray: rgb(76, 77, 75);
+            --skyColor: rgb(124, 172, 255);
+            --palerSky: rgb(165, 220, 255 );
+        }
+        
+        
+        button {
+          margin-left: 3rem;
+        }
+        
+        .title__hoegarden {
+          text-shadow: 1px 1px 2px black, 0 0 25px gray, 0 0 5px black;
+          font-family: monospace;
+          color: white;
+          font-weight: 500;
+        }
+        
+        .title__skinny {
+          font-weight: 100;
+          text-indent: 2.5rem;
+          line-height: 2.6rem;
+        }
+        
+        .elShadow {
+          box-shadow: 0 7px 7px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          border: 0.1rem hidden;
+          border-radius: 0.3rem;
+        }
+        
+        
+        .dashboard {
+          border: 2px  white;
+          margin: 0.5rem 2rem;
+          background-color: #444;
+          color:  var(--lightGray) ;
+          padding: 0.5rem;
+        }
+        
+        .dashboard__text {
+          margin: 0.3rem 1.5rem;
+        }
+        
+        .dashboard__data-noneditable {
+          color: black;
+          background-color: #777;
+        }
+        
+        .codeboard {
+          border: 5px dashed #bbb;
+          margin: 2rem;
+          background-color: #222;
+          color: #aaf;
+          padding: 2rem;
+        }
+        
+        .block {
+          background-color:  var(--lightGray)       ;
+          margin: 1rem;
+          padding: 2rem;
+        }
+    </style>
 
 
 </head>
 
-<body > 
+<body>
 
-<header>
-	<h2 class="title__hoegarden float-left">
-		Gray Arrays
-	</h2>
-  <h3 class="title__skinny">
+    <header>
+        <h2 class="title__hoegarden float-left">
+    Gray Arrays
+  </h2>
+        <h3 class="title__skinny">
     Using "modules" in the ES6 Javascript.
   </h3>
-</header>
+    </header>
 
-  <div class="col-md-9 outblock block elShadow">
-    <h3>Concatenate</h3>
-    <p>Input: several arrays  Returns a single array.</p>
-
-    <div class="codeboard elShadow">
-      <p id="concatenate">
-      The function...<br>
-      Will be here...</p>
+    <div class="col-md-9 outblock block elShadow">
+        <h3>Concatenate</h3>
+        <p>Definition: CONCAT is called as a method of an array and is passed a single argument, which is the other array. A single joining of these is returned as an array.</p>
+        <div class="codeboard elShadow">
+            <p id="concatenate">
+                The function...
+                <br> Will be here...</p>
+        </div>
+        <div class="dashboard given elShadow">
+            <h4 class="dashboard__text">If the array is this</h4>
+            <p class="dashboard__data-noneditable dashboard__text" id='myDIV'>
+            </p>
+        </div>
+        <div class="dashboard output elShadow">
+            <h4 class="dashboard__text">This will be returned</h4>
+            <p class="dashboard__data-noneditable dashboard__text">
+                a, b, c
+            </p>
+        </div>
+    </div>
+    <div class="col-md-9 outblock block elShadow">
+        <h3>Filter</h3>
+        <p>General: FILTER has the same syntax as EVERY and SOME.</p>
+        <p>Definition: filter takes three arguments.  It is common to write these as a tri-input function on the previous line and insert that function as a single argument into FILTER.  If you build it they will come; the three args get an auto-feed, generated by the FILTER, which, after all, is a loop-like method.  When invoked, FILTER will run a loop, and with each turn of the wheel it will access (value, index, array) based on the array that called it.</p>
+        <div class="codeboard elShadow">
+            <p id="concatenate">
+                The function...
+                <br> Will be here...</p>
+        </div>
+        <div class="dashboard given elShadow">
+            <h4 class="dashboard__text">If the array is this</h4>
+            <p class="dashboard__data-noneditable dashboard__text" id='myDIV'>
+            </p>
+        </div>
+        <div class="dashboard output elShadow">
+            <h4 class="dashboard__text">This will be returned</h4>
+            <p class="dashboard__data-noneditable dashboard__text">
+                a, b, c
+            </p>
+        </div>
+    </div>    <div class="col-md-9 outblock block elShadow">
+        <p>This page is the descendent of a memory palace, sketched below, starting with a joyous cat. I use the sketch for remembering JS array functions. The images of joy, slice, cat AND Eve's snake, sigmasum, Brita-filter, AND foreign, map which help
+            me remember join to a string, slice, concatenate, every, some, filter, forEach, and map.</p>
+        <p>To do: a test at the start of the page needs to check for post60 Firefox, et al, b/c of modules use. Best references are at <a href="https://www.sitepoint.com/understanding-es6-modules/">Sitepoint</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export">Mozilla</a>,
+            and <a href="https://medium.com/@mattlag/es6-modules-getting-started-gotchas-2ad154f38e2e">Medium Matt LaGrandeur</a> .</p>
     </div>
 
-    <div class="dashboard given elShadow">
-      <h4 class="dashboard__text">If the array is this</h4>
-      <p class="dashboard__data-noneditable dashboard__text" id='myDIV'>
-      </p>
+    <img src="./assets/betterMnemonic.png">
+    <div class="col-md-9 outblock block elShadow">
+        <footer>
+            <div class="starboard">
+                <span>Evan Genest is on: </span>
+                <i class="fab fa-github"></i>
+                <a href="https://github.com/atom-box/">Github</a>
+                <i class="fab fa-twitter"></i>
+                <a href="https://twitter.com/mistergenest">Twitter</a>
+                <i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/evan-genest-b6648380">LinkedIn </a>
+                <i class="fas fa-desktop"></i><a href="https://littlefurnace.com"> Portfolio </a>
+            </div>
+        </footer>
     </div>
-    <div class="dashboard output elShadow">
-      <h4  class="dashboard__text">This will be returned</h4>
-        <p class="dashboard__data-noneditable dashboard__text" >
-       a, b, c
-        </p>
-    </div>
-</div>
-<div class="col-md-9 outblock block elShadow"><p>This page is the descendent of a memory palace, sketched below, starting with a joyous cat. I use the sketch for remembering JS array functions.  The images of joy, slice, cat AND Eve's snake, sigmasum, Brita-filter, AND foreign, map which help me remember join to a string, slice, concatenate, every, some, filter, forEach, and map.</p>
- <p>To do: a test at the start of the page needs to check for post60 Firefox, et al, b/c of modules use. Best references are at <a href="https://www.sitepoint.com/understanding-es6-modules/">Sitepoint</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export">Mozilla</a>, and <a href="https://medium.com/@mattlag/es6-modules-getting-started-gotchas-2ad154f38e2e">Medium Matt LaGrandeur</a> .</p>
-    </div>
-  
-  <img src="./assets/betterMnemonic.png">
-<div class="col-md-9 outblock block elShadow">
-  <footer>
-    <div class="starboard">
-      <span>Evan Genest is on: </span>
-      <i class="fab fa-github"></i>
-      <a href="https://github.com/atom-box/">Github</a>
-      <i class="fab fa-twitter" ></i>
-      <a href="https://twitter.com/mistergenest">Twitter</a>
-      <i class="fab fa-linkedin" ></i><a href="https://www.linkedin.com/in/evan-genest-b6648380">LinkedIn </a>
-      <i class="fas fa-desktop" ></i><a href="https://littlefurnace.com"> Portfolio </a>
-    </div>
-  </footer>
-</div>
- 
+
 
 </body>
-<script   type="module" src="./js/top.js">
+<script type="module" src="./js/top.js">
 </script>
 
-</html>      
+</html>
