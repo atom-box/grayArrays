@@ -36,6 +36,30 @@ cont = lear_tears.join('****');
 ele.innerHTML = cont;           // Insert text
 document.getElementById("demo3__after").appendChild(ele); 
   //------------------------------------------------
+let sansNever =(w)=>{
+	if (w ==='never'){
+		return false;
+	} else if (w!=='never'){
+		return true;
+	} else {
+		console.log('ERROR');
+	}
+}
+
+
+ele = document.createElement("P");         // Create a <p> element
+lear_tears = bardWords;
+cont = `${lear_tears}`
+ele.innerHTML = cont;            // Insert text
+document.getElementById("demo4__before").appendChild(ele); 
+ele = document.createElement("P");         // Create a <p> element
+lear_tears = bardWords.filter(sansNever);
+cont = `${lear_tears}`
+ele.innerHTML = cont;            // Insert text
+document.getElementById("demo4__after").appendChild(ele); 
+  //------------------------------------------------
+
+
 ele = document.createElement("P");         // Create a <p> element
 let herAge =(o)=>{
 	return o.Age;	
