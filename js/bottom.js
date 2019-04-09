@@ -27,7 +27,7 @@ let rotators =
   {
     "Rk": 1,
     "Pos": "SP",
-    "Name": "Jordan Zimmermann\\zimmejo02",
+    "Name": "Jordan Zimmermann",
     "Age": 33,
     "W": 0,
     "L": 0,
@@ -63,7 +63,7 @@ let rotators =
   {
     "Rk": 2,
     "Pos": "SP",
-    "Name": "Matthew Boyd*\\boydma01",
+    "Name": "Matthew Boyd",
     "Age": 28,
     "W": 0,
     "L": 1,
@@ -99,7 +99,7 @@ let rotators =
   {
     "Rk": 3,
     "Pos": "SP",
-    "Name": "Matt Moore*\\moorema02",
+    "Name": "Matt Moore",
     "Age": 30,
     "W": 0,
     "L": 0,
@@ -135,7 +135,7 @@ let rotators =
   {
     "Rk": 4,
     "Pos": "SP",
-    "Name": "Spencer Turnbull\\turnbsp01",
+    "Name": "Spencer Turnbull",
     "Age": 26,
     "W": 0,
     "L": 1,
@@ -171,7 +171,7 @@ let rotators =
   {
     "Rk": 5,
     "Pos": "SP",
-    "Name": "Tyson Ross\\rossty01",
+    "Name": "Tyson Ross",
     "Age": 32,
     "W": 0,
     "L": 1,
