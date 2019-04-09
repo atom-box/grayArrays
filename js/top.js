@@ -36,6 +36,33 @@ cont = lear_tears.join('****');
 ele.innerHTML = cont;           // Insert text
 document.getElementById("demo3__after").appendChild(ele); 
   //------------------------------------------------
+ele = document.createElement("P");         // Create a <p> element
+let herAge =(o)=>{
+	return o.Age;	
+}
+let herName =(o)=>{
+	return o.Name;
+}
+// Takes age as arg
+let isKid =(o)=>{
+	if (o.Age < 30) return o.Name; 
+}
+
+let starterAges = [];
+starterAges = rotators.map(herAge);
+cont = `Ages: ` + starterAges.join(', ');
+ele.innerHTML =  cont;            // Insert ages
+let starterNames = [];
+starterNames = rotators.map(	herName);
+cont = cont + ' and Names: ' + starterNames.join(', ');
+ele.innerHTML = cont;            // Insert names
+document.getElementById("demo5__before").appendChild(ele); 
+ele = document.createElement("P");         // Create a <p> element
+starterNames = rotators.map(isKid);
+cont = starterNames;
+ele.innerHTML = cont;           // Insert text
+document.getElementById("demo5__after").appendChild(ele); 
+  //------------------------------------------------
 
 
 console.log(`Hit last line of "top.js".`);

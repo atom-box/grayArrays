@@ -152,7 +152,7 @@
     <div class="col-md-9 outblock block elShadow">
         <h3>Filter</h3>
         <div class="codeboard elShadow">
-            <p id="concatenate">gggggggg</p>
+            <p id="concatenate">TODO</p>
         </div>
 
         <div class="dashboard given elShadow">
@@ -169,18 +169,18 @@
 
 
     <div class="col-md-9 outblock block elShadow">
-        <h3>Just show the rotators</h3>
+        <h3>Map.</h3><p> Use map, with an "IF < 30" to show the names of Tigers pitchers younger than 30</p>
         <div class="codeboard elShadow">
-            <p id="concatenate">rotators[0].Name   rotators[0].Age</p>
+            <p>let isKid =(o)=>{<br>if (o.Age < 30) return o.Name;<br>}<br>starterNames = rotators.map(isKid);</p>
         </div>
 
         <div class="dashboard given elShadow">
-            <h4 class="dashboard__text">These are the names</h4>
+            <h4 class="dashboard__text">These are the names and ages</h4>
             <p class="dashboard__data-noneditable dashboard__text" id='demo5__before'>
             </p>
         </div>
         <div class="dashboard output elShadow">
-            <h4 class="dashboard__text">This will be returned</h4>
+            <h4 class="dashboard__text">This are the youngsters</h4>
             <p class="dashboard__data-noneditable dashboard__text" id='demo5__after'>
             </p>
         </div>
