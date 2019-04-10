@@ -8,34 +8,35 @@ let cliffWords = ["Lear", "addresses", "these", "words", "to", "the", "body", "o
 let bardWords = ["O", "thou'lt", "come", "no", "more", "never", "never", "never", "never", "never"];
 
   //---------------------1---------------------------
-let ele = document.createElement("P");         // Create a <p> element
-let cont = `${cliffWords} -AND- ${bardWords}`;
-ele.innerHTML = cont;            // Insert text
+let ele = document.createElement("P");         
+let content = `${cliffWords} -AND- ${bardWords}`;
+ele.innerHTML = content;            // Insert text
 document.getElementById("demo1__before").appendChild(ele); 
-ele = document.createElement("P");         // Create a <p> element
-cont = cliffWords.concat(bardWords);
-ele.innerHTML = cont;           // Insert text
+ele = document.createElement("P");         
+content = cliffWords.concat(bardWords);
+ele.innerHTML = content;           // Insert text
 document.getElementById("demo1__after").appendChild(ele); 
   //---------------------2---------------------------
-ele = document.createElement("P");         // Create a <p> element
-cont = `${bardWords}`
-ele.innerHTML = cont;            // Insert text
+ele = document.createElement("P");         
+content = `${bardWords}`
+ele.innerHTML = content;            // Insert text
 document.getElementById("demo2__before").appendChild(ele); 
-ele = document.createElement("P");         // Create a <p> element
-cont = bardWords.slice(5, 9);
-ele.innerHTML = cont;           // Insert text
+ele = document.createElement("P");         
+content = bardWords.slice(5, 9);
+ele.innerHTML = content;           // Insert text
 document.getElementById("demo2__after").appendChild(ele); 
   //----------------------3--------------------------
-ele = document.createElement("P");         // Create a <p> element
+ele = document.createElement("P");         
 let lear_tears = bardWords.slice(5, 9);
-cont = `${lear_tears}`
-ele.innerHTML = cont;            // Insert text
+content = `${lear_tears}`
+ele.innerHTML = content;            // Insert text
 document.getElementById("demo3__before").appendChild(ele); 
-ele = document.createElement("P");         // Create a <p> element
-cont = lear_tears.join('****');
-ele.innerHTML = cont;           // Insert text
+ele = document.createElement("P");         
+content = lear_tears.join('****');
+ele.innerHTML = content;           // Insert text
 document.getElementById("demo3__after").appendChild(ele); 
   //----------------------4--------------------------
+// Checks for the word "never"
 let sansNever =(w)=>{
 	if (w ==='never'){
 		return false;
@@ -59,7 +60,7 @@ ele.innerHTML = cont;            // Insert text
 document.getElementById("demo4__after").appendChild(ele); 
   //-------------------5-----------------------------
 
-
+// Three functions that feed to MAP functions below
 ele = document.createElement("P");         // Create a <p> element
 let herAge =(o)=>{
 	return o.Age;	
@@ -82,7 +83,6 @@ cont = cont + ' and Names: ' + starterNames.join(', ');
 ele.innerHTML = cont;            // Insert names
 document.getElementById("demo5__before").appendChild(ele); 
 starterNames = rotators.map(isKid);
-console.log(`The kids worked in 85 [${starterNames}]`)
 cont = starterNames;
 ele.innerHTML = cont;           // Insert text
 document.getElementById("demo5__after").appendChild(ele); 
