@@ -7,7 +7,7 @@ import {dummy, jr, rotators} from './bottom.js';
 let cliffWords = ["Lear", "addresses", "these", "words", "to", "the", "body", "of", "Cordelia", "in", "the", "play’s", "final", "scene"];
 let bardWords = ["O", "thou'lt", "come", "no", "more", "never", "never", "never", "never", "never"];
 
-  //------------------------------------------------
+  //---------------------1---------------------------
 let ele = document.createElement("P");         // Create a <p> element
 let cont = `${cliffWords} -AND- ${bardWords}`;
 ele.innerHTML = cont;            // Insert text
@@ -16,7 +16,7 @@ ele = document.createElement("P");         // Create a <p> element
 cont = cliffWords.concat(bardWords);
 ele.innerHTML = cont;           // Insert text
 document.getElementById("demo1__after").appendChild(ele); 
-  //------------------------------------------------
+  //---------------------2---------------------------
 ele = document.createElement("P");         // Create a <p> element
 cont = `${bardWords}`
 ele.innerHTML = cont;            // Insert text
@@ -25,7 +25,7 @@ ele = document.createElement("P");         // Create a <p> element
 cont = bardWords.slice(5, 9);
 ele.innerHTML = cont;           // Insert text
 document.getElementById("demo2__after").appendChild(ele); 
-  //------------------------------------------------
+  //----------------------3--------------------------
 ele = document.createElement("P");         // Create a <p> element
 let lear_tears = bardWords.slice(5, 9);
 cont = `${lear_tears}`
@@ -35,7 +35,7 @@ ele = document.createElement("P");         // Create a <p> element
 cont = lear_tears.join('****');
 ele.innerHTML = cont;           // Insert text
 document.getElementById("demo3__after").appendChild(ele); 
-  //------------------------------------------------
+  //----------------------4--------------------------
 let sansNever =(w)=>{
 	if (w ==='never'){
 		return false;
@@ -57,7 +57,7 @@ lear_tears = bardWords.filter(sansNever);
 cont = `${lear_tears}`
 ele.innerHTML = cont;            // Insert text
 document.getElementById("demo4__after").appendChild(ele); 
-  //------------------------------------------------
+  //-------------------5-----------------------------
 
 
 ele = document.createElement("P");         // Create a <p> element
@@ -77,17 +77,56 @@ starterAges = rotators.map(herAge);
 cont = `Ages: ` + starterAges.join(', ');
 ele.innerHTML =  cont;            // Insert ages
 let starterNames = [];
-starterNames = rotators.map(	herName);
+starterNames = rotators.map(herName);
 cont = cont + ' and Names: ' + starterNames.join(', ');
 ele.innerHTML = cont;            // Insert names
 document.getElementById("demo5__before").appendChild(ele); 
-ele = document.createElement("P");         // Create a <p> element
 starterNames = rotators.map(isKid);
+console.log(`The kids worked in 85 [${starterNames}]`)
 cont = starterNames;
 ele.innerHTML = cont;           // Insert text
 document.getElementById("demo5__after").appendChild(ele); 
-  //------------------------------------------------
+  //-----------------------6-$------------------------
+// WOW -- FOREACH  doesn't return anything! By definition.
+let takeSum =(o)=>{
+	sumK += o.SO9;
+}
 
+starterNames = rotators.map(herName);
+cont = starterNames.join(', ');
+console.log(`The starternames in 97 worked [${starterNames}]`)
+ele.innerHTML = cont;            // Insert text
+document.getElementById("demo6__before").appendChild(ele); 
+let aveK = 0, sumK = 0;
+rotators.forEach(takeSum);
+aveK = sumK / rotators.length;
+aveK = aveK.toFixed(2);
+cont = `The average strikeouts for a Tigers starter PER 9 INNINGS is ${aveK}`;
+ele.innerHTML = cont;            // Insert text
+document.getElementById("demo6__after").appendChild(ele); 
+  //----------------------7--$------------------------
+
+
+  ele = document.createElement("P");         // Create a <p> element
+cont = `${bardWords}`
+ele.innerHTML = cont;            // Insert text
+document.getElementById("demo7__before").appendChild(ele); 
+ele = document.createElement("P");         // Create a <p> element
+cont = bardWords.slice(5, 9);
+ele.innerHTML = cont;           // Insert text
+document.getElementById("demo7__after").appendChild(ele); 
+  //----------------------8---$-----------------------
+
+
+  ele = document.createElement("P");         // Create a <p> element
+cont = `${bardWords}`
+ele.innerHTML = cont;            // Insert text
+document.getElementById("demo8__before").appendChild(ele); 
+ele = document.createElement("P");         // Create a <p> element
+cont = bardWords.slice(5, 9);
+ele.innerHTML = cont;           // Insert text
+document.getElementById("demo8__after").appendChild(ele); 
+  //----------------------3--------------------------
 
 console.log(`Hit last line of "top.js".`);
 
@@ -95,3 +134,11 @@ console.log(`Hit last line of "top.js".`);
 // Wire the data into the frontend.
 // store data as JSON
 // use the array of objects
+
+// ARRAY
+// forEach 1-arg 3-args, filter, every, some,  ISAMEMBEROF
+// splice, toSTRING, reduce, reduceright, indexof, sort, reverse
+// STRING
+// repeat, slice, directlygetchar[], substring
+
+// bring on the regexing	
