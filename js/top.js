@@ -50,13 +50,13 @@ let sansNever =(w)=>{
 
 ele = document.createElement("P");         // Create a <p> element
 lear_tears = bardWords;
-cont = `${lear_tears}`
-ele.innerHTML = cont;            // Insert text
+content = `${lear_tears}`
+ele.innerHTML = content;            // Insert text
 document.getElementById("demo4__before").appendChild(ele); 
 ele = document.createElement("P");         // Create a <p> element
 lear_tears = bardWords.filter(sansNever);
-cont = `${lear_tears}`
-ele.innerHTML = cont;            // Insert text
+content = `${lear_tears}`
+ele.innerHTML = content;            // Insert text
 document.getElementById("demo4__after").appendChild(ele); 
   //-------------------5-----------------------------
 
@@ -75,16 +75,18 @@ let isKid =(o)=>{
 
 let starterAges = [];
 starterAges = rotators.map(herAge);
-cont = `Ages: ` + starterAges.join(', ');
-ele.innerHTML =  cont;            // Insert ages
+content = `Ages: ` + starterAges.join(', ');
+ele.innerHTML =  content;            // Insert ages
 let starterNames = [];
 starterNames = rotators.map(herName);
-cont = cont + ' and Names: ' + starterNames.join(', ');
-ele.innerHTML = cont;            // Insert names
+content = content + ' and Names: ' + starterNames.join(', '); // todo
+content = "Brass. Top Brass."
+ele.innerHTML = content;            // Insert names
 document.getElementById("demo5__before").appendChild(ele); 
 starterNames = rotators.map(isKid);
-cont = starterNames;
-ele.innerHTML = cont;           // Insert text
+content = starterNames; // todo
+content = `Rex Tillerson v. Earth`; // todo
+ele.innerHTML = content;           // Insert text
 document.getElementById("demo5__after").appendChild(ele); 
   //-----------------------6-$------------------------
 // WOW -- FOREACH  doesn't return anything! By definition.
@@ -93,38 +95,38 @@ let takeSum =(o)=>{
 }
 
 starterNames = rotators.map(herName);
-cont = starterNames.join(', ');
+content = starterNames.join(', ');
 console.log(`The starternames in 97 worked [${starterNames}]`)
-ele.innerHTML = cont;            // Insert text
+ele.innerHTML = content;            // Insert text
 document.getElementById("demo6__before").appendChild(ele); 
 let aveK = 0, sumK = 0;
 rotators.forEach(takeSum);
 aveK = sumK / rotators.length;
 aveK = aveK.toFixed(2);
-cont = `The average strikeouts for a Tigers starter PER 9 INNINGS is ${aveK}`;
-ele.innerHTML = cont;            // Insert text
+content = `The average strikeouts for a Tigers starter PER 9 INNINGS is ${aveK}`;
+ele.innerHTML = content;            // Insert text
 document.getElementById("demo6__after").appendChild(ele); 
   //----------------------7--$------------------------
 
 
   ele = document.createElement("P");         // Create a <p> element
-cont = `${bardWords}`
-ele.innerHTML = cont;            // Insert text
+content = `${bardWords}`
+ele.innerHTML = content;            // Insert text
 document.getElementById("demo7__before").appendChild(ele); 
 ele = document.createElement("P");         // Create a <p> element
-cont = bardWords.slice(5, 9);
-ele.innerHTML = cont;           // Insert text
+content = bardWords.slice(5, 9);
+ele.innerHTML = content;           // Insert text
 document.getElementById("demo7__after").appendChild(ele); 
   //----------------------8---$-----------------------
 
 
   ele = document.createElement("P");         // Create a <p> element
-cont = `${bardWords}`
-ele.innerHTML = cont;            // Insert text
+content = `${bardWords}`
+ele.innerHTML = content;            // Insert text
 document.getElementById("demo8__before").appendChild(ele); 
 ele = document.createElement("P");         // Create a <p> element
-cont = bardWords.slice(5, 9);
-ele.innerHTML = cont;           // Insert text
+content = bardWords.slice(5, 9);
+ele.innerHTML = content;           // Insert text
 document.getElementById("demo8__after").appendChild(ele); 
   //----------------------3--------------------------
 
