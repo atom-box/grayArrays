@@ -108,15 +108,23 @@ ele.innerHTML = content;            // Insert text
 document.getElementById("demo6__after").appendChild(ele); 
   //----------------------7--$------------------------
 
-
   ele = document.createElement("P");         // Create a <p> element
-content = `${bardWords}`
+let i = null, allPitchersArrayOfNames = [], youngPitchersArrayOfObjects = [], youngPitchersArrayOfNames = [];
+for ( i in rotators){
+	allPitchersArrayOfNames.unshift(rotators[i].Name );
+}
+
+youngPitchersArrayOfObjects = rotators.filter((o)=>{return o.Age < 30 });
+youngPitchersArrayOfNames = youngPitchersArrayOfObjects.map((o)=>{return o.Name}  );
+
+content = allPitchersArrayOfNames;
 ele.innerHTML = content;            // Insert text
 document.getElementById("demo7__before").appendChild(ele); 
 ele = document.createElement("P");         // Create a <p> element
-content = bardWords.slice(5, 9);
+content = youngPitchersArrayOfNames;
 ele.innerHTML = content;           // Insert text
 document.getElementById("demo7__after").appendChild(ele); 
+
   //----------------------8---$-----------------------
 
 

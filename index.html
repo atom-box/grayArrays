@@ -110,7 +110,7 @@
             </p>
         </div>
         <div class="dashboard output elShadow">
-            <h4 class="dashboard__text">This will be returned</h4>
+            <h4 class="dashboard__text">This would be returned</h4>
             <p class="dashboard__data-noneditable dashboard__text" id="demo1__after">
             </p>
         </div>
@@ -125,12 +125,12 @@
         </div>
 
         <div class="dashboard given elShadow">
-            <h4 class="dashboard__text">If the array was this</h4>
+            <h4 class="dashboard__text">If the array were this</h4>
             <p class="dashboard__data-noneditable dashboard__text" id='demo2__before'>
             </p>
         </div>
         <div class="dashboard output elShadow">
-            <h4 class="dashboard__text">This will be returned</h4>
+            <h4 class="dashboard__text">This would be returned</h4>
             <p class="dashboard__data-noneditable dashboard__text" id='demo2__after'>
             </p>
         </div>
@@ -146,12 +146,12 @@
         </div>
 
         <div class="dashboard given elShadow">
-            <h4 class="dashboard__text">If the array was this</h4>
+            <h4 class="dashboard__text">If the array were this</h4>
             <p class="dashboard__data-noneditable dashboard__text" id='demo3__before'>
             </p>
         </div>
         <div class="dashboard output elShadow">
-            <h4 class="dashboard__text">This will be returned</h4>
+            <h4 class="dashboard__text">This would be returned</h4>
             <p class="dashboard__data-noneditable dashboard__text" id='demo3__after'>
             </p>
         </div>
@@ -193,15 +193,16 @@ lear_tears = bardWords.filter(sansNever);
 
 
     <div class="col-md-9 outblock block elShadow">
-        <h3>Map.</h3><p> Use map, with an "IF < 30" to show the names of <a href="https://www.baseball-reference.com/teams/DET/2019.shtml"> Tigers pitchers </a>younger than 30</p>
+        <h3>Filter (mothballed).</h3><p> Use map, with an "IF < 30" to show the names of <a href="https://www.baseball-reference.com/teams/DET/2019.shtml"> Tigers pitchers </a>younger than 30</p>
         <div class="codeboard elShadow">
         <h4 class="dashboard__text">Syntax</h4>
             <p class="codeboard__code">let isKid =(o)=>{<br>if (o.Age < 30) return o.Name;<br>}<br>starterNames = rotators.map(isKid);</p>
         </div>
 
         <div class="dashboard given elShadow">
-            <h4 class="dashboard__text">These are the names and ages</h4>
+            <h4 class="dashboard__text">These pitchers are the Tigers starting rotation</h4>
             <p class="dashboard__data-noneditable dashboard__text" id='demo5__before'>
+            These are the pitchers in the starting rotation that are under 30.
             </p>
         </div>
         <div class="dashboard output elShadow">
@@ -234,13 +235,16 @@ lear_tears = bardWords.filter(sansNever);
         </div>
     </div>
 
-
+<!-oOOOooOOooOoOooooooOOOooOOooOoOoOooooooooooooOOOOOoOoooo--->
 
     <div class="col-md-9 outblock block elShadow">
-        <h3>Filter.</h3><p> .=.=.</p>
+        <h3>Filter for Tigers rotation, again.</h3><p> Made in Crescendo.</p>
         <div class="codeboard elShadow">
             <h4 class="dashboard__text">Syntax</h4>
-            <p class="codeboard__code">console;</p>
+            <p class="codeboard__code">
+                youngPitchersArrayOfObjects = rotators.filter((o)=>{return o.Age < 30 });<br>
+youngPitchersArrayOfNames = youngPitchersArrayOfObjects.map((o)=>{return o.Name}  );
+            </p>
         </div>
 
         <div class="dashboard given elShadow">
