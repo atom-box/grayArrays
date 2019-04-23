@@ -1,4 +1,4 @@
-import {dummy, jr, rotators} from './bottom.js';
+import {dummy, jr, rotators, nouns, verbs} from './bottom.js';
 // to avoid CORS error, get path right
 // THE file that is the head can be anywhere, but the next called path must have same insert point on the tree.
 // See also SWISSREGEX project
