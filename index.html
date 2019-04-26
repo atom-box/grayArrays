@@ -14,6 +14,8 @@
             --darkGray: rgb(76, 77, 75);
             --skyColor: rgb(124, 172, 255);
             --palerSky: rgb(165, 220, 255 );
+            --infieldGreen: rgb(52, 147, 28);
+            --tigersNavy: rgb(7, 23, 53);
         }
         
         button {
@@ -78,6 +80,18 @@
           margin: 1rem;
           padding: 2rem;
         }
+
+        .block-losTigres {
+          background-color:  var(--tigersNavy);
+          margin: 1rem;
+          padding: 2rem;
+          color: white;
+        }
+
+        .block-losTigres__green-background {
+              background-color:  var(--infieldGreen);
+        }
+
     </style>
 
 
@@ -237,22 +251,22 @@ lear_tears = bardWords.filter(sansNever);
 
 <!-oOOOooOOooOoOooooooOOOooOOooOoOoOooooooooooooOOOOOoOoooo--->
 
-    <div class="col-md-9 outblock block elShadow">
+    <div class="col-md-9 outblock block elShadow block-losTigres ">
         <h3>Filter for Tigers rotation, again.</h3><p> Made in Crescendo.</p>
         <div class="codeboard elShadow">
-            <h4 class="dashboard__text">Syntax</h4>
+            <h4 class="dashboard__text ">Syntax</h4>
             <p class="codeboard__code">
                 youngPitchersArrayOfObjects = rotators.filter((o)=>{return o.Age < 30 });<br>
 youngPitchersArrayOfNames = youngPitchersArrayOfObjects.map((o)=>{return o.Name}  );
             </p>
         </div>
 
-        <div class="dashboard given elShadow">
+        <div class="block-losTigres__green-background">
             <h4 class="dashboard__text">These are the names and ages</h4>
             <p class="dashboard__data-noneditable dashboard__text" id='demo7__before'>
             </p>
         </div>
-        <div class="dashboard output elShadow">
+        <div class="block-losTigres__green-background">
             <h4 class="dashboard__text">This are the youngsters</h4>
             <p class="dashboard__data-noneditable dashboard__text" id='demo7__after'>
             </p>
