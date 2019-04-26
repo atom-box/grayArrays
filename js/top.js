@@ -73,9 +73,11 @@ let isKid =(o)=>{
 	if (o.Age < 30) return o.Name; 
 }
 
-let starterAges = [];
-starterAges = rotators.map(herAge);
-content = `Ages: ` + starterAges.join(', ');
+// make an initials mapper for each rotator
+
+let starterMonograms = [];
+starterMonograms = rotators.map(herAge);
+content = `Ages: ` + starterMonograms.join(', ');
 ele.innerHTML =  content;            // Insert ages
 let starterNames = [];
 starterNames = rotators.map(herName);
