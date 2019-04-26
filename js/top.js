@@ -1,11 +1,15 @@
-import {dummy, jr, rotators, nouns, verbs} from './bottom.js';
+
+NEXT:  LOGIC IN SECTION 5 NEEDS FULLNAME ACCUMULATOR
+NEXT:  LOGIC IN SECTION 5 NEEDS INITIALS CREATOR & ACCUMULATOR
+
+
+
+
+import {dummy, jr, rotators, nouns, verbs, cliffWords, bardWords} from './bottom.js';
 // to avoid CORS error, get path right
 // THE file that is the head can be anywhere, but the next called path must have same insert point on the tree.
 // See also SWISSREGEX project
 
-
-let cliffWords = ["Lear", "addresses", "these", "words", "to", "the", "body", "of", "Cordelia", "in", "the", "play’s", "final", "scene"];
-let bardWords = ["O", "thou'lt", "come", "no", "more", "never", "never", "never", "never", "never"];
 
   //---------------------1---------------------------
 let ele = document.createElement("P");         
@@ -62,31 +66,21 @@ document.getElementById("demo4__after").appendChild(ele);
 
 // Three functions that feed to MAP functions below
 ele = document.createElement("P");         // Create a <p> element
-let herAge =(o)=>{
+let monogramatize =(o)=>{
 	return o.Age;	
 }
-let herName =(o)=>{
-	return o.Name;
-}
-// Takes age as arg
-let isKid =(o)=>{
-	if (o.Age < 30) return o.Name; 
-}
 
-// make an initials mapper for each rotator
-
-let starterMonograms = [];
-starterMonograms = rotators.map(herAge);
-content = `Ages: ` + starterMonograms.join(', ');
-ele.innerHTML =  content;            // Insert ages
+// Show full name of each rotator
 let starterNames = [];
-starterNames = rotators.map(herName);
-content = content + ' and Names: ' + starterNames.join(', '); // todo
-content = "Brass. Top Brass."
-ele.innerHTML = content;            // Insert names
+starterNames = rotators.map(monogramatize);
+
+content = `Ages: ` + starterNames.join(', ');
+ele.innerHTML =  content;            // Insert ages
 document.getElementById("demo5__before").appendChild(ele); 
-starterNames = rotators.map(isKid);
-content = starterNames; // todo
+
+// Show Initials of each rotator
+starterMonograms = rotators.map(isKid);
+content = starterMonograms; // todo
 content = `Rex Tillerson v. Earth`; // todo
 ele.innerHTML = content;           // Insert text
 document.getElementById("demo5__after").appendChild(ele); 
@@ -96,7 +90,7 @@ let takeSum =(o)=>{
 	sumK += o.SO9;
 }
 
-starterNames = rotators.map(herName);
+starterMonograms = rotators.map(herName);
 content = starterNames.join(', ');
 console.log(`The starternames in 97 worked [${starterNames}]`)
 ele.innerHTML = content;            // Insert text

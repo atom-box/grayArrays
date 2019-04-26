@@ -1,11 +1,14 @@
 // Only node.js has this modules stuff?  ES6 whither??
-export  {dummy, jr, rotators, nouns, verbs};
+export  {dummy, jr, rotators, nouns, verbs, cliffWords, bardWords};
 
 
 console.log("hellow from BOTTOM");
 const dummy =()=>{
 	return "I come from bottom JS.";
 }
+
+let cliffWords = ["Lear", "addresses", "these", "words", "to", "the", "body", "of", "Cordelia", "in", "the", "play’s", "final", "scene"];
+let bardWords = ["O", "thou'lt", "come", "no", "more", "never", "never", "never", "never", "never"];
 
 let jr = [
 {
