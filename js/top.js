@@ -1,6 +1,6 @@
 
-NEXT:  LOGIC IN SECTION 5 NEEDS FULLNAME ACCUMULATOR
-NEXT:  LOGIC IN SECTION 5 NEEDS INITIALS CREATOR & ACCUMULATOR
+// NEXT:  LOGIC IN SECTION 5 NEEDS FULLNAME ACCUMULATOR
+// NEXT:  LOGIC IN SECTION 5 NEEDS INITIALS CREATOR & ACCUMULATOR
 
 
 
@@ -79,7 +79,7 @@ ele.innerHTML =  content;            // Insert ages
 document.getElementById("demo5__before").appendChild(ele); 
 
 // Show Initials of each rotator
-starterMonograms = rotators.map(isKid);
+let starterMonograms = rotators.map(()=>{return null}); // TODO this was 'isKid' function which seems missing
 content = starterMonograms; // todo
 content = `Rex Tillerson v. Earth`; // todo
 ele.innerHTML = content;           // Insert text
@@ -90,7 +90,7 @@ let takeSum =(o)=>{
 	sumK += o.SO9;
 }
 
-starterMonograms = rotators.map(herName);
+starterMonograms = rotators.map((n)=> {return "--Charlie X--"});
 content = starterNames.join(', ');
 console.log(`The starternames in 97 worked [${starterNames}]`)
 ele.innerHTML = content;            // Insert text
