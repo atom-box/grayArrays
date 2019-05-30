@@ -133,16 +133,16 @@
 
     <div class="col-md-9 outblock block elShadow">
         <h3>Concatenate</h3><p>Join an array of words from King Lear to commentary about those words.</p>
-        <div class="codeboard elShadow">
-            <h4 class="dashboard__text">Syntax</h4>
-            <p  class="codeboard__code" id="concatenate" class="codeboard__code">cont = cliffWords.concat(bardWords);</p>
-        </div>
+
 
         <div class="dashboard given elShadow">
             <h4 class="dashboard__text">If the two arrays were these</h4>
             <p class="dashboard__data-noneditable dashboard__text" id='demo1__before'>
-
             </p>
+        </div>
+                <div class="codeboard elShadow">
+            <h4 class="dashboard__text">And this is the function</h4>
+            <p  class="codeboard__code" id="concatenate" class="codeboard__code">cont = cliffWords.concat(bardWords);</p>
         </div>
         <div class="dashboard output elShadow">
             <h4 class="dashboard__text">This single array would be returned</h4>
@@ -154,15 +154,16 @@
 
     <div class="col-md-9 outblock block elShadow">
         <h3>Slice</h3><p>Pluck several elements from the middle of an array.</p>
-        <div class="codeboard elShadow">
-        <h4 class="dashboard__text">Syntax</h4>
-            <p  class="codeboard__code" id="concatenate">cont = bardWords.slice(5, 9);</p>
-        </div>
+
 
         <div class="dashboard given elShadow">
             <h4 class="dashboard__text">If the array were this</h4>
             <p class="dashboard__data-noneditable dashboard__text" id='demo2__before'>
             </p>
+        </div>
+        <div class="codeboard elShadow">
+        <h4 class="dashboard__text">And this is the function</h4>
+            <p  class="codeboard__code" id="concatenate">cont = bardWords.slice(5, 9);</p>
         </div>
         <div class="dashboard output elShadow">
             <h4 class="dashboard__text">This would be returned</h4>
@@ -175,15 +176,16 @@
 
     <div class="col-md-9 outblock block elShadow">
         <h3>Join</h3><p>Convert an array to a string, optionally inserting some sort of string within its joints.</p>
-        <div class="codeboard elShadow">
-        <h4 class="dashboard__text">Syntax</h4>
-            <p  class="codeboard__code" id="concatenate">cont = lear_tears.join('****');</p>
-        </div>
+
 
         <div class="dashboard given elShadow">
             <h4 class="dashboard__text">If the array were this</h4>
             <p class="dashboard__data-noneditable dashboard__text" id='demo3__before'>
             </p>
+        </div>
+                <div class="codeboard elShadow">
+        <h4 class="dashboard__text">And this is the function</h4>
+            <p  class="codeboard__code" id="concatenate">cont = lear_tears.join('****');</p>
         </div>
         <div class="dashboard output elShadow">
             <h4 class="dashboard__text">This would be returned</h4>
@@ -195,8 +197,15 @@
 
     <div class="col-md-9 outblock block elShadow">
         <h3>Filter</h3><p>Remove any occurance of "never" from Lear's lament.</p>
-        <div class="codeboard elShadow">
-        <h4 class="dashboard__text">Syntax</h4>
+
+
+        <div class="dashboard given elShadow">
+            <h4 class="dashboard__text">If the array was this</h4>
+            <p class="dashboard__data-noneditable dashboard__text" id='demo4__before'>
+            </p>
+        </div>
+                <div class="codeboard elShadow">
+        <h4 class="dashboard__text">And this is the function</h4>
             <p  class="codeboard__code" id="concatenate">
 let sansNever =(w)=>{<br>
     if (w ==='never'){<br>
@@ -213,12 +222,6 @@ lear_tears = bardWords.filter(sansNever);
 
             </p>
         </div>
-
-        <div class="dashboard given elShadow">
-            <h4 class="dashboard__text">If the array was this</h4>
-            <p class="dashboard__data-noneditable dashboard__text" id='demo4__before'>
-            </p>
-        </div>
         <div class="dashboard output elShadow">
             <h4 class="dashboard__text">This will be returned</h4>
             <p class="dashboard__data-noneditable dashboard__text" id='demo4__after'>
@@ -230,16 +233,17 @@ lear_tears = bardWords.filter(sansNever);
 
     <div class="col-md-9 outblock block elShadow">
         <h3>Map</h3><p>Convert each Tiger pitcher's name into their initials.</p>
-        <div class="codeboard elShadow">
-            <h4 class="dashboard__text">Syntax</h4>
-            <p  class="codeboard__code" id="concatenate" class="codeboard__code">dunno dunno dunno know-not;</p>
-        </div>
+
 
         <div class="dashboard given elShadow">
             <h4 class="dashboard__text">If the athlete's full names are these:</h4>
             <p class="dashboard__data-noneditable dashboard__text" id='demo5__before'>
 
             </p>
+        </div>
+                <div class="codeboard elShadow">
+            <h4 class="dashboard__text">And this is the function</h4>
+            <p  class="codeboard__code" id="concatenate" class="codeboard__code">dunno dunno dunno know-not;</p>
         </div>
         <div class="dashboard output elShadow">
             <h4 class="dashboard__text">Their initials are these:</h4>
@@ -252,15 +256,16 @@ lear_tears = bardWords.filter(sansNever);
 
     <div class="col-md-9 outblock block elShadow">
         <h3>ForEach.</h3><p> ...</p>
-        <div class="codeboard elShadow">
-        <h4 class="dashboard__text">Syntax</h4>
-            <p class="codeboard__code">console;</p>
-        </div>
+
 
         <div class="dashboard given elShadow">
             <h4 class="dashboard__text">For these pitchers</h4>
             <p class="dashboard__data-noneditable dashboard__text" id='demo6__before'>
             </p>
+        </div>
+                <div class="codeboard elShadow">
+        <h4 class="dashboard__text">And this is the function</h4>
+            <p class="codeboard__code">console;</p>
         </div>
         <div class="dashboard output elShadow">
             <h4 class="dashboard__text">Tiger 2019 rotation average:</h4>
@@ -272,17 +277,18 @@ lear_tears = bardWords.filter(sansNever);
 
     <div class="col-md-9 outblock block elShadow  ">
         <h3>Filter for The Youth in the '19 Tigers rotation.</h3><p> Colors from <a href="https://www.mlb.com/tigers">Detroit</a>.   Data from <a href="https://www.baseball-reference.com/teams/DET/2019.shtml">Baseball Reference</a>.</p>
-        <div class="codeboard elShadow">
-            <h4 class="dashboard__text ">Syntax</h4>
-            <p class="codeboard__code">
-                youngPitchersArrayOfObjects = rotators.filter((o)=>{return o.Age < 30 });<br>
-youngPitchersArrayOfNames = youngPitchersArrayOfObjects.map((o)=>{return o.Name}  );
-            </p>
-        </div>
+
 
         <div class="dashboard output elShadow navyBackground">
             <h4 class="dashboard__text "><span class="greenBackground"> These are the names and ages</span></h4>
             <p class="dashboard__data-noneditable dashboard__text" id='demo7__before'> 
+            </p>
+        </div>
+                <div class="codeboard elShadow">
+            <h4 class="dashboard__text ">And this is the function</h4>
+            <p class="codeboard__code">
+                youngPitchersArrayOfObjects = rotators.filter((o)=>{return o.Age < 30 });<br>
+youngPitchersArrayOfNames = youngPitchersArrayOfObjects.map((o)=>{return o.Name}  );
             </p>
         </div>
         <div class="dashboard output elShadow navyBackground">
@@ -296,15 +302,16 @@ youngPitchersArrayOfNames = youngPitchersArrayOfObjects.map((o)=>{return o.Name}
 
     <div class="col-md-9 outblock block elShadow">
         <h3>Every.</h3><p> .=.=.</p>
-        <div class="codeboard elShadow">
-            <h4 class="dashboard__text">Syntax</h4>
-            <p class="codeboard__code">console;</p>
-        </div>
+
 
         <div class="dashboard given elShadow">
             <h4 class="dashboard__text">These are the names and ages</h4>
             <p class="dashboard__data-noneditable dashboard__text" id='demo8__before'>
             </p>
+        </div>
+                <div class="codeboard elShadow">
+            <h4 class="dashboard__text">And this is the function</h4>
+            <p class="codeboard__code">console;</p>
         </div>
         <div class="dashboard output elShadow">
             <h4 class="dashboard__text">This are the youngsters</h4>
