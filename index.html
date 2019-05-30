@@ -113,27 +113,28 @@
     Gray Arrays
   </h2>
         <h3 class="title__skinny">
-    A recitation of array and string methods
+    A recitation of methods
   </h3>
-  <p class="title__explain">What's going on here:  After getting evangelized to Elm.js on the frontend, I've decided to double down on the functional flavor of Javascript!  So here are some array methods, with an emphasis on the ES5 array functions.  The scripts for this page are modestly modularized.</p>
+  <p class="title__explain">What's going on here:  After getting evangelized to compiled JS by purely functional <a href="https://elm-lang.org/">Elm.js</a> on the frontend, I've decided to double-down on the functional flavor of Javascript itself!  So here are examples of JS array methods, with an emphasis on the ES5 array functions.  The scripts for this page are modestly modularized.  The CSS is very ad-hoc, no-pasting.</p>
     </header>
 <!-     uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu  -->
 <div class="container-fluid">
 <!-- Navbar Menu -->
 
         <ul >
-            <button><a href="#">CON</a></button>
-            <button><a href="#">SLI</a></button>
-            <button><a href="#">JOI</a></button>
-            <button><a href="#">FIL</a></button>
-            <button><a href="#">etc</a></button>
+            <button><a href="index.html#concatenate">CAT</a></button>
+            <button><a href="index.html#join">JOI</a></button>
+            <button><a href="index.html#map">MAP</a></button>
+            <button><a href="index.html#for-each">EAC</a></button>
+            <button><a href="index.html#filter2">FIL</a></button>
+            <button><a href="index.html#every">EVE</a></button>
         </ul>
  
 </div>
 <!-     uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu  -->
 
 
-    <div class="col-md-9 outblock block elShadow">
+    <div class="col-md-9 outblock block elShadow" id="concatenate">
         <h3>Concatenate</h3><p>Join an array of words from King Lear to commentary about those words.</p>
 
 
@@ -154,7 +155,7 @@
     </div>
 
 
-    <div class="col-md-9 outblock block elShadow">
+    <div class="col-md-9 outblock block elShadow" id="slice">
         <h3>Slice</h3><p>Pluck several elements from the middle of an array.</p>
 
 
@@ -176,7 +177,7 @@
 
 
 
-    <div class="col-md-9 outblock block elShadow">
+    <div class="col-md-9 outblock block elShadow"  id="join">
         <h3>Join</h3><p>Convert an array to a string, optionally inserting some sort of string within its joints.</p>
 
 
@@ -197,7 +198,7 @@
     </div>
 
 
-    <div class="col-md-9 outblock block elShadow">
+    <div class="col-md-9 outblock block elShadow"  id="filter1">
         <h3>Filter</h3><p>Remove any occurance of "never" from Lear's lament.</p>
 
 
@@ -233,7 +234,7 @@ lear_tears = bardWords.filter(sansNever);
 
 
 
-    <div class="col-md-9 outblock block elShadow">
+    <div class="col-md-9 outblock block elShadow"  id="map">
         <h3>Map</h3><p>Convert each Tiger pitcher's name into their initials.</p>
 
 
@@ -256,7 +257,7 @@ lear_tears = bardWords.filter(sansNever);
 
 
 
-    <div class="col-md-9 outblock block elShadow">
+    <div class="col-md-9 outblock block elShadow"   id="for-each">
         <h3>ForEach.</h3><p> ...</p>
 
 
@@ -277,7 +278,7 @@ lear_tears = bardWords.filter(sansNever);
     </div>
 
 
-    <div class="col-md-9 outblock block elShadow  ">
+    <div class="col-md-9 outblock block elShadow" id="filter2">
         <h3>Filter for The Youth in the '19 Tigers rotation.</h3><p> Colors from <a href="https://www.mlb.com/tigers">Detroit</a>.   Data from <a href="https://www.baseball-reference.com/teams/DET/2019.shtml">Baseball Reference</a>.</p>
 
 
@@ -302,7 +303,7 @@ youngPitchersArrayOfNames = youngPitchersArrayOfObjects.map((o)=>{return o.Name}
 
 
 
-    <div class="col-md-9 outblock block elShadow">
+    <div class="col-md-9 outblock block elShadow"   id="every">
         <h3>Every.</h3><p> .=.=.</p>
 
 
@@ -331,14 +332,24 @@ youngPitchersArrayOfNames = youngPitchersArrayOfObjects.map((o)=>{return o.Name}
     <div class="col-md-9 outblock block elShadow">
         <h2>To do:</h2>
         <ul>
-            <li>Move script out of html and back into top.js again!</li>
-            <li>Show the code syntax above each pair of windows</li>
             <li>Whip that unruly text to stay inside the div</li>
             <li> Wire the data into the frontend.</li>
             <li> store data as JSON</li>
             <li> use the array of objects</li>
         </ul>
     </div>
+
+    <div class="col-md-9 outblock block elShadow">
+        <h2>Changelog:</h2>
+        <ul>
+            <li>Moved script out of html and back into top.js again!</li>
+            <li>Added the code syntax to the middle, between the <em>Before</em> and <em>After</em> of each example.</li>
+            <li>Added round nav buttons.</li>
+            <li>Added Tigers colors to one div in a fit of enthusiasm for MLB.</li>
+        </ul>
+ 
+</div>
+
 
     <div class="col-md-9 outblock block elShadow">
         <footer>
