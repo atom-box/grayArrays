@@ -43,7 +43,9 @@
           text-indent: 2.5rem;
           line-height: 2.6rem;
         }
-        
+        .title__explain {
+            padding: 0.4rem 2rem;
+        }
         .elShadow {
           box-shadow: 0 7px 7px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           border: 0.1rem hidden;
@@ -113,7 +115,7 @@
         <h3 class="title__skinny">
     A recitation of array and string methods
   </h3>
-  <p>What's going on here:  Let's highlight the functional flavor of Javascript with some examples of the newer array methods.  The scripts for this page are modestly modularized.</p>
+  <p class="title__explain">What's going on here:  After getting evangelized to Elm.js on the frontend, I've decided to double down on the functional flavor of Javascript!  So here are some array methods, with an emphasis on the ES5 array functions.  The scripts for this page are modestly modularized.</p>
     </header>
 <!-     uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu  -->
 <div class="container-fluid">
@@ -322,7 +324,7 @@ youngPitchersArrayOfNames = youngPitchersArrayOfObjects.map((o)=>{return o.Name}
 
     <div class="col-md-9 outblock block elShadow">
         <h2>Napkin sketch</h2>
-        <p>A <a href="https://www.artofmanliness.com/articles/how-to-memorize-a-deck-of-cards/">memory palace</a> for memorizing the methods of arrays and strings:
+        <p>My cryptic <a href="https://www.artofmanliness.com/articles/how-to-memorize-a-deck-of-cards/">memory palace</a> for memorizing all of the above methods of arrays and strings:
         </p>
         <img src="./assets/betterMnemonic.png">
     </div>
