@@ -128,80 +128,16 @@
 <!-- Navbar Menu -->
 
         <ul >
-            <button><a href="index.html#concatenate" title="conCATenate the arrays (not functional)" >CAT</a></button>
-            <button><a href="index.html#join" title="JOIn the arrays (not functional)">JOI</a></button>
             <button><a href="index.html#map" title="MAP the array">MAP</a></button>
             <button><a href="index.html#for-each" title="forEACh item of the array">EAC</a></button>
             <button><a href="index.html#filter2" title="FILter the array">FIL</a></button>
             <button><a href="index.html#every" title="for EVEry item in the array">EVE</a></button>
-        </ul>
+            <button><a href="index.html#concatenate" title="conCATenate the arrays (not functional)" >CAT</a></button>
+            <button><a href="index.html#join" title="JOIn the arrays (not functional)">JOI</a></button>        </ul>
  
 </div>
 <!-     uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu  -->
 
-
-    <div class="col-md-9 outblock block elShadow" id="concatenate">
-        <h3>Concatenate</h3><p>Join an array of words from King Lear to commentary about those words.</p>
-
-
-        <div class="dashboard given elShadow">
-            <h4 class="dashboard__text">If the two arrays were these</h4>
-            <p class="dashboard__data-noneditable dashboard__text" id='demo1__before'>
-            </p>
-        </div>
-                <div class="codeboard elShadow">
-            <h4 class="dashboard__text">And this is the function</h4>
-            <p  class="codeboard__code" id="concatenate" class="codeboard__code">cont = cliffWords.concat(bardWords);</p>
-        </div>
-        <div class="dashboard output elShadow">
-            <h4 class="dashboard__text">This single array would be returned</h4>
-            <p class="dashboard__data-noneditable dashboard__text" id="demo1__after">
-            </p>
-        </div>
-    </div>
-
-
-    <div class="col-md-9 outblock block elShadow" id="slice">
-        <h3>Slice</h3><p>Pluck several elements from the middle of an array.</p>
-
-
-        <div class="dashboard given elShadow">
-            <h4 class="dashboard__text">If the array were this</h4>
-            <p class="dashboard__data-noneditable dashboard__text" id='demo2__before'>
-            </p>
-        </div>
-        <div class="codeboard elShadow">
-        <h4 class="dashboard__text">And this is the function</h4>
-            <p  class="codeboard__code" id="concatenate">cont = bardWords.slice(5, 9);</p>
-        </div>
-        <div class="dashboard output elShadow">
-            <h4 class="dashboard__text">This would be returned</h4>
-            <p class="dashboard__data-noneditable dashboard__text" id='demo2__after'>
-            </p>
-        </div>
-    </div>
-
-
-
-    <div class="col-md-9 outblock block elShadow"  id="join">
-        <h3>Join</h3><p>Convert an array to a string, optionally inserting some sort of string within its joints.</p>
-
-
-        <div class="dashboard given elShadow">
-            <h4 class="dashboard__text">If the array were this</h4>
-            <p class="dashboard__data-noneditable dashboard__text" id='demo3__before'>
-            </p>
-        </div>
-                <div class="codeboard elShadow">
-        <h4 class="dashboard__text">And this is the function</h4>
-            <p  class="codeboard__code" id="concatenate">cont = lear_tears.join('****');</p>
-        </div>
-        <div class="dashboard output elShadow">
-            <h4 class="dashboard__text">This would be returned</h4>
-            <p class="dashboard__data-noneditable dashboard__text" id='demo3__after'>
-            </p>
-        </div>
-    </div>
 
 
     <div class="col-md-9 outblock block elShadow"  id="filter1">
@@ -325,6 +261,69 @@ youngPitchersArrayOfNames = youngPitchersArrayOfObjects.map((o)=>{return o.Name}
         <div class="dashboard output elShadow">
             <h4 class="dashboard__text">This are the youngsters</h4>
             <p class="dashboard__data-noneditable dashboard__text" id='demo8__after'>
+            </p>
+        </div>
+    </div>
+
+    <div class="col-md-9 outblock block elShadow" id="concatenate">
+        <h3>Concatenate</h3><p>Join an array of words from King Lear to commentary about those words.</p>
+
+
+        <div class="dashboard given elShadow">
+            <h4 class="dashboard__text">If the two arrays were these</h4>
+            <p class="dashboard__data-noneditable dashboard__text" id='demo1__before'>
+            </p>
+        </div>
+                <div class="codeboard elShadow">
+            <h4 class="dashboard__text">And this is the function</h4>
+            <p  class="codeboard__code" id="concatenate" class="codeboard__code">cont = cliffWords.concat(bardWords);</p>
+        </div>
+        <div class="dashboard output elShadow">
+            <h4 class="dashboard__text">This single array would be returned</h4>
+            <p class="dashboard__data-noneditable dashboard__text" id="demo1__after">
+            </p>
+        </div>
+    </div>
+
+
+    <div class="col-md-9 outblock block elShadow" id="slice">
+        <h3>Slice</h3><p>Pluck several elements from the middle of an array.</p>
+
+
+        <div class="dashboard given elShadow">
+            <h4 class="dashboard__text">If the array were this</h4>
+            <p class="dashboard__data-noneditable dashboard__text" id='demo2__before'>
+            </p>
+        </div>
+        <div class="codeboard elShadow">
+        <h4 class="dashboard__text">And this is the function</h4>
+            <p  class="codeboard__code" id="concatenate">cont = bardWords.slice(5, 9);</p>
+        </div>
+        <div class="dashboard output elShadow">
+            <h4 class="dashboard__text">This would be returned</h4>
+            <p class="dashboard__data-noneditable dashboard__text" id='demo2__after'>
+            </p>
+        </div>
+    </div>
+
+
+
+    <div class="col-md-9 outblock block elShadow"  id="join">
+        <h3>Join</h3><p>Convert an array to a string, optionally inserting some sort of string within its joints.</p>
+
+
+        <div class="dashboard given elShadow">
+            <h4 class="dashboard__text">If the array were this</h4>
+            <p class="dashboard__data-noneditable dashboard__text" id='demo3__before'>
+            </p>
+        </div>
+                <div class="codeboard elShadow">
+        <h4 class="dashboard__text">And this is the function</h4>
+            <p  class="codeboard__code" id="concatenate">cont = lear_tears.join('****');</p>
+        </div>
+        <div class="dashboard output elShadow">
+            <h4 class="dashboard__text">This would be returned</h4>
+            <p class="dashboard__data-noneditable dashboard__text" id='demo3__after'>
             </p>
         </div>
     </div>
