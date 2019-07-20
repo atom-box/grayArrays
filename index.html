@@ -7,8 +7,12 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
-
     <style type="text/css">
+    /*
+    I meant this page as a pure CSS learning exercise BUT it has BS. I'm mostly
+    using Bootstrap as a style reset.  TODO: write by hand a re-set.
+    */
+
         :root { 
             --lightGray: rgb(239, 239, 244); 
             --darkGray: rgb(76, 77, 75);
@@ -51,7 +55,17 @@
           border: 0.1rem hidden;
           border-radius: 0.3rem;
         }
-        
+        .topboard {
+            border: 5px solid #000;
+          margin: 0.5rem 2rem;
+          background-color: #ddd;
+          padding: 0.5rem;
+        }
+        .topboard__text {
+          margin: 0.3rem 1.5rem;
+          color: #333;
+        }
+
         
         .dashboard {
           border: 2px  white;
@@ -115,6 +129,7 @@
         <h3 class="title__skinny">
     for web-page reliability
   </h3>
+      <div class="topboard topboard__text">
 
     <ul>
         <li>The best way to make a webpage reliable is probably to write it in something approaching Haskell, like using the <a href="https://elm-lang.org/">Elm</a> compiler.  This would require migrating to an entirely new language and training the team in a new paradigm.  (Although this is exactly what IBM, Ford Motor Company, and famously No Red Ink have all done.</li>
@@ -123,8 +138,9 @@
 
     </ul> 
       <p class="title__explain">"Pure functions are easier to reason about. Testing is easier, and pure functions lend themselves well to techniques like property-based testing. Debugging is easier. Programs are more bulletproof. " - <a href="https://alvinalexander.com/scala/fp-book/benefits-of-functional-programming">  Alvin Alexander</a>.</p> 
+</div>
+      <div class="topboard topboard__text">
       <p>This page is just a list of syntax examples that emphasize Functional programming.  Test yourself: try to guess the Functional principle for each abbreviation here.</p>
-    </header>
 <!-     uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu  -->
 <div class="container-fluid">
 <!-- Navbar Menu -->
@@ -138,6 +154,9 @@
             <button><a href="index.html#join" title="JOIn the arrays">JOI</a></button>        </ul>
  
 </div>
+</div>
+    </header>
+
 <!-     uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu  -->
 
 
