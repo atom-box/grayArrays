@@ -6,116 +6,115 @@
     <meta charset="UTF-8">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    <!-- INCREMENTAL REACT  -->
     <script src="js/react.development.min.js"></script>
     <script src="js/react-dom.development.min.js"></script>
     <script src="js/browser.min.js"></script>
+    <script type="text/babel">
+        const Hello = () => {
+            return (
+                <h1>Hello, World!</h1>
+            );
+        }
+
+        ReactDOM.render(<Hello/>, document.getElementById('root'));
+    </script>
+    <!-- END  _____  REACT  -->
+ 
     <style type="text/css">
+
         /*
             Try adding React in an incremental way. 8/14/2019
         */
-    
-            :root { 
-                --lightGray: rgb(239, 239, 244); 
-                --darkGray: rgb(76, 77, 75);
-                --skyColor: rgb(124, 172, 255);
-                --palerSky: rgb(165, 220, 255 );
-                --infieldGreen: rgb(52, 147, 28);
-                --tigersNavy: rgb(7, 23, 53);
-            }
-            
-            button {
-              margin-left: 3rem;
-              height: 4rem;
-              width: 4rem;
-              background-color: white;
-              color: white;
-              border-radius: 2rem;
-              border-color: black;
-              border-width: 0.4rem;
-            }
-
-  body{
-    margin:0;
-   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    margin:0.5rem 1rem;
-    background: url(images/abe.png)  no-repeat;
-      background-size: cover;
-      height: 1300px;
+ :root {
+     --lightGray: rgb(239, 239, 244);
+     --darkGray: rgb(76, 77, 75);
+     --skyColor: rgb(124, 172, 255);
+     --palerSky: rgb(165, 220, 255 );
+     --infieldGreen: rgb(52, 147, 28);
+     --tigersNavy: rgb(7, 23, 53);
+}
+ button {
+     margin-left: 3rem;
+     height: 4rem;
+     width: 4rem;
+     background-color: white;
+     color: white;
+     border-radius: 2rem;
+     border-color: black;
+     border-width: 0.4rem;
+}
+ body{
+     margin:0;
+     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+     margin:0.5rem 1rem;
+     background: url(images/abe.png) no-repeat;
+     background-size: cover;
+     height: 1300px;
+}
+ img {
+     width: 98%;
+}
+ .title__hoegarden {
+     text-shadow: 1px 1px 2px black, 0 0 25px gray, 0 0 5px black;
+     font-family: monospace;
+     color: white;
+     font-weight: 500;
+}
+ .title__skinny {
+     font-weight: 100;
+     text-indent: 2.5rem;
+     line-height: 2.6rem;
+     background-color: rgba(230, 230, 230, 0.8);
+}
+ .title__explain {
+     padding: 0.4rem 2rem;
+}
+ .elShadow {
+     box-shadow: 0 7px 7px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+     border: 0.1rem hidden;
+     border-radius: 0.3rem;
+}
+ .dashboard {
+     border: 2px white;
+     margin: 0.5rem 2rem;
+     background-color: #444;
+     color: var(--lightGray) ;
+     padding: 0.5rem;
+}
+ .dashboard__text {
+     margin: 0.3rem 1.5rem;
+     color: white;
+}
+ .dashboard__data-noneditable {
+     color: black;
+     background-color: #777;
+}
+ .codeboard {
+     border: 5px dashed #bbb;
+     margin: 0.5rem 2rem;
+     background-color: #222;
+     padding: 0.5rem;
+}
+ .codeboard__code {
+     color: #aaf;
+     margin: 0.3rem 1.5rem 0.3rem 1.9rem;
+}
+ .block {
+     background-color: var(--lightGray) ;
+     margin: 1rem;
+     padding: 2rem;
+}
+ .navyBackground {
+     background-color: var(--tigersNavy);
+     xcolor: white;
+}
+ .greenBackground {
+     background-color: var(--infieldGreen);
+     border-radius: 0.6rem;
+     padding: 0.1rem 0.3rem;
 }
 
-            img {
-              width: 98%;
-            }
-            .title__hoegarden {
-              text-shadow: 1px 1px 2px black, 0 0 25px gray, 0 0 5px black;
-              font-family: monospace;
-              color: white;
-              font-weight: 500;
-            }
-            
-            .title__skinny {
-              font-weight: 100;
-              text-indent: 2.5rem;
-              line-height: 2.6rem;
-              background-color: rgba(230, 230, 230, 0.8);
-            }
-            .title__explain {
-                padding: 0.4rem 2rem;
-            }
-            .elShadow {
-              box-shadow: 0 7px 7px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-              border: 0.1rem hidden;
-              border-radius: 0.3rem;
-            }
-    
-            
-            .dashboard {
-              border: 2px  white;
-              margin: 0.5rem 2rem;
-              background-color: #444;
-              color:  var(--lightGray) ;
-              padding: 0.5rem;
-            }
-            
-            .dashboard__text {
-              margin: 0.3rem 1.5rem;
-              color: white;
-            }
-            
-            .dashboard__data-noneditable {
-              color: black;
-              background-color: #777;
-            }
-            
-            .codeboard {
-              border: 5px dashed #bbb;
-              margin: 0.5rem 2rem;
-              background-color: #222;
-              padding: 0.5rem;
-            }
-            
-            .codeboard__code {
-              color: #aaf;
-              margin: 0.3rem 1.5rem 0.3rem 1.9rem;
-    
-    
-            }
-            .block {
-              background-color:  var(--lightGray)       ;
-              margin: 1rem;
-              padding: 2rem;
-            }
-    
-            .navyBackground {
-              background-color:  var(--tigersNavy);
-              xcolor: white;
-            }
-    
-            .greenBackground {
-                  background-color:  var(--infieldGreen);
-                  border-radius: 0.6rem;
-                  padding: 0.1rem 0.3rem;
-            }
     </style>
 
 
@@ -135,7 +134,7 @@
 
     <!-     uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu  -->
 
-    <div class="col-sm-10 col-md-6 col-lg-4  outblock block elShadow"  id="filter1">
+    <div class="col-sm-10 col-md-6 col-lg-4   block elShadow"  id="filter1">
 
 
 <h2>Ballparks</h2>
@@ -167,21 +166,35 @@
 
 
 
-        <div class="col-md-9 outblock block elShadow">
-            <p>These buttons.  Are very round.</p>
-            <!-     uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu  -->
-            <div class="container-fluid">
-                <!-- Navbar Menu -->
+<div class="col-sm-10 col-md-6 col-lg-4   block elShadow"  id="filter1">
 
-                <ul>
-                    <button><a href="index.html#map" title="MAP the array">L</a></button>
-                    <button><a href="https://example.com" title="REDuce the array to a single value, which can be a primitive or object">M</a></button>
-                    <button><a href="index.html#filter2" title="FILter the array">N</a></button>
 
-                </ul>
+<h2>React...</h2>
 
-            </div>
+
+
+        <div class="dashboard given elShadow" >
+            <h4 class="dashboard__text">...goes here:</h4>
+            <p class="dashboard__data-noneditable dashboard__text">
+            </p>
         </div>
+        <div id="root">
+            
+        </div>
+</div>
+
+
+<div class="col-md-9  block elShadow">
+    <p>These buttons.  Are very round.</p>
+    <div class="container-fluid">
+        <!-- Navbar Menu -->
+        <ul>
+            <button><a href="index.html#map" title="MAP the array">L</a></button>
+            <button><a href="https://example.com" title="REDuce the array to a single value, which can be a primitive or object">M</a></button>
+            <button><a href="index.html#filter2" title="FILter the array">N</a></button>
+        </ul>
+    </div>
+</div>
 
  
 
