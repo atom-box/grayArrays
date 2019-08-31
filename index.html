@@ -370,15 +370,20 @@ youngPitchersArrayOfNames = youngPitchersArrayOfObjects.map((o)=>{return o.Name}
             </div>
         </footer>
     </div>
-
-    <script type="text/javascript">
-        console.log('yerp');
-    </script>
-</body>
-<script type="module" src="xtip.js">
+    <div>
+        script type="module" src="./top.js">
     // https://github.com/mdn/js-examples  SOME RELIEF IS HERE. but some headaches are just windows
     // these formerly working, still working on Linux, not on windows.  Embarrassing.
     // error CORS CROSS ERROR IF you use file addressing instead of URL addressing.
-</script>
+    script>
+</div>
+    <script src="./js/top.js">
+    </script>
+</body>
+
+<!-- The following works IF you do type="text/javascript" then your problem is, it can't import from its module.  TOP.JS complains 'import declarations may only appear at top level of a module' no matter what you do.-->
+<!-- <script type="text/javascript" src="./js/top.js"></script>     -->
+
+
 
 </html>
