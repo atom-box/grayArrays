@@ -4,7 +4,6 @@
 <head>
     <title>Make Vanilla Javascript Functional</title>
     <meta charset="UTF-8">
-
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
     <style type="text/css">
@@ -13,168 +12,157 @@
     using Bootstrap as a style reset.  TODO: write by hand a re-set.
     */
 
-        :root { 
-            --lightGray: rgb(239, 239, 244); 
-            --darkGray: rgb(76, 77, 75);
-            --skyColor: rgb(124, 172, 255);
-            --palerSky: rgb(165, 220, 255 );
-            --infieldGreen: rgb(52, 147, 28);
-            --tigersNavy: rgb(7, 23, 53);
-        }
-        
-        button {
-          margin-left: 3rem;
-          height: 4rem;
-          width: 4rem;
-          background-color: white;
-          color: white;
-          border-radius: 2rem;
-          border-color: black;
-          border-width: 0.4rem;
-        }
-        img {
-          width: 98%;
-        }
-        .title__hoegarden {
-          text-shadow: 1px 1px 2px black, 0 0 25px gray, 0 0 5px black;
-          font-family: monospace;
-          color: white;
-          font-weight: 500;
-        }
-        
-        .title__skinny {
-          font-weight: 100;
-          text-indent: 2.5rem;
-          line-height: 2.6rem;
-        }
-        .title__explain {
-            padding: 0.4rem 2rem;
-        }
-        .elShadow {
-          box-shadow: 0 7px 7px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          border: 0.1rem hidden;
-          border-radius: 0.3rem;
-        }
+    :root {
+        --lightGray: rgb(239, 239, 244);
+        --darkGray: rgb(76, 77, 75);
+        --skyColor: rgb(124, 172, 255);
+        --palerSky: rgb(165, 220, 255);
+        --infieldGreen: rgb(52, 147, 28);
+        --tigersNavy: rgb(7, 23, 53);
+    }
 
-        
-        .dashboard {
-          border: 2px  white;
-          margin: 0.5rem 2rem;
-          background-color: #444;
-          color:  var(--lightGray) ;
-          padding: 0.5rem;
-        }
-        
-        .dashboard__text {
-          margin: 0.3rem 1.5rem;
-          color: white;
-        }
-        
-        .dashboard__data-noneditable {
-          color: black;
-          background-color: #777;
-        }
-        
-        .codeboard {
-          border: 5px dashed #bbb;
-          margin: 0.5rem 2rem;
-          background-color: #222;
-          padding: 0.5rem;
-        }
-        
-        .codeboard__code {
-          color: #aaf;
-          margin: 0.3rem 1.5rem 0.3rem 1.9rem;
+    button {
+        margin-left: 3rem;
+        height: 4rem;
+        width: 4rem;
+        background-color: white;
+        color: white;
+        border-radius: 2rem;
+        border-color: black;
+        border-width: 0.4rem;
+    }
+
+    img {
+        width: 98%;
+    }
+
+    .title__hoegarden {
+        text-shadow: 1px 1px 2px black, 0 0 25px gray, 0 0 5px black;
+        font-family: monospace;
+        color: white;
+        font-weight: 500;
+    }
+
+    .title__skinny {
+        font-weight: 100;
+        text-indent: 2.5rem;
+        line-height: 2.6rem;
+    }
+
+    .title__explain {
+        padding: 0.4rem 2rem;
+    }
+
+    .elShadow {
+        box-shadow: 0 7px 7px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border: 0.1rem hidden;
+        border-radius: 0.3rem;
+    }
 
 
-        }
-        .block {
-          background-color:  var(--lightGray)       ;
-          margin: 1rem;
-          padding: 2rem;
-        }
+    .dashboard {
+        border: 2px white;
+        margin: 0.5rem 2rem;
+        background-color: #444;
+        color: var(--lightGray);
+        padding: 0.5rem;
+    }
 
-        .navyBackground {
-          background-color:  var(--tigersNavy);
-          xcolor: white;
-        }
+    .dashboard__text {
+        margin: 0.3rem 1.5rem;
+        color: white;
+    }
 
-        .greenBackground {
-              background-color:  var(--infieldGreen);
-              border-radius: 0.6rem;
-              padding: 0.1rem 0.3rem;
-        }
+    .dashboard__data-noneditable {
+        color: black;
+        background-color: #777;
+    }
 
+    .codeboard {
+        border: 5px dashed #bbb;
+        margin: 0.5rem 2rem;
+        background-color: #222;
+        padding: 0.5rem;
+    }
+
+    .codeboard__code {
+        color: #aaf;
+        margin: 0.3rem 1.5rem 0.3rem 1.9rem;
+
+
+    }
+
+    .block {
+        background-color: var(--lightGray);
+        margin: 1rem;
+        padding: 2rem;
+    }
+
+    .navyBackground {
+        background-color: var(--tigersNavy);
+        xcolor: white;
+    }
+
+    .greenBackground {
+        background-color: var(--infieldGreen);
+        border-radius: 0.6rem;
+        padding: 0.1rem 0.3rem;
+    }
     </style>
-
-
 </head>
 
 <body>
-
     <header>
         <h2 class="title__hoegarden float-left">
-    Functional Javascript
-  </h2>
+            Functional Javascript
+        </h2>
         <h3 class="title__skinny">
-    for web-page reliability
-  </h3>
-      <div class="col-md-9 outblock block elShadow">
-        <p>I really want to build robust websites.</p>
-    <ul>
-        <li>In my imagination I dream of making my sites in <a href="https://elm-lang.org/">Elm</a> .</li>
-        <li>What is more likely this year is learning<a href="https://www.typescriptlang.org/">Typescript</a> .</li>
-        <li>What I've done so far: I'm using as much of the the existing <strong>Functional</strong> options within JS as I can.</li>
-    </ul> 
-      <p class="title__explain">"Pure functions are easier to reason about. Testing is easier, and pure functions lend themselves well to techniques like property-based testing. Debugging is easier. Programs are more bulletproof. " - <a href="https://alvinalexander.com/scala/fp-book/benefits-of-functional-programming">  Alvin Alexander</a>.</p> 
-</div>
-      <div class="col-md-9 outblock block elShadow">
-      <p>This page is just a list of syntax examples that emphasize Functional programming. With just a three letter prompt, can you guess the Functional principle for each abbreviation here?</p>
-<!-     uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu  -->
-<div class="container-fluid">
-<!-- Navbar Menu -->
-
-        <ul >
-            <button><a href="index.html#map" title="MAP the array">MAP</a></button>
-            <button><a href="https://example.com" title="REDuce the array to a single value, which can be a primitive or object">RED</a></button>
-            <button><a href="index.html#filter2" title="FILter the array">FIL</a></button>
-            <button><a href="index.html#concatenate" title="instead of mutating existing array memebers, conCATenate the arrays" >CAT</a></button>
-            <button><a href="https://example.com" title="Instead of for-loops, use RECursive functions">REC</a></button>
-            <button><a href="index.html#join" title="don't mutate members, JOIn to make new arrays">JOI</a></button>        </ul>
- 
-</div>
-</div>
+            for web-page reliability
+        </h3>
+        <div class="col-md-9 outblock block elShadow">
+            <p>This page is a love letter to the functional methods waiting patiently inside of Javascript. They are all ES5 array methods.  All are stateless; they give predictable output. Functional programming makes the code more like math. And just as math is proveable, functional code is proveable.</p>
+            <p>I got onto this angle while using <a href="https://elm-lang.org/">Elm</a>, an immutable language that compiles into Javascript, providing both an immutable environment for state, as well as a pleasant encounter with your errors, via very friendly compiler error messages.</p>
+            <p class="title__explain">"Pure functions are easier to reason about. Testing is easier, and pure functions lend themselves well to techniques like property-based testing. Debugging is easier. Programs are more bulletproof. " - <a href="https://alvinalexander.com/scala/fp-book/benefits-of-functional-programming"> Alvin Alexander</a>.</p>
+        </div>
+        <div class="col-md-9 outblock block elShadow">
+            <p>For each three letter prompt, can you guess the Functional javascript method? (Mouse over each for explanations.)</p>
+            <!-     uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu  -->
+            <div class="container-fluid">
+                <!-- Navbar Menu -->
+                <ul>
+                    <button><a href="https://example.com" title="REDuce the array to a single value, which can be a primitive or object">RED</a></button>
+                    <button><a href="index.html#filter2" title="FILter the array">FIL</a></button>
+                    <button><a href="index.html#concatenate" title="instead of mutating existing array memebers, conCATenate the arrays">CAT</a></button>
+                    <button><a href="https://example.com" title="Instead of for-loops, use RECursive functions">REC</a></button>
+                    <button><a href="index.html#join" title="don't mutate members, JOIn to make new arrays">JOI</a></button>
+                    <button><a href="index.html#map" title="MAP the array">MAP</a></button>
+                </ul>
+            </div>
+        </div>
     </header>
-
-<!-     uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu  -->
-
-
+    <!-     uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu  -->
     <div class="col-md-9 outblock block elShadow" id="filter1">
-
-        <h3>Filter</h3><p>Remove any occurance of "never" from Lear's lament.</p>
-
-
+        <h3>Filter</h3>
+        <p>Remove any occurance of "never" from Lear's lament.</p>
         <div class="dashboard given elShadow">
             <h4 class="dashboard__text">If the array was this</h4>
             <p class="dashboard__data-noneditable dashboard__text" id='demo4__before'>
             </p>
         </div>
-                <div class="codeboard elShadow">
-        <h4 class="dashboard__text">And this is the function</h4>
-            <p  class="codeboard__code" id="concatenate">
-let sansNever =(w)=>{<br>
-    if (w ==='never'){<br>
-        return false;<br>
-    } else if (w!=='never'){<br>
-        return true;<br>
-    } else {<br>
-        console.log('ERROR');<br>
-    }<br>
-}<br>
-
-<br>
-lear_tears = bardWords.filter(sansNever);
-
+        <div class="codeboard elShadow">
+            <h4 class="dashboard__text">And this is the function</h4>
+            <p class="codeboard__code" id="concatenate">
+                let sansNever =(w)=>{<br>
+                if (w ==='never'){<br>
+                return false;<br>
+                } else if (w!=='never'){<br>
+                return true;<br>
+                } else {<br>
+                console.log('ERROR');<br>
+                }<br>
+                }<br>
+                <br>
+                lear_tears = bardWords.filter(sansNever);
             </p>
         </div>
         <div class="dashboard output elShadow">
@@ -183,8 +171,6 @@ lear_tears = bardWords.filter(sansNever);
             </p>
         </div>
     </div>
-
-
     <!--
     <div class="col-md-9 outblock block elShadow"  id="map">
         <h3>Map</h3><p>Convert each Tiger pitcher's name into their initials.</p>
@@ -207,8 +193,7 @@ lear_tears = bardWords.filter(sansNever);
         </div>
     </div>
 -->
-
-<!--
+    <!--
     <div class="col-md-9 outblock block elShadow"   id="for-each">
         <h3>ForEach.</h3><p> ...</p>
 
@@ -229,32 +214,28 @@ lear_tears = bardWords.filter(sansNever);
         </div>
     </div>
 -->
-
     <div class="col-md-9 outblock block elShadow" id="filter2">
-        <h3>Filter for The Youth in the '19 Tigers rotation.</h3><p> Colors from <a href="https://www.mlb.com/tigers">Detroit</a>.   Data from <a href="https://www.baseball-reference.com/teams/DET/2019.shtml">Baseball Reference</a>.</p>
-
-
+        <h3>Filter for The Youth in the '19 Tigers rotation.</h3>
+        <p> Colors from <a href="https://www.mlb.com/tigers">Detroit</a>. Data from <a href="https://www.baseball-reference.com/teams/DET/2019.shtml">Baseball Reference</a>.</p>
         <div class="dashboard output elShadow navyBackground">
             <h4 class="dashboard__text "><span class="greenBackground"> These are the names and ages</span></h4>
-            <p class="dashboard__data-noneditable dashboard__text" id='demo7__before'> 
+            <p class="dashboard__data-noneditable dashboard__text" id='demo7__before'>
             </p>
         </div>
-                <div class="codeboard elShadow">
+        <div class="codeboard elShadow">
             <h4 class="dashboard__text ">And this is the function</h4>
             <p class="codeboard__code">
                 youngPitchersArrayOfObjects = rotators.filter((o)=>{return o.Age < 30 });<br>
-youngPitchersArrayOfNames = youngPitchersArrayOfObjects.map((o)=>{return o.Name}  );
+                    youngPitchersArrayOfNames = youngPitchersArrayOfObjects.map((o)=>{return o.Name} );
             </p>
         </div>
         <div class="dashboard output elShadow navyBackground">
             <h4 class="dashboard__text "><span class="greenBackground"> This are the youngsters</span></h4>
-            <p class="dashboard__data-noneditable dashboard__text" id='demo7__after'> 
+            <p class="dashboard__data-noneditable dashboard__text" id='demo7__after'>
             </p>
         </div>
     </div>
-
-
-<!--
+    <!--
     <div class="col-md-9 outblock block elShadow"   id="every">
         <h3>Every.</h3><p> .=.=.</p>
 
@@ -275,20 +256,17 @@ youngPitchersArrayOfNames = youngPitchersArrayOfObjects.map((o)=>{return o.Name}
         </div>
     </div>
 -->
-
-
     <div class="col-md-9 outblock block elShadow" id="concatenate">
-        <h3>Concatenate</h3><p>Join an array of words from King Lear to commentary about those words.</p>
-
-
+        <h3>Concatenate</h3>
+        <p>Join an array of words from King Lear to commentary about those words.</p>
         <div class="dashboard given elShadow">
             <h4 class="dashboard__text">If the two arrays were these</h4>
             <p class="dashboard__data-noneditable dashboard__text" id='demo1__before'>
             </p>
         </div>
-                <div class="codeboard elShadow">
+        <div class="codeboard elShadow">
             <h4 class="dashboard__text">And this is the function</h4>
-            <p  class="codeboard__code" id="concatenate" class="codeboard__code">cont = cliffWords.concat(bardWords);</p>
+            <p class="codeboard__code" id="concatenate" class="codeboard__code">cont = cliffWords.concat(bardWords);</p>
         </div>
         <div class="dashboard output elShadow">
             <h4 class="dashboard__text">This single array would be returned</h4>
@@ -296,20 +274,17 @@ youngPitchersArrayOfNames = youngPitchersArrayOfObjects.map((o)=>{return o.Name}
             </p>
         </div>
     </div>
-
-
     <div class="col-md-9 outblock block elShadow" id="slice">
-        <h3>Slice</h3><p>Pluck several elements from the middle of an array.</p>
-
-
+        <h3>Slice</h3>
+        <p>Pluck several elements from the middle of an array.</p>
         <div class="dashboard given elShadow">
             <h4 class="dashboard__text">If the array were this</h4>
             <p class="dashboard__data-noneditable dashboard__text" id='demo2__before'>
             </p>
         </div>
         <div class="codeboard elShadow">
-        <h4 class="dashboard__text">And this is the function</h4>
-            <p  class="codeboard__code" id="concatenate">cont = bardWords.slice(5, 9);</p>
+            <h4 class="dashboard__text">And this is the function</h4>
+            <p class="codeboard__code" id="concatenate">cont = bardWords.slice(5, 9);</p>
         </div>
         <div class="dashboard output elShadow">
             <h4 class="dashboard__text">This would be returned</h4>
@@ -317,21 +292,17 @@ youngPitchersArrayOfNames = youngPitchersArrayOfObjects.map((o)=>{return o.Name}
             </p>
         </div>
     </div>
-
-
-
-    <div class="col-md-9 outblock block elShadow"  id="join">
-        <h3>Join</h3><p>Convert an array to a string, optionally inserting some sort of string within its joints.</p>
-
-
+    <div class="col-md-9 outblock block elShadow" id="join">
+        <h3>Join</h3>
+        <p>Convert an array to a string, optionally inserting some sort of string within its joints.</p>
         <div class="dashboard given elShadow">
             <h4 class="dashboard__text">If the array were this</h4>
             <p class="dashboard__data-noneditable dashboard__text" id='demo3__before'>
             </p>
         </div>
-                <div class="codeboard elShadow">
-        <h4 class="dashboard__text">And this is the function</h4>
-            <p  class="codeboard__code" id="concatenate">cont = lear_tears.join('****');</p>
+        <div class="codeboard elShadow">
+            <h4 class="dashboard__text">And this is the function</h4>
+            <p class="codeboard__code" id="concatenate">cont = lear_tears.join('****');</p>
         </div>
         <div class="dashboard output elShadow">
             <h4 class="dashboard__text">This would be returned</h4>
@@ -339,15 +310,12 @@ youngPitchersArrayOfNames = youngPitchersArrayOfObjects.map((o)=>{return o.Name}
             </p>
         </div>
     </div>
-
     <div class="col-md-9 outblock block elShadow">
         <h2>Napkin sketch</h2>
-        <p>This is a  <a href="https://www.artofmanliness.com/articles/how-to-memorize-a-deck-of-cards/">mnemonic</a> mnemonic device for remembering array functions.  From the left: join, concat, slice, some(sum), every, filter, map, forEach.
+        <p>This is a <a href="https://www.artofmanliness.com/articles/how-to-memorize-a-deck-of-cards/">mnemonic</a> mnemonic device for remembering array functions. From the left: join, concat, slice, some(sum), every, filter, map, forEach.
         </p>
         <img src="./assets/betterMnemonic.png">
     </div>
-
-
     <div class="col-md-9 outblock block elShadow">
         <h2>Changelog:</h2>
         <ul>
@@ -356,10 +324,7 @@ youngPitchersArrayOfNames = youngPitchersArrayOfObjects.map((o)=>{return o.Name}
             <li>Added round nav buttons.</li>
             <li>Added Tigers colors to one div in a fit of enthusiasm for MLB.</li>
         </ul>
- 
-</div>
-
-
+    </div>
     <div class="col-md-9 outblock block elShadow">
         <footer>
             <div class="starboard">
@@ -372,13 +337,9 @@ youngPitchersArrayOfNames = youngPitchersArrayOfObjects.map((o)=>{return o.Name}
             </div>
         </footer>
     </div>
-
-    <script  src="./js/together.js"></script>
+    <script src="./js/together.js"></script>
 </body>
-
 <!-- The following works IF you do type="text/javascript" then your problem is, it can't import from its module.  TOP.JS complains 'import declarations may only appear at top level of a module' no matter what you do.-->
 <!-- <script type="text/javascript" src="./js/top.js"></script>     -->
-
-
 
 </html>
