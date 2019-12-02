@@ -1,0 +1,7629 @@
+const nouns = [
+  {
+    "Word": "people",
+    "Frequency": 372,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "history",
+    "Frequency": 187,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "way",
+    "Frequency": 185,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "art",
+    "Frequency": 183,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "world",
+    "Frequency": 169,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "information",
+    "Frequency": 168,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "map",
+    "Frequency": 167,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "two",
+    "Frequency": 164,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "family",
+    "Frequency": 159,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "government",
+    "Frequency": 143,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "health",
+    "Frequency": 122,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "system",
+    "Frequency": 111,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "computer",
+    "Frequency": 109,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "meat",
+    "Frequency": 99,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "year",
+    "Frequency": 96,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "thanks",
+    "Frequency": 84,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "music",
+    "Frequency": 80,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "person",
+    "Frequency": 80,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "reading",
+    "Frequency": 77,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "method",
+    "Frequency": 76,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "data",
+    "Frequency": 74,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "food",
+    "Frequency": 73,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "understanding",
+    "Frequency": 73,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "theory",
+    "Frequency": 71,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "law",
+    "Frequency": 70,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "bird",
+    "Frequency": 68,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "literature",
+    "Frequency": 67,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "problem",
+    "Frequency": 66,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "software",
+    "Frequency": 63,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "control",
+    "Frequency": 62,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "knowledge",
+    "Frequency": 62,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "power",
+    "Frequency": 62,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "ability",
+    "Frequency": 61,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "economics",
+    "Frequency": 61,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "love",
+    "Frequency": 60,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "internet",
+    "Frequency": 59,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "television",
+    "Frequency": 59,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "science",
+    "Frequency": 58,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "library",
+    "Frequency": 57,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "nature",
+    "Frequency": 57,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "fact",
+    "Frequency": 56,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "product",
+    "Frequency": 56,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "idea",
+    "Frequency": 55,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "temperature",
+    "Frequency": 55,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "investment",
+    "Frequency": 52,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "area",
+    "Frequency": 50,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "society",
+    "Frequency": 50,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "activity",
+    "Frequency": 48,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "story",
+    "Frequency": 48,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "industry",
+    "Frequency": 47,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "media",
+    "Frequency": 47,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "thing",
+    "Frequency": 47,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "oven",
+    "Frequency": 45,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "community",
+    "Frequency": 44,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "definition",
+    "Frequency": 44,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "safety",
+    "Frequency": 44,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "quality",
+    "Frequency": 43,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "development",
+    "Frequency": 42,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "language",
+    "Frequency": 42,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "management",
+    "Frequency": 41,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "player",
+    "Frequency": 41,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "variety",
+    "Frequency": 41,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "video",
+    "Frequency": 41,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "week",
+    "Frequency": 41,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "security",
+    "Frequency": 38,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "country",
+    "Frequency": 37,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "exam",
+    "Frequency": 37,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "movie",
+    "Frequency": 37,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "organization",
+    "Frequency": 37,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "equipment",
+    "Frequency": 35,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "physics",
+    "Frequency": 35,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "analysis",
+    "Frequency": 34,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "policy",
+    "Frequency": 34,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "series",
+    "Frequency": 34,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "thought",
+    "Frequency": 34,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "basis",
+    "Frequency": 33,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "boyfriend",
+    "Frequency": 33,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "direction",
+    "Frequency": 33,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "strategy",
+    "Frequency": 33,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "technology",
+    "Frequency": 33,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "army",
+    "Frequency": 32,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "camera",
+    "Frequency": 32,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "freedom",
+    "Frequency": 32,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "paper",
+    "Frequency": 32,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "environment",
+    "Frequency": 31,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "child",
+    "Frequency": 30,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "instance",
+    "Frequency": 30,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "month",
+    "Frequency": 30,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "truth",
+    "Frequency": 30,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "marketing",
+    "Frequency": 29,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "university",
+    "Frequency": 29,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "writing",
+    "Frequency": 29,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "article",
+    "Frequency": 28,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "department",
+    "Frequency": 28,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "difference",
+    "Frequency": 28,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "goal",
+    "Frequency": 28,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "news",
+    "Frequency": 28,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "audience",
+    "Frequency": 27,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "fishing",
+    "Frequency": 27,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "growth",
+    "Frequency": 27,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "income",
+    "Frequency": 27,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "marriage",
+    "Frequency": 27,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "user",
+    "Frequency": 27,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "combination",
+    "Frequency": 26,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "failure",
+    "Frequency": 26,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "meaning",
+    "Frequency": 26,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "medicine",
+    "Frequency": 26,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "philosophy",
+    "Frequency": 26,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "teacher",
+    "Frequency": 25,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "communication",
+    "Frequency": 24,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "night",
+    "Frequency": 24,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "chemistry",
+    "Frequency": 23,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "disease",
+    "Frequency": 23,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "disk",
+    "Frequency": 23,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "energy",
+    "Frequency": 23,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "nation",
+    "Frequency": 23,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "road",
+    "Frequency": 23,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "role",
+    "Frequency": 23,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "soup",
+    "Frequency": 23,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "advertising",
+    "Frequency": 22,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "location",
+    "Frequency": 22,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "success",
+    "Frequency": 22,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "addition",
+    "Frequency": 21,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "apartment",
+    "Frequency": 21,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "education",
+    "Frequency": 21,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "math",
+    "Frequency": 21,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "moment",
+    "Frequency": 21,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "painting",
+    "Frequency": 21,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "politics",
+    "Frequency": 21,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "attention",
+    "Frequency": 20,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "decision",
+    "Frequency": 20,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "event",
+    "Frequency": 20,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "property",
+    "Frequency": 20,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "shopping",
+    "Frequency": 20,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "student",
+    "Frequency": 20,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "wood",
+    "Frequency": 20,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "competition",
+    "Frequency": 19,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "distribution",
+    "Frequency": 19,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "entertainment",
+    "Frequency": 19,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "office",
+    "Frequency": 19,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "population",
+    "Frequency": 19,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "president",
+    "Frequency": 19,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "unit",
+    "Frequency": 19,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "category",
+    "Frequency": 18,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "cigarette",
+    "Frequency": 18,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "context",
+    "Frequency": 18,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "introduction",
+    "Frequency": 18,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "opportunity",
+    "Frequency": 18,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "performance",
+    "Frequency": 18,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "driver",
+    "Frequency": 17,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "flight",
+    "Frequency": 17,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "length",
+    "Frequency": 17,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "magazine",
+    "Frequency": 17,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "newspaper",
+    "Frequency": 17,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "relationship",
+    "Frequency": 17,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "teaching",
+    "Frequency": 17,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "cell",
+    "Frequency": 16,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "dealer",
+    "Frequency": 16,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "finding",
+    "Frequency": 16,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "lake",
+    "Frequency": 16,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "member",
+    "Frequency": 16,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "message",
+    "Frequency": 16,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "phone",
+    "Frequency": 16,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "scene",
+    "Frequency": 16,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "appearance",
+    "Frequency": 15,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "association",
+    "Frequency": 15,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "concept",
+    "Frequency": 15,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "customer",
+    "Frequency": 15,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "death",
+    "Frequency": 15,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "discussion",
+    "Frequency": 15,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "housing",
+    "Frequency": 15,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "inflation",
+    "Frequency": 15,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "insurance",
+    "Frequency": 15,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "mood",
+    "Frequency": 15,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "woman",
+    "Frequency": 15,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "advice",
+    "Frequency": 14,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "blood",
+    "Frequency": 14,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "effort",
+    "Frequency": 14,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "expression",
+    "Frequency": 14,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "importance",
+    "Frequency": 14,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "opinion",
+    "Frequency": 14,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "payment",
+    "Frequency": 14,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "reality",
+    "Frequency": 14,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "responsibility",
+    "Frequency": 14,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "situation",
+    "Frequency": 14,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "skill",
+    "Frequency": 14,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "statement",
+    "Frequency": 14,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "wealth",
+    "Frequency": 14,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "application",
+    "Frequency": 13,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "city",
+    "Frequency": 13,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "county",
+    "Frequency": 13,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "depth",
+    "Frequency": 13,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "estate",
+    "Frequency": 13,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "foundation",
+    "Frequency": 13,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "grandmother",
+    "Frequency": 13,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "heart",
+    "Frequency": 13,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "perspective",
+    "Frequency": 13,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "photo",
+    "Frequency": 13,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "recipe",
+    "Frequency": 13,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "studio",
+    "Frequency": 13,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "topic",
+    "Frequency": 13,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "collection",
+    "Frequency": 12,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "depression",
+    "Frequency": 12,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "imagination",
+    "Frequency": 12,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "passion",
+    "Frequency": 12,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "percentage",
+    "Frequency": 12,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "resource",
+    "Frequency": 12,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "setting",
+    "Frequency": 12,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "ad",
+    "Frequency": 11,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "agency",
+    "Frequency": 11,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "college",
+    "Frequency": 11,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "connection",
+    "Frequency": 11,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "criticism",
+    "Frequency": 11,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "debt",
+    "Frequency": 11,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "description",
+    "Frequency": 11,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "memory",
+    "Frequency": 11,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "patience",
+    "Frequency": 11,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "secretary",
+    "Frequency": 11,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "solution",
+    "Frequency": 11,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "administration",
+    "Frequency": 10,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "aspect",
+    "Frequency": 10,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "attitude",
+    "Frequency": 10,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "director",
+    "Frequency": 10,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "personality",
+    "Frequency": 10,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "psychology",
+    "Frequency": 10,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "recommendation",
+    "Frequency": 10,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "response",
+    "Frequency": 10,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "selection",
+    "Frequency": 10,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "storage",
+    "Frequency": 10,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "version",
+    "Frequency": 10,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "alcohol",
+    "Frequency": 9,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "argument",
+    "Frequency": 9,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "complaint",
+    "Frequency": 9,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "contract",
+    "Frequency": 9,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "emphasis",
+    "Frequency": 9,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "highway",
+    "Frequency": 9,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "loss",
+    "Frequency": 9,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "membership",
+    "Frequency": 9,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "possession",
+    "Frequency": 9,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "preparation",
+    "Frequency": 9,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "steak",
+    "Frequency": 9,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "union",
+    "Frequency": 9,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "agreement",
+    "Frequency": 8,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "cancer",
+    "Frequency": 8,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "currency",
+    "Frequency": 8,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "employment",
+    "Frequency": 8,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "engineering",
+    "Frequency": 8,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "entry",
+    "Frequency": 8,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "interaction",
+    "Frequency": 8,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "mixture",
+    "Frequency": 8,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "preference",
+    "Frequency": 8,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "region",
+    "Frequency": 8,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "republic",
+    "Frequency": 8,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "tradition",
+    "Frequency": 8,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "virus",
+    "Frequency": 8,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "actor",
+    "Frequency": 7,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "classroom",
+    "Frequency": 7,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "delivery",
+    "Frequency": 7,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "device",
+    "Frequency": 7,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "difficulty",
+    "Frequency": 7,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "drama",
+    "Frequency": 7,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "election",
+    "Frequency": 7,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "engine",
+    "Frequency": 7,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "football",
+    "Frequency": 7,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "guidance",
+    "Frequency": 7,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "hotel",
+    "Frequency": 7,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "owner",
+    "Frequency": 7,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "priority",
+    "Frequency": 7,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "protection",
+    "Frequency": 7,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "suggestion",
+    "Frequency": 7,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "tension",
+    "Frequency": 7,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "variation",
+    "Frequency": 7,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "anxiety",
+    "Frequency": 6,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "atmosphere",
+    "Frequency": 6,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "awareness",
+    "Frequency": 6,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "bath",
+    "Frequency": 6,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "bread",
+    "Frequency": 6,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "candidate",
+    "Frequency": 6,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "climate",
+    "Frequency": 6,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "comparison",
+    "Frequency": 6,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "confusion",
+    "Frequency": 6,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "construction",
+    "Frequency": 6,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "elevator",
+    "Frequency": 6,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "emotion",
+    "Frequency": 6,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "employee",
+    "Frequency": 6,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "employer",
+    "Frequency": 6,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "guest",
+    "Frequency": 6,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "height",
+    "Frequency": 6,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "leadership",
+    "Frequency": 6,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "mall",
+    "Frequency": 6,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "manager",
+    "Frequency": 6,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "operation",
+    "Frequency": 6,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "recording",
+    "Frequency": 6,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "sample",
+    "Frequency": 6,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "transportation",
+    "Frequency": 6,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "charity",
+    "Frequency": 5,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "cousin",
+    "Frequency": 5,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "disaster",
+    "Frequency": 5,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "editor",
+    "Frequency": 5,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "efficiency",
+    "Frequency": 5,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "excitement",
+    "Frequency": 5,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "extent",
+    "Frequency": 5,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "feedback",
+    "Frequency": 5,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "guitar",
+    "Frequency": 5,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "homework",
+    "Frequency": 5,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "leader",
+    "Frequency": 5,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "mom",
+    "Frequency": 5,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "outcome",
+    "Frequency": 5,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "permission",
+    "Frequency": 5,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "presentation",
+    "Frequency": 5,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "promotion",
+    "Frequency": 5,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "reflection",
+    "Frequency": 5,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "refrigerator",
+    "Frequency": 5,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "resolution",
+    "Frequency": 5,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "revenue",
+    "Frequency": 5,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "session",
+    "Frequency": 5,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "singer",
+    "Frequency": 5,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "tennis",
+    "Frequency": 5,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "basket",
+    "Frequency": 4,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "bonus",
+    "Frequency": 4,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "cabinet",
+    "Frequency": 4,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "childhood",
+    "Frequency": 4,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "church",
+    "Frequency": 4,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "clothes",
+    "Frequency": 4,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "coffee",
+    "Frequency": 4,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "dinner",
+    "Frequency": 4,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "drawing",
+    "Frequency": 4,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "hair",
+    "Frequency": 4,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "hearing",
+    "Frequency": 4,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "initiative",
+    "Frequency": 4,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "judgment",
+    "Frequency": 4,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "lab",
+    "Frequency": 4,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "measurement",
+    "Frequency": 4,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "mode",
+    "Frequency": 4,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "mud",
+    "Frequency": 4,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "orange",
+    "Frequency": 4,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "poetry",
+    "Frequency": 4,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "police",
+    "Frequency": 4,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "possibility",
+    "Frequency": 4,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "procedure",
+    "Frequency": 4,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "queen",
+    "Frequency": 4,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "ratio",
+    "Frequency": 4,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "relation",
+    "Frequency": 4,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "restaurant",
+    "Frequency": 4,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "satisfaction",
+    "Frequency": 4,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "sector",
+    "Frequency": 4,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "signature",
+    "Frequency": 4,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "significance",
+    "Frequency": 4,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "song",
+    "Frequency": 4,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "tooth",
+    "Frequency": 4,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "town",
+    "Frequency": 4,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "vehicle",
+    "Frequency": 4,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "volume",
+    "Frequency": 4,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "wife",
+    "Frequency": 4,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "accident",
+    "Frequency": 3,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "airport",
+    "Frequency": 3,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "appointment",
+    "Frequency": 3,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "arrival",
+    "Frequency": 3,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "assumption",
+    "Frequency": 3,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "baseball",
+    "Frequency": 3,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "chapter",
+    "Frequency": 3,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "committee",
+    "Frequency": 3,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "conversation",
+    "Frequency": 3,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "database",
+    "Frequency": 3,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "enthusiasm",
+    "Frequency": 3,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "error",
+    "Frequency": 3,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "explanation",
+    "Frequency": 3,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "farmer",
+    "Frequency": 3,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "gate",
+    "Frequency": 3,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "girl",
+    "Frequency": 3,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "hall",
+    "Frequency": 3,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "historian",
+    "Frequency": 3,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "hospital",
+    "Frequency": 3,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "injury",
+    "Frequency": 3,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "instruction",
+    "Frequency": 3,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "maintenance",
+    "Frequency": 3,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "manufacturer",
+    "Frequency": 3,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "meal",
+    "Frequency": 3,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "perception",
+    "Frequency": 3,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "pie",
+    "Frequency": 3,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "poem",
+    "Frequency": 3,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "presence",
+    "Frequency": 3,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "proposal",
+    "Frequency": 3,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "reception",
+    "Frequency": 3,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "replacement",
+    "Frequency": 3,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "revolution",
+    "Frequency": 3,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "river",
+    "Frequency": 3,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "son",
+    "Frequency": 3,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "speech",
+    "Frequency": 3,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "tea",
+    "Frequency": 3,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "village",
+    "Frequency": 3,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "warning",
+    "Frequency": 3,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "winner",
+    "Frequency": 3,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "worker",
+    "Frequency": 3,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "writer",
+    "Frequency": 3,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "assistance",
+    "Frequency": 2,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "breath",
+    "Frequency": 2,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "buyer",
+    "Frequency": 2,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "chest",
+    "Frequency": 2,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "chocolate",
+    "Frequency": 2,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "conclusion",
+    "Frequency": 2,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "contribution",
+    "Frequency": 2,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "cookie",
+    "Frequency": 2,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "courage",
+    "Frequency": 2,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "dad",
+    "Frequency": 2,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "desk",
+    "Frequency": 2,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "drawer",
+    "Frequency": 2,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "establishment",
+    "Frequency": 2,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "examination",
+    "Frequency": 2,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "garbage",
+    "Frequency": 2,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "grocery",
+    "Frequency": 2,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "honey",
+    "Frequency": 2,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "impression",
+    "Frequency": 2,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "improvement",
+    "Frequency": 2,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "independence",
+    "Frequency": 2,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "insect",
+    "Frequency": 2,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "inspection",
+    "Frequency": 2,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "inspector",
+    "Frequency": 2,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "king",
+    "Frequency": 2,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "ladder",
+    "Frequency": 2,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "menu",
+    "Frequency": 2,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "penalty",
+    "Frequency": 2,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "piano",
+    "Frequency": 2,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "potato",
+    "Frequency": 2,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "profession",
+    "Frequency": 2,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "professor",
+    "Frequency": 2,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "quantity",
+    "Frequency": 2,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "reaction",
+    "Frequency": 2,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "requirement",
+    "Frequency": 2,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "salad",
+    "Frequency": 2,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "sister",
+    "Frequency": 2,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "supermarket",
+    "Frequency": 2,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "tongue",
+    "Frequency": 2,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "weakness",
+    "Frequency": 2,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "wedding",
+    "Frequency": 2,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "affair",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "ambition",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "analyst",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "apple",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "assignment",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "assistant",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "bathroom",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "bedroom",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "beer",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "birthday",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "celebration",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "championship",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "cheek",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "client",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "consequence",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "departure",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "diamond",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "dirt",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "ear",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "fortune",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "friendship",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "funeral",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "gene",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "girlfriend",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "hat",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "indication",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "intention",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "lady",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "midnight",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "negotiation",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "obligation",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "passenger",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "pizza",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "platform",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "poet",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "pollution",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "recognition",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "reputation",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "shirt",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "sir",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "speaker",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "stranger",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "surgery",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "sympathy",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "tale",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "throat",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "trainer",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "uncle",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "youth",
+    "Frequency": 1,
+    "Type": "(noun)"
+  },
+  {
+    "Word": "time",
+    "Frequency": 369,
+    "Type": "(noun, adjective, verb)"
+  },
+  {
+    "Word": "work",
+    "Frequency": 224,
+    "Type": "(noun, adjective, verb)"
+  },
+  {
+    "Word": "film",
+    "Frequency": 209,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "water",
+    "Frequency": 201,
+    "Type": "(noun, verb, adjective)"
+  },
+  {
+    "Word": "money",
+    "Frequency": 174,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "example",
+    "Frequency": 147,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "while",
+    "Frequency": 147,
+    "Type": "(noun, conjunction, preposition)"
+  },
+  {
+    "Word": "business",
+    "Frequency": 127,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "study",
+    "Frequency": 118,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "game",
+    "Frequency": 117,
+    "Type": "(noun, adjective, verb)"
+  },
+  {
+    "Word": "life",
+    "Frequency": 107,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "form",
+    "Frequency": 99,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "air",
+    "Frequency": 98,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "day",
+    "Frequency": 98,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "place",
+    "Frequency": 98,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "number",
+    "Frequency": 97,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "part",
+    "Frequency": 96,
+    "Type": "(noun, verb, adverb)"
+  },
+  {
+    "Word": "field",
+    "Frequency": 95,
+    "Type": "(noun, verb, adjective)"
+  },
+  {
+    "Word": "fish",
+    "Frequency": 92,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "back",
+    "Frequency": 86,
+    "Type": "(noun, adverb, verb)"
+  },
+  {
+    "Word": "process",
+    "Frequency": 85,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "heat",
+    "Frequency": 84,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "hand",
+    "Frequency": 81,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "experience",
+    "Frequency": 80,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "job",
+    "Frequency": 80,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "book",
+    "Frequency": 77,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "end",
+    "Frequency": 76,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "point",
+    "Frequency": 74,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "type",
+    "Frequency": 74,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "home",
+    "Frequency": 72,
+    "Type": "(noun, adjective, adverb)"
+  },
+  {
+    "Word": "economy",
+    "Frequency": 71,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "value",
+    "Frequency": 70,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "body",
+    "Frequency": 69,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "market",
+    "Frequency": 69,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "guide",
+    "Frequency": 68,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "interest",
+    "Frequency": 67,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "state",
+    "Frequency": 63,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "radio",
+    "Frequency": 62,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "course",
+    "Frequency": 61,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "company",
+    "Frequency": 60,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "price",
+    "Frequency": 60,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "size",
+    "Frequency": 60,
+    "Type": "(noun, verb, adjective)"
+  },
+  {
+    "Word": "card",
+    "Frequency": 58,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "list",
+    "Frequency": 58,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "mind",
+    "Frequency": 58,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "trade",
+    "Frequency": 58,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "line",
+    "Frequency": 56,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "care",
+    "Frequency": 55,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "group",
+    "Frequency": 55,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "risk",
+    "Frequency": 55,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "word",
+    "Frequency": 55,
+    "Type": "(noun, verb, interjection)"
+  },
+  {
+    "Word": "fat",
+    "Frequency": 54,
+    "Type": "(noun, adjective, verb)"
+  },
+  {
+    "Word": "force",
+    "Frequency": 54,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "key",
+    "Frequency": 54,
+    "Type": "(noun, adjective, verb)"
+  },
+  {
+    "Word": "light",
+    "Frequency": 54,
+    "Type": "(noun, verb, adjective)"
+  },
+  {
+    "Word": "training",
+    "Frequency": 54,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "name",
+    "Frequency": 53,
+    "Type": "(noun, verb, adjective)"
+  },
+  {
+    "Word": "school",
+    "Frequency": 53,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "top",
+    "Frequency": 53,
+    "Type": "(noun, adjective, verb)"
+  },
+  {
+    "Word": "amount",
+    "Frequency": 51,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "level",
+    "Frequency": 51,
+    "Type": "(noun, adjective, verb)"
+  },
+  {
+    "Word": "order",
+    "Frequency": 51,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "practice",
+    "Frequency": 51,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "research",
+    "Frequency": 51,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "sense",
+    "Frequency": 51,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "service",
+    "Frequency": 51,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "piece",
+    "Frequency": 50,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "web",
+    "Frequency": 49,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "boss",
+    "Frequency": 48,
+    "Type": "(noun, verb, adjective)"
+  },
+  {
+    "Word": "sport",
+    "Frequency": 47,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "fun",
+    "Frequency": 46,
+    "Type": "(noun, adjective, verb)"
+  },
+  {
+    "Word": "house",
+    "Frequency": 46,
+    "Type": "(noun, adjective, verb)"
+  },
+  {
+    "Word": "page",
+    "Frequency": 46,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "term",
+    "Frequency": 46,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "test",
+    "Frequency": 46,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "answer",
+    "Frequency": 45,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "sound",
+    "Frequency": 45,
+    "Type": "(noun, verb, adjective)"
+  },
+  {
+    "Word": "focus",
+    "Frequency": 44,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "matter",
+    "Frequency": 44,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "kind",
+    "Frequency": 43,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "soil",
+    "Frequency": 43,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "board",
+    "Frequency": 42,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "oil",
+    "Frequency": 42,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "picture",
+    "Frequency": 42,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "access",
+    "Frequency": 41,
+    "Type": "(noun, verb, adjective)"
+  },
+  {
+    "Word": "garden",
+    "Frequency": 41,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "range",
+    "Frequency": 41,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "rate",
+    "Frequency": 41,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "reason",
+    "Frequency": 41,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "future",
+    "Frequency": 40,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "site",
+    "Frequency": 40,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "demand",
+    "Frequency": 39,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "exercise",
+    "Frequency": 39,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "image",
+    "Frequency": 39,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "case",
+    "Frequency": 38,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "cause",
+    "Frequency": 38,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "coast",
+    "Frequency": 38,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "action",
+    "Frequency": 37,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "age",
+    "Frequency": 37,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "bad",
+    "Frequency": 37,
+    "Type": "(noun, adverb, adjective)"
+  },
+  {
+    "Word": "boat",
+    "Frequency": 37,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "record",
+    "Frequency": 37,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "result",
+    "Frequency": 37,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "section",
+    "Frequency": 37,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "building",
+    "Frequency": 36,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "mouse",
+    "Frequency": 36,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "cash",
+    "Frequency": 35,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "class",
+    "Frequency": 35,
+    "Type": "(noun, verb, adjective)"
+  },
+  {
+    "Word": "nothing",
+    "Frequency": 35,
+    "Type": "(noun, pronoun, adjective)"
+  },
+  {
+    "Word": "period",
+    "Frequency": 35,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "plan",
+    "Frequency": 35,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "store",
+    "Frequency": 35,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "tax",
+    "Frequency": 35,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "side",
+    "Frequency": 34,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "subject",
+    "Frequency": 34,
+    "Type": "(noun, adjective, adverb)"
+  },
+  {
+    "Word": "space",
+    "Frequency": 33,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "rule",
+    "Frequency": 32,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "stock",
+    "Frequency": 32,
+    "Type": "(noun, adjective, verb)"
+  },
+  {
+    "Word": "weather",
+    "Frequency": 32,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "chance",
+    "Frequency": 31,
+    "Type": "(noun, adjective, verb)"
+  },
+  {
+    "Word": "figure",
+    "Frequency": 31,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "man",
+    "Frequency": 31,
+    "Type": "(noun, verb, interjection)"
+  },
+  {
+    "Word": "model",
+    "Frequency": 31,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "source",
+    "Frequency": 31,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "beginning",
+    "Frequency": 30,
+    "Type": "(noun, adjective, verb)"
+  },
+  {
+    "Word": "earth",
+    "Frequency": 30,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "program",
+    "Frequency": 30,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "chicken",
+    "Frequency": 29,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "design",
+    "Frequency": 29,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "feature",
+    "Frequency": 29,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "head",
+    "Frequency": 29,
+    "Type": "(noun, adjective, verb)"
+  },
+  {
+    "Word": "material",
+    "Frequency": 29,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "purpose",
+    "Frequency": 29,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "question",
+    "Frequency": 29,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "rock",
+    "Frequency": 29,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "salt",
+    "Frequency": 29,
+    "Type": "(noun, adjective, verb)"
+  },
+  {
+    "Word": "act",
+    "Frequency": 28,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "birth",
+    "Frequency": 28,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "car",
+    "Frequency": 28,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "dog",
+    "Frequency": 28,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "object",
+    "Frequency": 28,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "scale",
+    "Frequency": 28,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "sun",
+    "Frequency": 28,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "note",
+    "Frequency": 27,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "profit",
+    "Frequency": 27,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "rent",
+    "Frequency": 27,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "speed",
+    "Frequency": 27,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "style",
+    "Frequency": 27,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "war",
+    "Frequency": 27,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "bank",
+    "Frequency": 26,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "craft",
+    "Frequency": 26,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "half",
+    "Frequency": 26,
+    "Type": "(noun, predeterminer, adverb)"
+  },
+  {
+    "Word": "inside",
+    "Frequency": 26,
+    "Type": "(noun, adjective, preposition)"
+  },
+  {
+    "Word": "outside",
+    "Frequency": 26,
+    "Type": "(noun, adjective, preposition)"
+  },
+  {
+    "Word": "standard",
+    "Frequency": 26,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "bus",
+    "Frequency": 25,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "exchange",
+    "Frequency": 25,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "eye",
+    "Frequency": 25,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "fire",
+    "Frequency": 25,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "position",
+    "Frequency": 25,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "pressure",
+    "Frequency": 25,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "stress",
+    "Frequency": 25,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "advantage",
+    "Frequency": 24,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "benefit",
+    "Frequency": 24,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "box",
+    "Frequency": 24,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "frame",
+    "Frequency": 24,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "issue",
+    "Frequency": 24,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "step",
+    "Frequency": 24,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "cycle",
+    "Frequency": 23,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "face",
+    "Frequency": 23,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "item",
+    "Frequency": 23,
+    "Type": "(noun, adverb)"
+  },
+  {
+    "Word": "metal",
+    "Frequency": 23,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "paint",
+    "Frequency": 23,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "review",
+    "Frequency": 23,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "room",
+    "Frequency": 23,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "screen",
+    "Frequency": 23,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "structure",
+    "Frequency": 23,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "view",
+    "Frequency": 23,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "account",
+    "Frequency": 22,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "ball",
+    "Frequency": 22,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "discipline",
+    "Frequency": 22,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "medium",
+    "Frequency": 22,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "share",
+    "Frequency": 22,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "balance",
+    "Frequency": 21,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "bit",
+    "Frequency": 21,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "black",
+    "Frequency": 21,
+    "Type": "(noun, verb, adjective)"
+  },
+  {
+    "Word": "bottom",
+    "Frequency": 21,
+    "Type": "(noun, verb, adjective)"
+  },
+  {
+    "Word": "choice",
+    "Frequency": 21,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "gift",
+    "Frequency": 21,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "impact",
+    "Frequency": 21,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "machine",
+    "Frequency": 21,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "shape",
+    "Frequency": 21,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "tool",
+    "Frequency": 21,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "wind",
+    "Frequency": 21,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "address",
+    "Frequency": 20,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "average",
+    "Frequency": 20,
+    "Type": "(noun, verb, adjective)"
+  },
+  {
+    "Word": "career",
+    "Frequency": 20,
+    "Type": "(noun, verb, adjective)"
+  },
+  {
+    "Word": "culture",
+    "Frequency": 20,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "morning",
+    "Frequency": 20,
+    "Type": "(noun, adverb)"
+  },
+  {
+    "Word": "pot",
+    "Frequency": 20,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "sign",
+    "Frequency": 20,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "table",
+    "Frequency": 20,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "task",
+    "Frequency": 20,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "condition",
+    "Frequency": 19,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "contact",
+    "Frequency": 19,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "credit",
+    "Frequency": 19,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "egg",
+    "Frequency": 19,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "hope",
+    "Frequency": 19,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "ice",
+    "Frequency": 19,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "network",
+    "Frequency": 19,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "north",
+    "Frequency": 19,
+    "Type": "(noun, adjective, adverb)"
+  },
+  {
+    "Word": "square",
+    "Frequency": 19,
+    "Type": "(noun, adjective, adverb)"
+  },
+  {
+    "Word": "attempt",
+    "Frequency": 18,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "date",
+    "Frequency": 18,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "effect",
+    "Frequency": 18,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "link",
+    "Frequency": 18,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "post",
+    "Frequency": 18,
+    "Type": "(noun, verb, adverb)"
+  },
+  {
+    "Word": "star",
+    "Frequency": 18,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "voice",
+    "Frequency": 18,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "capital",
+    "Frequency": 17,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "challenge",
+    "Frequency": 17,
+    "Type": "(noun, verb, adjective)"
+  },
+  {
+    "Word": "friend",
+    "Frequency": 17,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "self",
+    "Frequency": 17,
+    "Type": "(noun, pronoun, adjective)"
+  },
+  {
+    "Word": "shot",
+    "Frequency": 17,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "brush",
+    "Frequency": 16,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "couple",
+    "Frequency": 16,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "debate",
+    "Frequency": 16,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "exit",
+    "Frequency": 16,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "front",
+    "Frequency": 16,
+    "Type": "(noun, adjective, verb)"
+  },
+  {
+    "Word": "function",
+    "Frequency": 16,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "lack",
+    "Frequency": 16,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "living",
+    "Frequency": 16,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "plant",
+    "Frequency": 16,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "plastic",
+    "Frequency": 16,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "spot",
+    "Frequency": 16,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "summer",
+    "Frequency": 16,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "taste",
+    "Frequency": 16,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "theme",
+    "Frequency": 16,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "track",
+    "Frequency": 16,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "wing",
+    "Frequency": 16,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "brain",
+    "Frequency": 15,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "button",
+    "Frequency": 15,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "click",
+    "Frequency": 15,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "desire",
+    "Frequency": 15,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "foot",
+    "Frequency": 15,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "gas",
+    "Frequency": 15,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "influence",
+    "Frequency": 15,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "notice",
+    "Frequency": 15,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "rain",
+    "Frequency": 15,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "wall",
+    "Frequency": 15,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "base",
+    "Frequency": 14,
+    "Type": "(noun, verb, adjective)"
+  },
+  {
+    "Word": "damage",
+    "Frequency": 14,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "distance",
+    "Frequency": 14,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "feeling",
+    "Frequency": 14,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "pair",
+    "Frequency": 14,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "savings",
+    "Frequency": 14,
+    "Type": "(noun, adjective, preposition)"
+  },
+  {
+    "Word": "staff",
+    "Frequency": 14,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "sugar",
+    "Frequency": 14,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "target",
+    "Frequency": 14,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "text",
+    "Frequency": 14,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "animal",
+    "Frequency": 13,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "author",
+    "Frequency": 13,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "budget",
+    "Frequency": 13,
+    "Type": "(noun, adjective, verb)"
+  },
+  {
+    "Word": "discount",
+    "Frequency": 13,
+    "Type": "(noun, verb, adjective)"
+  },
+  {
+    "Word": "file",
+    "Frequency": 13,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "ground",
+    "Frequency": 13,
+    "Type": "(noun, verb, adjective)"
+  },
+  {
+    "Word": "lesson",
+    "Frequency": 13,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "minute",
+    "Frequency": 13,
+    "Type": "(noun, adjective, verb)"
+  },
+  {
+    "Word": "officer",
+    "Frequency": 13,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "phase",
+    "Frequency": 13,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "reference",
+    "Frequency": 13,
+    "Type": "(noun, verb, adjective)"
+  },
+  {
+    "Word": "register",
+    "Frequency": 13,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "sky",
+    "Frequency": 13,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "stage",
+    "Frequency": 13,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "stick",
+    "Frequency": 13,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "title",
+    "Frequency": 13,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "trouble",
+    "Frequency": 13,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "bowl",
+    "Frequency": 12,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "bridge",
+    "Frequency": 12,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "campaign",
+    "Frequency": 12,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "character",
+    "Frequency": 12,
+    "Type": "(noun, adjective, verb)"
+  },
+  {
+    "Word": "club",
+    "Frequency": 12,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "edge",
+    "Frequency": 12,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "evidence",
+    "Frequency": 12,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "fan",
+    "Frequency": 12,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "letter",
+    "Frequency": 12,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "lock",
+    "Frequency": 12,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "maximum",
+    "Frequency": 12,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "novel",
+    "Frequency": 12,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "option",
+    "Frequency": 12,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "pack",
+    "Frequency": 12,
+    "Type": "(noun, verb, adjective)"
+  },
+  {
+    "Word": "park",
+    "Frequency": 12,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "plenty",
+    "Frequency": 12,
+    "Type": "(noun, adjective, adverb)"
+  },
+  {
+    "Word": "quarter",
+    "Frequency": 12,
+    "Type": "(noun, verb, adjective)"
+  },
+  {
+    "Word": "skin",
+    "Frequency": 12,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "sort",
+    "Frequency": 12,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "weight",
+    "Frequency": 12,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "baby",
+    "Frequency": 11,
+    "Type": "(noun, verb, adjective)"
+  },
+  {
+    "Word": "background",
+    "Frequency": 11,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "carry",
+    "Frequency": 11,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "dish",
+    "Frequency": 11,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "factor",
+    "Frequency": 11,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "fruit",
+    "Frequency": 11,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "glass",
+    "Frequency": 11,
+    "Type": "(noun, adjective, verb)"
+  },
+  {
+    "Word": "joint",
+    "Frequency": 11,
+    "Type": "(noun, adjective, verb)"
+  },
+  {
+    "Word": "master",
+    "Frequency": 11,
+    "Type": "(noun, adjective, verb)"
+  },
+  {
+    "Word": "muscle",
+    "Frequency": 11,
+    "Type": "(noun, verb, adjective)"
+  },
+  {
+    "Word": "red",
+    "Frequency": 11,
+    "Type": "(noun, adjective, idiom)"
+  },
+  {
+    "Word": "strength",
+    "Frequency": 11,
+    "Type": "(noun, idiom)"
+  },
+  {
+    "Word": "traffic",
+    "Frequency": 11,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "trip",
+    "Frequency": 11,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "vegetable",
+    "Frequency": 11,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "appeal",
+    "Frequency": 10,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "chart",
+    "Frequency": 10,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "gear",
+    "Frequency": 10,
+    "Type": "(noun, verb, adjective)"
+  },
+  {
+    "Word": "ideal",
+    "Frequency": 10,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "kitchen",
+    "Frequency": 10,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "land",
+    "Frequency": 10,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "log",
+    "Frequency": 10,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "mother",
+    "Frequency": 10,
+    "Type": "(noun, adjective, verb)"
+  },
+  {
+    "Word": "net",
+    "Frequency": 10,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "party",
+    "Frequency": 10,
+    "Type": "(noun, adjective, verb)"
+  },
+  {
+    "Word": "principle",
+    "Frequency": 10,
+    "Type": "(noun, idiom)"
+  },
+  {
+    "Word": "relative",
+    "Frequency": 10,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "sale",
+    "Frequency": 10,
+    "Type": "(noun, idiom)"
+  },
+  {
+    "Word": "season",
+    "Frequency": 10,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "signal",
+    "Frequency": 10,
+    "Type": "(noun, adjective, verb)"
+  },
+  {
+    "Word": "spirit",
+    "Frequency": 10,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "street",
+    "Frequency": 10,
+    "Type": "(noun, adjective, idiom)"
+  },
+  {
+    "Word": "tree",
+    "Frequency": 10,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "wave",
+    "Frequency": 10,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "belt",
+    "Frequency": 9,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "bench",
+    "Frequency": 9,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "commission",
+    "Frequency": 9,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "copy",
+    "Frequency": 9,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "drop",
+    "Frequency": 9,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "minimum",
+    "Frequency": 9,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "path",
+    "Frequency": 9,
+    "Type": "(noun, idiom)"
+  },
+  {
+    "Word": "progress",
+    "Frequency": 9,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "project",
+    "Frequency": 9,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "sea",
+    "Frequency": 9,
+    "Type": "(noun, adjective, idiom)"
+  },
+  {
+    "Word": "south",
+    "Frequency": 9,
+    "Type": "(noun, adjective, adverb)"
+  },
+  {
+    "Word": "status",
+    "Frequency": 9,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "stuff",
+    "Frequency": 9,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "ticket",
+    "Frequency": 9,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "tour",
+    "Frequency": 9,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "angle",
+    "Frequency": 8,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "blue",
+    "Frequency": 8,
+    "Type": "(noun, verb, adjective)"
+  },
+  {
+    "Word": "breakfast",
+    "Frequency": 8,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "confidence",
+    "Frequency": 8,
+    "Type": "(noun, idiom)"
+  },
+  {
+    "Word": "daughter",
+    "Frequency": 8,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "degree",
+    "Frequency": 8,
+    "Type": "(noun, idiom)"
+  },
+  {
+    "Word": "doctor",
+    "Frequency": 8,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "dot",
+    "Frequency": 8,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "dream",
+    "Frequency": 8,
+    "Type": "(noun, verb, adjective)"
+  },
+  {
+    "Word": "duty",
+    "Frequency": 8,
+    "Type": "(noun, idiom)"
+  },
+  {
+    "Word": "essay",
+    "Frequency": 8,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "father",
+    "Frequency": 8,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "fee",
+    "Frequency": 8,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "finance",
+    "Frequency": 8,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "hour",
+    "Frequency": 8,
+    "Type": "(noun, adjective, idiom)"
+  },
+  {
+    "Word": "juice",
+    "Frequency": 8,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "limit",
+    "Frequency": 8,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "luck",
+    "Frequency": 8,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "milk",
+    "Frequency": 8,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "mouth",
+    "Frequency": 8,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "peace",
+    "Frequency": 8,
+    "Type": "(noun, interjection, verb)"
+  },
+  {
+    "Word": "pipe",
+    "Frequency": 8,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "seat",
+    "Frequency": 8,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "stable",
+    "Frequency": 8,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "storm",
+    "Frequency": 8,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "substance",
+    "Frequency": 8,
+    "Type": "(noun, idiom)"
+  },
+  {
+    "Word": "team",
+    "Frequency": 8,
+    "Type": "(noun, verb, adjective)"
+  },
+  {
+    "Word": "trick",
+    "Frequency": 8,
+    "Type": "(noun, adjective, verb)"
+  },
+  {
+    "Word": "afternoon",
+    "Frequency": 7,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "bat",
+    "Frequency": 7,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "beach",
+    "Frequency": 7,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "blank",
+    "Frequency": 7,
+    "Type": "(noun, verb, adjective)"
+  },
+  {
+    "Word": "catch",
+    "Frequency": 7,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "chain",
+    "Frequency": 7,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "consideration",
+    "Frequency": 7,
+    "Type": "(noun, idiom)"
+  },
+  {
+    "Word": "cream",
+    "Frequency": 7,
+    "Type": "(noun, verb, adjective)"
+  },
+  {
+    "Word": "crew",
+    "Frequency": 7,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "detail",
+    "Frequency": 7,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "gold",
+    "Frequency": 7,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "interview",
+    "Frequency": 7,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "kid",
+    "Frequency": 7,
+    "Type": "(noun, verb, adjective)"
+  },
+  {
+    "Word": "mark",
+    "Frequency": 7,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "match",
+    "Frequency": 7,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "mission",
+    "Frequency": 7,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "pain",
+    "Frequency": 7,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "pleasure",
+    "Frequency": 7,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "score",
+    "Frequency": 7,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "screw",
+    "Frequency": 7,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "sex",
+    "Frequency": 7,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "shop",
+    "Frequency": 7,
+    "Type": "(noun, verb, interjection)"
+  },
+  {
+    "Word": "shower",
+    "Frequency": 7,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "suit",
+    "Frequency": 7,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "tone",
+    "Frequency": 7,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "window",
+    "Frequency": 7,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "agent",
+    "Frequency": 6,
+    "Type": "(noun, adjective, verb)"
+  },
+  {
+    "Word": "band",
+    "Frequency": 6,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "block",
+    "Frequency": 6,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "bone",
+    "Frequency": 6,
+    "Type": "(noun, verb, adverb)"
+  },
+  {
+    "Word": "calendar",
+    "Frequency": 6,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "cap",
+    "Frequency": 6,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "coat",
+    "Frequency": 6,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "contest",
+    "Frequency": 6,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "corner",
+    "Frequency": 6,
+    "Type": "(noun, adjective, verb)"
+  },
+  {
+    "Word": "court",
+    "Frequency": 6,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "cup",
+    "Frequency": 6,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "district",
+    "Frequency": 6,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "door",
+    "Frequency": 6,
+    "Type": "(noun, idiom)"
+  },
+  {
+    "Word": "east",
+    "Frequency": 6,
+    "Type": "(noun, adjective, adverb)"
+  },
+  {
+    "Word": "finger",
+    "Frequency": 6,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "garage",
+    "Frequency": 6,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "guarantee",
+    "Frequency": 6,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "hole",
+    "Frequency": 6,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "hook",
+    "Frequency": 6,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "implement",
+    "Frequency": 6,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "layer",
+    "Frequency": 6,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "lecture",
+    "Frequency": 6,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "lie",
+    "Frequency": 6,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "manner",
+    "Frequency": 6,
+    "Type": "(noun, idiom)"
+  },
+  {
+    "Word": "meeting",
+    "Frequency": 6,
+    "Type": "(noun, idiom)"
+  },
+  {
+    "Word": "nose",
+    "Frequency": 6,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "parking",
+    "Frequency": 6,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "partner",
+    "Frequency": 6,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "profile",
+    "Frequency": 6,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "respect",
+    "Frequency": 6,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "rice",
+    "Frequency": 6,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "routine",
+    "Frequency": 6,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "schedule",
+    "Frequency": 6,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "swimming",
+    "Frequency": 6,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "telephone",
+    "Frequency": 6,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "tip",
+    "Frequency": 6,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "winter",
+    "Frequency": 6,
+    "Type": "(noun, adjective, verb)"
+  },
+  {
+    "Word": "airline",
+    "Frequency": 5,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "bag",
+    "Frequency": 5,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "battle",
+    "Frequency": 5,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "bed",
+    "Frequency": 5,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "bill",
+    "Frequency": 5,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "bother",
+    "Frequency": 5,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "cake",
+    "Frequency": 5,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "code",
+    "Frequency": 5,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "curve",
+    "Frequency": 5,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "designer",
+    "Frequency": 5,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "dimension",
+    "Frequency": 5,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "dress",
+    "Frequency": 5,
+    "Type": "(noun, adjective, verb)"
+  },
+  {
+    "Word": "ease",
+    "Frequency": 5,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "emergency",
+    "Frequency": 5,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "evening",
+    "Frequency": 5,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "extension",
+    "Frequency": 5,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "farm",
+    "Frequency": 5,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "fight",
+    "Frequency": 5,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "gap",
+    "Frequency": 5,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "grade",
+    "Frequency": 5,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "holiday",
+    "Frequency": 5,
+    "Type": "(noun, adjective, verb)"
+  },
+  {
+    "Word": "horror",
+    "Frequency": 5,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "horse",
+    "Frequency": 5,
+    "Type": "(noun, verb, adjective)"
+  },
+  {
+    "Word": "host",
+    "Frequency": 5,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "husband",
+    "Frequency": 5,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "loan",
+    "Frequency": 5,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "mistake",
+    "Frequency": 5,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "mountain",
+    "Frequency": 5,
+    "Type": "(noun, adjective, idiom)"
+  },
+  {
+    "Word": "nail",
+    "Frequency": 5,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "noise",
+    "Frequency": 5,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "occasion",
+    "Frequency": 5,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "package",
+    "Frequency": 5,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "patient",
+    "Frequency": 5,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "pause",
+    "Frequency": 5,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "phrase",
+    "Frequency": 5,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "proof",
+    "Frequency": 5,
+    "Type": "(noun, adjective, verb)"
+  },
+  {
+    "Word": "race",
+    "Frequency": 5,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "relief",
+    "Frequency": 5,
+    "Type": "(noun, idiom)"
+  },
+  {
+    "Word": "sand",
+    "Frequency": 5,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "sentence",
+    "Frequency": 5,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "shoulder",
+    "Frequency": 5,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "smoke",
+    "Frequency": 5,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "stomach",
+    "Frequency": 5,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "string",
+    "Frequency": 5,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "tourist",
+    "Frequency": 5,
+    "Type": "(noun, adverb)"
+  },
+  {
+    "Word": "towel",
+    "Frequency": 5,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "vacation",
+    "Frequency": 5,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "west",
+    "Frequency": 5,
+    "Type": "(noun, adjective, adverb)"
+  },
+  {
+    "Word": "wheel",
+    "Frequency": 5,
+    "Type": "(noun, verb, idiom)"
+  },
+  {
+    "Word": "wine",
+    "Frequency": 5,
+    "Type": "(noun, adjective, verb)"
+  },
+  {
+    "Word": "arm",
+    "Frequency": 4,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "aside",
+    "Frequency": 4,
+    "Type": "(noun, adverb)"
+  },
+  {
+    "Word": "associate",
+    "Frequency": 4,
+    "Type": "(noun, verb, adjective)"
+  },
+  {
+    "Word": "bet",
+    "Frequency": 4,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "blow",
+    "Frequency": 4,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "border",
+    "Frequency": 4,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "branch",
+    "Frequency": 4,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "breast",
+    "Frequency": 4,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "brother",
+    "Frequency": 4,
+    "Type": "(noun, interjection)"
+  },
+  {
+    "Word": "buddy",
+    "Frequency": 4,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "bunch",
+    "Frequency": 4,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "chip",
+    "Frequency": 4,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "coach",
+    "Frequency": 4,
+    "Type": "(noun, verb, adverb)"
+  },
+  {
+    "Word": "cross",
+    "Frequency": 4,
+    "Type": "(noun, verb, adjective)"
+  },
+  {
+    "Word": "document",
+    "Frequency": 4,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "draft",
+    "Frequency": 4,
+    "Type": "(noun, verb, adjective)"
+  },
+  {
+    "Word": "dust",
+    "Frequency": 4,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "expert",
+    "Frequency": 4,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "floor",
+    "Frequency": 4,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "god",
+    "Frequency": 4,
+    "Type": "(noun, interjection)"
+  },
+  {
+    "Word": "golf",
+    "Frequency": 4,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "habit",
+    "Frequency": 4,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "iron",
+    "Frequency": 4,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "judge",
+    "Frequency": 4,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "knife",
+    "Frequency": 4,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "landscape",
+    "Frequency": 4,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "league",
+    "Frequency": 4,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "mail",
+    "Frequency": 4,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "mess",
+    "Frequency": 4,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "native",
+    "Frequency": 4,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "opening",
+    "Frequency": 4,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "parent",
+    "Frequency": 4,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "pattern",
+    "Frequency": 4,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "pin",
+    "Frequency": 4,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "pool",
+    "Frequency": 4,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "pound",
+    "Frequency": 4,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "request",
+    "Frequency": 4,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "salary",
+    "Frequency": 4,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "shame",
+    "Frequency": 4,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "shelter",
+    "Frequency": 4,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "shoe",
+    "Frequency": 4,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "silver",
+    "Frequency": 4,
+    "Type": "(noun, adjective, verb)"
+  },
+  {
+    "Word": "tackle",
+    "Frequency": 4,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "tank",
+    "Frequency": 4,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "trust",
+    "Frequency": 4,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "assist",
+    "Frequency": 3,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "bake",
+    "Frequency": 3,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "bar",
+    "Frequency": 3,
+    "Type": "(noun, verb, preposition)"
+  },
+  {
+    "Word": "bell",
+    "Frequency": 3,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "bike",
+    "Frequency": 3,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "blame",
+    "Frequency": 3,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "boy",
+    "Frequency": 3,
+    "Type": "(noun, interjection)"
+  },
+  {
+    "Word": "brick",
+    "Frequency": 3,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "chair",
+    "Frequency": 3,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "closet",
+    "Frequency": 3,
+    "Type": "(noun, verb, adjective)"
+  },
+  {
+    "Word": "clue",
+    "Frequency": 3,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "collar",
+    "Frequency": 3,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "comment",
+    "Frequency": 3,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "conference",
+    "Frequency": 3,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "devil",
+    "Frequency": 3,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "diet",
+    "Frequency": 3,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "fear",
+    "Frequency": 3,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "fuel",
+    "Frequency": 3,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "glove",
+    "Frequency": 3,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "jacket",
+    "Frequency": 3,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "lunch",
+    "Frequency": 3,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "monitor",
+    "Frequency": 3,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "mortgage",
+    "Frequency": 3,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "nurse",
+    "Frequency": 3,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "pace",
+    "Frequency": 3,
+    "Type": "(noun, verb, preposition)"
+  },
+  {
+    "Word": "panic",
+    "Frequency": 3,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "peak",
+    "Frequency": 3,
+    "Type": "(noun, verb, adjective)"
+  },
+  {
+    "Word": "plane",
+    "Frequency": 3,
+    "Type": "(noun, adjective, verb)"
+  },
+  {
+    "Word": "reward",
+    "Frequency": 3,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "row",
+    "Frequency": 3,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "sandwich",
+    "Frequency": 3,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "shock",
+    "Frequency": 3,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "spite",
+    "Frequency": 3,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "spray",
+    "Frequency": 3,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "surprise",
+    "Frequency": 3,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "till",
+    "Frequency": 3,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "transition",
+    "Frequency": 3,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "weekend",
+    "Frequency": 3,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "welcome",
+    "Frequency": 3,
+    "Type": "(noun, interjection, verb)"
+  },
+  {
+    "Word": "yard",
+    "Frequency": 3,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "alarm",
+    "Frequency": 2,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "bend",
+    "Frequency": 2,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "bicycle",
+    "Frequency": 2,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "bite",
+    "Frequency": 2,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "blind",
+    "Frequency": 2,
+    "Type": "(noun, verb, adjective)"
+  },
+  {
+    "Word": "bottle",
+    "Frequency": 2,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "cable",
+    "Frequency": 2,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "candle",
+    "Frequency": 2,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "clerk",
+    "Frequency": 2,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "cloud",
+    "Frequency": 2,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "concert",
+    "Frequency": 2,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "counter",
+    "Frequency": 2,
+    "Type": "(noun, verb, adverb)"
+  },
+  {
+    "Word": "flower",
+    "Frequency": 2,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "grandfather",
+    "Frequency": 2,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "harm",
+    "Frequency": 2,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "knee",
+    "Frequency": 2,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "lawyer",
+    "Frequency": 2,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "leather",
+    "Frequency": 2,
+    "Type": "(noun, adjective, verb)"
+  },
+  {
+    "Word": "load",
+    "Frequency": 2,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "mirror",
+    "Frequency": 2,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "neck",
+    "Frequency": 2,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "pension",
+    "Frequency": 2,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "plate",
+    "Frequency": 2,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "purple",
+    "Frequency": 2,
+    "Type": "(noun, adjective, verb)"
+  },
+  {
+    "Word": "ruin",
+    "Frequency": 2,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "ship",
+    "Frequency": 2,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "skirt",
+    "Frequency": 2,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "slice",
+    "Frequency": 2,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "snow",
+    "Frequency": 2,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "specialist",
+    "Frequency": 2,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "stroke",
+    "Frequency": 2,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "switch",
+    "Frequency": 2,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "trash",
+    "Frequency": 2,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "tune",
+    "Frequency": 2,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "zone",
+    "Frequency": 2,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "anger",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "award",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "bid",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "bitter",
+    "Frequency": 1,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "boot",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "bug",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "camp",
+    "Frequency": 1,
+    "Type": "(noun, verb, adjective)"
+  },
+  {
+    "Word": "candy",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "carpet",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "cat",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "champion",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "channel",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "clock",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "comfort",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "cow",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "crack",
+    "Frequency": 1,
+    "Type": "(noun, verb, adjective)"
+  },
+  {
+    "Word": "engineer",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "entrance",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "fault",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "grass",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "guy",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "hell",
+    "Frequency": 1,
+    "Type": "(noun, interjection)"
+  },
+  {
+    "Word": "highlight",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "incident",
+    "Frequency": 1,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "island",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "joke",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "jury",
+    "Frequency": 1,
+    "Type": "(noun, verb, adjective)"
+  },
+  {
+    "Word": "leg",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "lip",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "mate",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "motor",
+    "Frequency": 1,
+    "Type": "(noun, adjective, verb)"
+  },
+  {
+    "Word": "nerve",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "passage",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "pen",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "pride",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "priest",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "prize",
+    "Frequency": 1,
+    "Type": "(noun, adjective, verb)"
+  },
+  {
+    "Word": "promise",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "resident",
+    "Frequency": 1,
+    "Type": "(noun, adjective)"
+  },
+  {
+    "Word": "resort",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "ring",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "roof",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "rope",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "sail",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "scheme",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "script",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "sock",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "station",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "toe",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "tower",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "truck",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "witness",
+    "Frequency": 1,
+    "Type": "(noun, verb)"
+  },
+  {
+    "Word": "a",
+    "Frequency": 4506,
+    "Type": "(indefinite article, noun, preposition)"
+  },
+  {
+    "Word": "you",
+    "Frequency": 2041,
+    "Type": "(pronoun, noun)"
+  },
+  {
+    "Word": "it",
+    "Frequency": 1386,
+    "Type": "(pronoun, noun)"
+  },
+  {
+    "Word": "can",
+    "Frequency": 895,
+    "Type": "(auxiliary verb, noun)"
+  },
+  {
+    "Word": "will",
+    "Frequency": 577,
+    "Type": "(auxiliary verb, noun)"
+  },
+  {
+    "Word": "if",
+    "Frequency": 546,
+    "Type": "(conjunction, noun)"
+  },
+  {
+    "Word": "one",
+    "Frequency": 441,
+    "Type": "(adjective, noun, pronoun)"
+  },
+  {
+    "Word": "many",
+    "Frequency": 397,
+    "Type": "(adjective, noun, pronoun)"
+  },
+  {
+    "Word": "most",
+    "Frequency": 378,
+    "Type": "(adjective, noun, adverb)"
+  },
+  {
+    "Word": "other",
+    "Frequency": 369,
+    "Type": "(adjective, noun, pronoun)"
+  },
+  {
+    "Word": "use",
+    "Frequency": 319,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "make",
+    "Frequency": 262,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "good",
+    "Frequency": 201,
+    "Type": "(adjective, noun, adverb)"
+  },
+  {
+    "Word": "look",
+    "Frequency": 144,
+    "Type": "(verb, noun, interjection)"
+  },
+  {
+    "Word": "help",
+    "Frequency": 141,
+    "Type": "(verb, noun, interjection)"
+  },
+  {
+    "Word": "go",
+    "Frequency": 131,
+    "Type": "(verb, noun, adjective)"
+  },
+  {
+    "Word": "great",
+    "Frequency": 126,
+    "Type": "(adjective, noun, adverb)"
+  },
+  {
+    "Word": "being",
+    "Frequency": 124,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "few",
+    "Frequency": 117,
+    "Type": "(adjective, noun, pronoun)"
+  },
+  {
+    "Word": "might",
+    "Frequency": 116,
+    "Type": "(auxiliary verb, noun)"
+  },
+  {
+    "Word": "still",
+    "Frequency": 112,
+    "Type": "(adjective, noun, adverb)"
+  },
+  {
+    "Word": "public",
+    "Frequency": 97,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "read",
+    "Frequency": 97,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "keep",
+    "Frequency": 96,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "start",
+    "Frequency": 96,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "give",
+    "Frequency": 93,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "human",
+    "Frequency": 92,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "local",
+    "Frequency": 90,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "general",
+    "Frequency": 85,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "she",
+    "Frequency": 85,
+    "Type": "(pronoun, noun)"
+  },
+  {
+    "Word": "specific",
+    "Frequency": 83,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "long",
+    "Frequency": 82,
+    "Type": "(adjective, noun, adverb)"
+  },
+  {
+    "Word": "play",
+    "Frequency": 75,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "feel",
+    "Frequency": 74,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "high",
+    "Frequency": 74,
+    "Type": "(adjective, noun, adverb)"
+  },
+  {
+    "Word": "tonight",
+    "Frequency": 71,
+    "Type": "(adverb, noun)"
+  },
+  {
+    "Word": "put",
+    "Frequency": 70,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "common",
+    "Frequency": 69,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "set",
+    "Frequency": 69,
+    "Type": "(verb, noun, adjective)"
+  },
+  {
+    "Word": "change",
+    "Frequency": 67,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "simple",
+    "Frequency": 63,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "past",
+    "Frequency": 60,
+    "Type": "(adjective, noun, preposition)"
+  },
+  {
+    "Word": "big",
+    "Frequency": 59,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "possible",
+    "Frequency": 59,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "particular",
+    "Frequency": 58,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "today",
+    "Frequency": 54,
+    "Type": "(adverb, noun)"
+  },
+  {
+    "Word": "major",
+    "Frequency": 53,
+    "Type": "(adjective, noun, verb)"
+  },
+  {
+    "Word": "personal",
+    "Frequency": 53,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "current",
+    "Frequency": 52,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "national",
+    "Frequency": 52,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "cut",
+    "Frequency": 50,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "natural",
+    "Frequency": 50,
+    "Type": "(adjective, noun, adverb)"
+  },
+  {
+    "Word": "physical",
+    "Frequency": 50,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "show",
+    "Frequency": 50,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "try",
+    "Frequency": 50,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "check",
+    "Frequency": 49,
+    "Type": "(verb, noun, interjection)"
+  },
+  {
+    "Word": "second",
+    "Frequency": 49,
+    "Type": "(number, noun)"
+  },
+  {
+    "Word": "call",
+    "Frequency": 47,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "move",
+    "Frequency": 47,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "pay",
+    "Frequency": 47,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "let",
+    "Frequency": 46,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "increase",
+    "Frequency": 45,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "single",
+    "Frequency": 45,
+    "Type": "(adjective, noun, verb)"
+  },
+  {
+    "Word": "individual",
+    "Frequency": 44,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "turn",
+    "Frequency": 44,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "ask",
+    "Frequency": 42,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "buy",
+    "Frequency": 42,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "guard",
+    "Frequency": 42,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "hold",
+    "Frequency": 42,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "main",
+    "Frequency": 42,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "offer",
+    "Frequency": 42,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "potential",
+    "Frequency": 42,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "professional",
+    "Frequency": 42,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "international",
+    "Frequency": 41,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "travel",
+    "Frequency": 41,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "cook",
+    "Frequency": 40,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "alternative",
+    "Frequency": 39,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "following",
+    "Frequency": 39,
+    "Type": "(preposition, noun, adjective)"
+  },
+  {
+    "Word": "special",
+    "Frequency": 39,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "working",
+    "Frequency": 39,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "whole",
+    "Frequency": 38,
+    "Type": "(adjective, noun, adverb)"
+  },
+  {
+    "Word": "dance",
+    "Frequency": 37,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "excuse",
+    "Frequency": 37,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "cold",
+    "Frequency": 34,
+    "Type": "(adjective, noun, adverb)"
+  },
+  {
+    "Word": "commercial",
+    "Frequency": 34,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "low",
+    "Frequency": 34,
+    "Type": "(adjective, noun, adverb)"
+  },
+  {
+    "Word": "purchase",
+    "Frequency": 34,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "deal",
+    "Frequency": 33,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "primary",
+    "Frequency": 33,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "worth",
+    "Frequency": 33,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "fall",
+    "Frequency": 32,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "necessary",
+    "Frequency": 31,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "positive",
+    "Frequency": 31,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "produce",
+    "Frequency": 31,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "search",
+    "Frequency": 31,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "present",
+    "Frequency": 30,
+    "Type": "(adjective, noun, verb)"
+  },
+  {
+    "Word": "spend",
+    "Frequency": 30,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "talk",
+    "Frequency": 30,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "creative",
+    "Frequency": 29,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "tell",
+    "Frequency": 29,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "cost",
+    "Frequency": 28,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "drive",
+    "Frequency": 28,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "green",
+    "Frequency": 28,
+    "Type": "(adjective, noun, verb)"
+  },
+  {
+    "Word": "support",
+    "Frequency": 28,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "glad",
+    "Frequency": 27,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "remove",
+    "Frequency": 27,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "return",
+    "Frequency": 27,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "run",
+    "Frequency": 27,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "complex",
+    "Frequency": 26,
+    "Type": "(adjective, noun, verb)"
+  },
+  {
+    "Word": "due",
+    "Frequency": 26,
+    "Type": "(adjective, noun, adverb)"
+  },
+  {
+    "Word": "effective",
+    "Frequency": 26,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "middle",
+    "Frequency": 26,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "regular",
+    "Frequency": 26,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "reserve",
+    "Frequency": 26,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "independent",
+    "Frequency": 25,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "leave",
+    "Frequency": 25,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "original",
+    "Frequency": 25,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "reach",
+    "Frequency": 25,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "rest",
+    "Frequency": 25,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "serve",
+    "Frequency": 25,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "watch",
+    "Frequency": 25,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "beautiful",
+    "Frequency": 24,
+    "Type": "(adjective, noun, interjection)"
+  },
+  {
+    "Word": "charge",
+    "Frequency": 24,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "active",
+    "Frequency": 23,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "break",
+    "Frequency": 23,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "negative",
+    "Frequency": 23,
+    "Type": "(adjective, noun, interjection)"
+  },
+  {
+    "Word": "safe",
+    "Frequency": 23,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "stay",
+    "Frequency": 23,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "visit",
+    "Frequency": 23,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "visual",
+    "Frequency": 23,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "affect",
+    "Frequency": 22,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "cover",
+    "Frequency": 22,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "report",
+    "Frequency": 22,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "rise",
+    "Frequency": 22,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "walk",
+    "Frequency": 21,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "white",
+    "Frequency": 21,
+    "Type": "(adjective, noun, verb)"
+  },
+  {
+    "Word": "beyond",
+    "Frequency": 20,
+    "Type": "(preposition, noun)"
+  },
+  {
+    "Word": "junior",
+    "Frequency": 20,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "pick",
+    "Frequency": 20,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "unique",
+    "Frequency": 20,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "anything",
+    "Frequency": 19,
+    "Type": "(pronoun, noun, adverb)"
+  },
+  {
+    "Word": "classic",
+    "Frequency": 19,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "final",
+    "Frequency": 19,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "lift",
+    "Frequency": 19,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "mix",
+    "Frequency": 19,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "private",
+    "Frequency": 19,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "stop",
+    "Frequency": 19,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "teach",
+    "Frequency": 19,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "western",
+    "Frequency": 19,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "concern",
+    "Frequency": 18,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "familiar",
+    "Frequency": 18,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "fly",
+    "Frequency": 18,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "official",
+    "Frequency": 18,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "broad",
+    "Frequency": 17,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "comfortable",
+    "Frequency": 17,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "gain",
+    "Frequency": 17,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "maybe",
+    "Frequency": 17,
+    "Type": "(adverb, noun)"
+  },
+  {
+    "Word": "rich",
+    "Frequency": 17,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "save",
+    "Frequency": 17,
+    "Type": "(verb, noun, preposition)"
+  },
+  {
+    "Word": "stand",
+    "Frequency": 17,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "young",
+    "Frequency": 17,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "fail",
+    "Frequency": 16,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "heavy",
+    "Frequency": 16,
+    "Type": "(adjective, noun, adverb)"
+  },
+  {
+    "Word": "hello",
+    "Frequency": 16,
+    "Type": "(interjection, noun)"
+  },
+  {
+    "Word": "lead",
+    "Frequency": 16,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "listen",
+    "Frequency": 16,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "valuable",
+    "Frequency": 16,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "worry",
+    "Frequency": 16,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "handle",
+    "Frequency": 15,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "leading",
+    "Frequency": 15,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "meet",
+    "Frequency": 15,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "release",
+    "Frequency": 15,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "sell",
+    "Frequency": 15,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "finish",
+    "Frequency": 14,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "normal",
+    "Frequency": 14,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "press",
+    "Frequency": 14,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "ride",
+    "Frequency": 14,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "secret",
+    "Frequency": 14,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "spread",
+    "Frequency": 14,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "spring",
+    "Frequency": 14,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "tough",
+    "Frequency": 14,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "wait",
+    "Frequency": 14,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "brown",
+    "Frequency": 13,
+    "Type": "(adjective, noun, verb)"
+  },
+  {
+    "Word": "deep",
+    "Frequency": 13,
+    "Type": "(adjective, noun, adverb)"
+  },
+  {
+    "Word": "display",
+    "Frequency": 13,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "flow",
+    "Frequency": 13,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "hit",
+    "Frequency": 13,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "objective",
+    "Frequency": 13,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "shoot",
+    "Frequency": 13,
+    "Type": "(verb, noun, interjection)"
+  },
+  {
+    "Word": "touch",
+    "Frequency": 13,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "cancel",
+    "Frequency": 12,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "chemical",
+    "Frequency": 12,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "cry",
+    "Frequency": 12,
+    "Type": "(verb, noun, idiom)"
+  },
+  {
+    "Word": "dump",
+    "Frequency": 12,
+    "Type": "(verb, noun, idiom)"
+  },
+  {
+    "Word": "extreme",
+    "Frequency": 12,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "push",
+    "Frequency": 12,
+    "Type": "(verb, noun, idiom)"
+  },
+  {
+    "Word": "conflict",
+    "Frequency": 11,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "eat",
+    "Frequency": 11,
+    "Type": "(verb, noun, idiom)"
+  },
+  {
+    "Word": "fill",
+    "Frequency": 11,
+    "Type": "(verb, noun, idiom)"
+  },
+  {
+    "Word": "formal",
+    "Frequency": 11,
+    "Type": "(adjective, noun, adverb)"
+  },
+  {
+    "Word": "jump",
+    "Frequency": 11,
+    "Type": "(verb, noun, adjective)"
+  },
+  {
+    "Word": "kick",
+    "Frequency": 11,
+    "Type": "(verb, noun, idiom)"
+  },
+  {
+    "Word": "opposite",
+    "Frequency": 11,
+    "Type": "(adjective, noun, preposition)"
+  },
+  {
+    "Word": "pass",
+    "Frequency": 11,
+    "Type": "(verb, noun, idiom)"
+  },
+  {
+    "Word": "pitch",
+    "Frequency": 11,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "remote",
+    "Frequency": 11,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "total",
+    "Frequency": 11,
+    "Type": "(adjective, noun, verb)"
+  },
+  {
+    "Word": "treat",
+    "Frequency": 11,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "vast",
+    "Frequency": 11,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "abuse",
+    "Frequency": 10,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "beat",
+    "Frequency": 10,
+    "Type": "(verb, noun, adjective)"
+  },
+  {
+    "Word": "burn",
+    "Frequency": 10,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "deposit",
+    "Frequency": 10,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "print",
+    "Frequency": 10,
+    "Type": "(verb, noun, adjective)"
+  },
+  {
+    "Word": "raise",
+    "Frequency": 10,
+    "Type": "(verb, noun, idiom)"
+  },
+  {
+    "Word": "sleep",
+    "Frequency": 10,
+    "Type": "(verb, noun, idiom)"
+  },
+  {
+    "Word": "somewhere",
+    "Frequency": 10,
+    "Type": "(adverb, noun)"
+  },
+  {
+    "Word": "advance",
+    "Frequency": 9,
+    "Type": "(verb, noun, adjective)"
+  },
+  {
+    "Word": "anywhere",
+    "Frequency": 9,
+    "Type": "(adverb, noun)"
+  },
+  {
+    "Word": "consist",
+    "Frequency": 9,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "dark",
+    "Frequency": 9,
+    "Type": "(adjective, noun, idiom)"
+  },
+  {
+    "Word": "double",
+    "Frequency": 9,
+    "Type": "(adjective, noun, verb)"
+  },
+  {
+    "Word": "draw",
+    "Frequency": 9,
+    "Type": "(verb, noun, idiom)"
+  },
+  {
+    "Word": "equal",
+    "Frequency": 9,
+    "Type": "(adjective, noun, verb)"
+  },
+  {
+    "Word": "fix",
+    "Frequency": 9,
+    "Type": "(verb, noun, idiom)"
+  },
+  {
+    "Word": "hire",
+    "Frequency": 9,
+    "Type": "(verb, noun, adjective)"
+  },
+  {
+    "Word": "internal",
+    "Frequency": 9,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "join",
+    "Frequency": 9,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "kill",
+    "Frequency": 9,
+    "Type": "(verb, noun, idiom)"
+  },
+  {
+    "Word": "sensitive",
+    "Frequency": 9,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "tap",
+    "Frequency": 9,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "win",
+    "Frequency": 9,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "attack",
+    "Frequency": 8,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "claim",
+    "Frequency": 8,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "constant",
+    "Frequency": 8,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "drag",
+    "Frequency": 8,
+    "Type": "(verb, noun, adjective)"
+  },
+  {
+    "Word": "drink",
+    "Frequency": 8,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "guess",
+    "Frequency": 8,
+    "Type": "(verb, noun, idiom)"
+  },
+  {
+    "Word": "minor",
+    "Frequency": 8,
+    "Type": "(adjective, noun, verb)"
+  },
+  {
+    "Word": "pull",
+    "Frequency": 8,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "raw",
+    "Frequency": 8,
+    "Type": "(adjective, noun, idiom)"
+  },
+  {
+    "Word": "soft",
+    "Frequency": 8,
+    "Type": "(adjective, noun, adverb)"
+  },
+  {
+    "Word": "solid",
+    "Frequency": 8,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "wear",
+    "Frequency": 8,
+    "Type": "(verb, noun, idiom)"
+  },
+  {
+    "Word": "weird",
+    "Frequency": 8,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "wonder",
+    "Frequency": 8,
+    "Type": "(verb, noun, idiom)"
+  },
+  {
+    "Word": "annual",
+    "Frequency": 7,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "count",
+    "Frequency": 7,
+    "Type": "(verb, noun, adjective)"
+  },
+  {
+    "Word": "dead",
+    "Frequency": 7,
+    "Type": "(adjective, noun, adverb)"
+  },
+  {
+    "Word": "doubt",
+    "Frequency": 7,
+    "Type": "(verb, noun, idiom)"
+  },
+  {
+    "Word": "feed",
+    "Frequency": 7,
+    "Type": "(verb, noun, idiom)"
+  },
+  {
+    "Word": "forever",
+    "Frequency": 7,
+    "Type": "(adverb, noun, idiom)"
+  },
+  {
+    "Word": "impress",
+    "Frequency": 7,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "nobody",
+    "Frequency": 7,
+    "Type": "(pronoun, noun)"
+  },
+  {
+    "Word": "repeat",
+    "Frequency": 7,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "round",
+    "Frequency": 7,
+    "Type": "(adjective, noun, adverb)"
+  },
+  {
+    "Word": "sing",
+    "Frequency": 7,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "slide",
+    "Frequency": 7,
+    "Type": "(verb, noun, idiom)"
+  },
+  {
+    "Word": "strip",
+    "Frequency": 7,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "whereas",
+    "Frequency": 7,
+    "Type": "(conjunction, noun)"
+  },
+  {
+    "Word": "wish",
+    "Frequency": 7,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "combine",
+    "Frequency": 6,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "command",
+    "Frequency": 6,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "dig",
+    "Frequency": 6,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "divide",
+    "Frequency": 6,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "equivalent",
+    "Frequency": 6,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "hang",
+    "Frequency": 6,
+    "Type": "(verb, noun, idiom)"
+  },
+  {
+    "Word": "hunt",
+    "Frequency": 6,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "initial",
+    "Frequency": 6,
+    "Type": "(adjective, noun, verb)"
+  },
+  {
+    "Word": "march",
+    "Frequency": 6,
+    "Type": "(verb, noun, idiom)"
+  },
+  {
+    "Word": "mention",
+    "Frequency": 6,
+    "Type": "(verb, noun, idiom)"
+  },
+  {
+    "Word": "smell",
+    "Frequency": 6,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "spiritual",
+    "Frequency": 6,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "survey",
+    "Frequency": 6,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "tie",
+    "Frequency": 6,
+    "Type": "(verb, noun, idiom)"
+  },
+  {
+    "Word": "adult",
+    "Frequency": 5,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "brief",
+    "Frequency": 5,
+    "Type": "(adjective, noun, verb)"
+  },
+  {
+    "Word": "crazy",
+    "Frequency": 5,
+    "Type": "(adjective, noun, idiom)"
+  },
+  {
+    "Word": "escape",
+    "Frequency": 5,
+    "Type": "(verb, noun, adjective)"
+  },
+  {
+    "Word": "gather",
+    "Frequency": 5,
+    "Type": "(verb, noun, idiom)"
+  },
+  {
+    "Word": "hate",
+    "Frequency": 5,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "prior",
+    "Frequency": 5,
+    "Type": "(adjective, noun, idiom)"
+  },
+  {
+    "Word": "repair",
+    "Frequency": 5,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "rough",
+    "Frequency": 5,
+    "Type": "(adjective, noun, adverb)"
+  },
+  {
+    "Word": "sad",
+    "Frequency": 5,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "scratch",
+    "Frequency": 5,
+    "Type": "(verb, noun, adjective)"
+  },
+  {
+    "Word": "sick",
+    "Frequency": 5,
+    "Type": "(adjective, noun, idiom)"
+  },
+  {
+    "Word": "strike",
+    "Frequency": 5,
+    "Type": "(verb, noun, adjective)"
+  },
+  {
+    "Word": "employ",
+    "Frequency": 4,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "external",
+    "Frequency": 4,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "hurt",
+    "Frequency": 4,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "illegal",
+    "Frequency": 4,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "laugh",
+    "Frequency": 4,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "lay",
+    "Frequency": 4,
+    "Type": "(verb, noun, adjective)"
+  },
+  {
+    "Word": "mobile",
+    "Frequency": 4,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "nasty",
+    "Frequency": 4,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "ordinary",
+    "Frequency": 4,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "respond",
+    "Frequency": 4,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "royal",
+    "Frequency": 4,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "senior",
+    "Frequency": 4,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "split",
+    "Frequency": 4,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "strain",
+    "Frequency": 4,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "struggle",
+    "Frequency": 4,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "swim",
+    "Frequency": 4,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "train",
+    "Frequency": 4,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "upper",
+    "Frequency": 4,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "wash",
+    "Frequency": 4,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "yellow",
+    "Frequency": 4,
+    "Type": "(adjective, noun, verb)"
+  },
+  {
+    "Word": "convert",
+    "Frequency": 3,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "crash",
+    "Frequency": 3,
+    "Type": "(verb, noun, adjective)"
+  },
+  {
+    "Word": "dependent",
+    "Frequency": 3,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "fold",
+    "Frequency": 3,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "funny",
+    "Frequency": 3,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "grab",
+    "Frequency": 3,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "hide",
+    "Frequency": 3,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "miss",
+    "Frequency": 3,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "permit",
+    "Frequency": 3,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "quote",
+    "Frequency": 3,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "recover",
+    "Frequency": 3,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "resolve",
+    "Frequency": 3,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "roll",
+    "Frequency": 3,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "sink",
+    "Frequency": 3,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "slip",
+    "Frequency": 3,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "spare",
+    "Frequency": 3,
+    "Type": "(adjective, noun, verb)"
+  },
+  {
+    "Word": "suspect",
+    "Frequency": 3,
+    "Type": "(verb, noun, adjective)"
+  },
+  {
+    "Word": "sweet",
+    "Frequency": 3,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "swing",
+    "Frequency": 3,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "twist",
+    "Frequency": 3,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "upstairs",
+    "Frequency": 3,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "usual",
+    "Frequency": 3,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "abroad",
+    "Frequency": 2,
+    "Type": "(adverb, noun)"
+  },
+  {
+    "Word": "brave",
+    "Frequency": 2,
+    "Type": "(adjective, noun, verb)"
+  },
+  {
+    "Word": "calm",
+    "Frequency": 2,
+    "Type": "(adjective, noun, verb)"
+  },
+  {
+    "Word": "concentrate",
+    "Frequency": 2,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "estimate",
+    "Frequency": 2,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "grand",
+    "Frequency": 2,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "male",
+    "Frequency": 2,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "mine",
+    "Frequency": 2,
+    "Type": "(pronoun, noun, verb)"
+  },
+  {
+    "Word": "prompt",
+    "Frequency": 2,
+    "Type": "(verb, noun, adjective)"
+  },
+  {
+    "Word": "quiet",
+    "Frequency": 2,
+    "Type": "(adjective, noun, verb)"
+  },
+  {
+    "Word": "refuse",
+    "Frequency": 2,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "regret",
+    "Frequency": 2,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "reveal",
+    "Frequency": 2,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "rush",
+    "Frequency": 2,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "shake",
+    "Frequency": 2,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "shift",
+    "Frequency": 2,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "shine",
+    "Frequency": 2,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "steal",
+    "Frequency": 2,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "suck",
+    "Frequency": 2,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "surround",
+    "Frequency": 2,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "anybody",
+    "Frequency": 1,
+    "Type": "(pronoun, noun)"
+  },
+  {
+    "Word": "bear",
+    "Frequency": 1,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "brilliant",
+    "Frequency": 1,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "dare",
+    "Frequency": 1,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "dear",
+    "Frequency": 1,
+    "Type": "(adjective, noun, adverb)"
+  },
+  {
+    "Word": "delay",
+    "Frequency": 1,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "drunk",
+    "Frequency": 1,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "female",
+    "Frequency": 1,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "hurry",
+    "Frequency": 1,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "inevitable",
+    "Frequency": 1,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "invite",
+    "Frequency": 1,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "kiss",
+    "Frequency": 1,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "neat",
+    "Frequency": 1,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "pop",
+    "Frequency": 1,
+    "Type": "(verb, noun, adverb)"
+  },
+  {
+    "Word": "punch",
+    "Frequency": 1,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "quit",
+    "Frequency": 1,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "reply",
+    "Frequency": 1,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "representative",
+    "Frequency": 1,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "resist",
+    "Frequency": 1,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "rip",
+    "Frequency": 1,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "rub",
+    "Frequency": 1,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "silly",
+    "Frequency": 1,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "smile",
+    "Frequency": 1,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "spell",
+    "Frequency": 1,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "stretch",
+    "Frequency": 1,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "stupid",
+    "Frequency": 1,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "tear",
+    "Frequency": 1,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "temporary",
+    "Frequency": 1,
+    "Type": "(adjective, noun)"
+  },
+  {
+    "Word": "tomorrow",
+    "Frequency": 1,
+    "Type": "(adverb, noun)"
+  },
+  {
+    "Word": "wake",
+    "Frequency": 1,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "wrap",
+    "Frequency": 1,
+    "Type": "(verb, noun)"
+  },
+  {
+    "Word": "yesterday",
+    "Frequency": 1,
+    "Type": "(adverb, noun)"
+  }
+];
+
+export {nouns}; 

@@ -1,5 +1,5 @@
-// Only node.js has this modules stuff?  ES6 whither??
-export  {dummy, jr, rotators, nouns, verbs, cliffWords, bardWords};
+  // Only node.js has this modules stuff?  ES6 whither??
+// export  {dummy, jr, rotators, nouns, verbs, cliffWords, bardWords};
 
 
 console.log("hellow from BOTTOM");
